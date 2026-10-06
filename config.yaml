@@ -1,0 +1,40 @@
+project:
+  name: "LexiTech TR"
+  version: "0.1.0"
+  random_seed: 42
+
+paths:
+  raw: "data/raw"
+  extracted: "data/extracted"
+  cleaned: "data/cleaned"
+  final: "data/final"
+  reports: "reports"
+
+datasets:
+  huggingface:
+    - name: "sinanelms/hukukisorular"
+      enabled: true
+
+    - name: "OrionCAF/turkish_law_qa_dataset"
+      enabled: true
+
+cleaning:
+  normalize_unicode: true
+  remove_html: true
+  normalize_whitespace: true
+  remove_empty_records: true
+
+deduplication:
+  sha256:
+    enabled: true
+
+  minhash:
+    enabled: true
+    threshold: 0.85
+    num_perm: 128
+
+split:
+  train: 0.80
+  validation: 0.10
+  test: 0.10
+  document_level: true

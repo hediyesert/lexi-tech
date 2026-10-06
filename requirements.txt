@@ -1,0 +1,23 @@
+# Dataset acquisition
+datasets
+huggingface_hub
+
+# Data processing
+pandas
+numpy
+
+# Configuration
+PyYAML
+
+# Text / HTML processing
+beautifulsoup4
+lxml
+
+# Deduplication
+datasketch
+
+# Progress bars
+tqdm
+
+# Testing
+pytest

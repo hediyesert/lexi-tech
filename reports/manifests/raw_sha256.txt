@@ -1,0 +1,2 @@
+006f8a0ad344507473c8dd744b82473018465dd56a2d441dc9dbb729123156d3  data/raw/OrionCAF__turkish_law_qa_dataset/train.jsonl
+1c1d6c651893833c393a2a0f07a1a3a30a1fcb91f01488eea3d9a8bb020a5014  data/raw/sinanelms__hukukisorular/train.jsonl
