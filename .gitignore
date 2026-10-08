@@ -50,3 +50,7 @@ data/final/*
 
 data/deduplicated/*
 !data/deduplicated/.gitkeep
+
+# Generated near-duplicate reports
+reports/deduplication/lsh_candidate_pairs.tsv
+reports/deduplication/near_duplicate_candidates.jsonl

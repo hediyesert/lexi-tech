@@ -1,0 +1,9 @@
+{
+  "input_records": 308009,
+  "threshold": 0.85,
+  "num_perm": 128,
+  "shingle_size": 3,
+  "lsh_candidate_pairs": 3091,
+  "verified_near_duplicate_pairs": 2688,
+  "cross_source_near_duplicate_pairs": 0
+}
