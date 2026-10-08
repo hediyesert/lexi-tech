@@ -1,0 +1,14 @@
+{
+  "verified_near_duplicate_pairs": 2688,
+  "unique_records_in_clusters": 5097,
+  "cluster_count": 2494,
+  "largest_cluster_size": 6,
+  "potential_removals_if_one_record_kept_per_cluster": 2603,
+  "cluster_size_distribution": {
+    "2": 2410,
+    "3": 64,
+    "4": 16,
+    "5": 3,
+    "6": 1
+  }
+}
