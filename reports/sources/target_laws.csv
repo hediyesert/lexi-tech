@@ -1,6 +1,6 @@
 law_number,law_name,legal_area,status
-2709,Turkiye Cumhuriyeti Anayasasi,constitutional_law,pending
-4721,Turk Medeni Kanunu,civil_law,pending
+2709,Turkiye Cumhuriyeti Anayasasi,constitutional_law,preprocessed_pending_review
+4721,Turk Medeni Kanunu,civil_law,preprocessed_pending_review
 6098,Turk Borclar Kanunu,obligations_law,pending
 5237,Turk Ceza Kanunu,criminal_law,pending
 5271,Ceza Muhakemesi Kanunu,criminal_procedure,pending
