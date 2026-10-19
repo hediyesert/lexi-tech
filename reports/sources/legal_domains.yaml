@@ -1,0 +1,42 @@
+project: LexiTech TR
+
+domain: Turkish Law
+
+language: tr
+
+legal_areas:
+  - id: constitutional_law
+    name: Anayasa Hukuku
+
+  - id: civil_law
+    name: Medeni Hukuk
+
+  - id: obligations_law
+    name: Borçlar Hukuku
+
+  - id: criminal_law
+    name: Ceza Hukuku
+
+  - id: criminal_procedure
+    name: Ceza Muhakemesi Hukuku
+
+  - id: labor_law
+    name: İş Hukuku
+
+  - id: commercial_law
+    name: Ticaret Hukuku
+
+  - id: consumer_law
+    name: Tüketici Hukuku
+
+  - id: administrative_law
+    name: İdare Hukuku
+
+  - id: tax_law
+    name: Vergi Hukuku
+
+  - id: enforcement_bankruptcy
+    name: İcra ve İflas Hukuku
+
+  - id: social_security
+    name: Sosyal Güvenlik Hukuku

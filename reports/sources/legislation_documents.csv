@@ -1,0 +1,2 @@
+document_id,law_number,law_name,legal_area,source_name,source_url,document_url,access_date,raw_path,raw_sha256,cleaned_path,cleaned_sha256,rights_status,quality_status
+constitution_2709,2709,Türkiye Cumhuriyeti Anayasası,constitutional_law,mevzuat_bilgi_sistemi,https://www.mevzuat.gov.tr/,,2026-10-19,data/raw/legislation/anayasa.pdf,bed68c2e0bdec7fa7f04b93e95ce64a2b2dd056a19c86f6c85ffbdc8648f6633,data/cleaned/legislation/anayasa_spacing_fixed.txt,8b717af60ca714404858f3efe6aa3076ba6fb9cba14f8fc7bb30c244f8228a1c,incelenecek,otomatik_temizlik_yapildi_insan_kontrolu_bekliyor

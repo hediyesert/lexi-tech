@@ -1,0 +1,2 @@
+bed68c2e0bdec7fa7f04b93e95ce64a2b2dd056a19c86f6c85ffbdc8648f6633  data/raw/legislation/anayasa.pdf
+8b717af60ca714404858f3efe6aa3076ba6fb9cba14f8fc7bb30c244f8228a1c  data/cleaned/legislation/anayasa_spacing_fixed.txt
