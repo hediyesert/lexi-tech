@@ -1,0 +1,2 @@
+da3d03c0b2e47c2d31facef500b997438909b52c95a9fda075bde5fd9803eade  data/raw/legislation/medeni_kanun.pdf
+166ee4b8488572407341cbedb77c2994c5c9eb62d4e01c2d1707ac46b6283b4c  data/cleaned/legislation/medeni_kanun_spacing_fixed.txt
