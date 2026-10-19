@@ -1,0 +1,2 @@
+959bb8e3eacd52c6928d4c26635978f5062a3afd19ac324d4ed2d90e6abbd358  data/raw/legislation/ceza_kanunu.pdf
+15c1632f253602085382a803468da9cde8b55b03acdf6af704f9f500b7247b7e  data/cleaned/legislation/ceza_kanunu_spacing_fixed.txt
