@@ -1,0 +1,2 @@
+62224ff6a6176a60718a5afe19dc091b8fc19e180c136087493955442b612137  data/raw/legislation/borclar_kanunu.pdf
+d9514cefd284d4780b4c33bd883eb26738ac3cf10102f99c373a6f7518324956  data/cleaned/legislation/borclar_kanunu_spacing_fixed.txt
