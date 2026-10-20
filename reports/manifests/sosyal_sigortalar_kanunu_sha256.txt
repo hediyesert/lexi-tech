@@ -1,0 +1,2 @@
+c8a55346bdd4741a30a067442256afe126e4d587c84638d9209123e0f5be5033  data/raw/legislation/sosyal_sigortalar_kanunu.pdf
+fb39b25cfe2ca8dc6b0bb65a49123a22defdfef53f4ee1c3e6777718526a63d4  data/cleaned/legislation/sosyal_sigortalar_kanunu_sh_fixed.txt
