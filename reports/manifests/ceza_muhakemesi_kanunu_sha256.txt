@@ -1,0 +1,2 @@
+09c39ff86d2209474a83d52e9ab0fb1537283f5863489f134b6ad44f109507b0  data/raw/legislation/ceza_muhakemesi_kanunu.pdf
+df8669c9dcef00033364e8197f2b40d69be49a959ae3080370705f250c51fe42  data/cleaned/legislation/ceza_muhakemesi_kanunu_spacing_fixed.txt

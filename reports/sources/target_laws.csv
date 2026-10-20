@@ -3,7 +3,7 @@ law_number,law_name,legal_area,status
 4721,Turk Medeni Kanunu,civil_law,preprocessed_pending_review
 6098,Turk Borclar Kanunu,obligations_law,preprocessed_pending_review
 5237,Turk Ceza Kanunu,criminal_law,preprocessed_pending_review
-5271,Ceza Muhakemesi Kanunu,criminal_procedure,pending
+5271,Ceza Muhakemesi Kanunu,criminal_procedure,preprocessed_pending_review
 4857,Is Kanunu,labor_law,pending
 6102,Turk Ticaret Kanunu,commercial_law,pending
 6502,Tuketicinin Korunmasi Hakkinda Kanun,consumer_law,pending
