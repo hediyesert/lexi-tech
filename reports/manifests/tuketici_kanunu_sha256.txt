@@ -1,0 +1,2 @@
+808431359269564ed6be6e46a62f776d208adafa7f83d4af89ba185f71c58a0c  data/raw/legislation/tuketici_kanunu.pdf
+200d911fcfb9c9f479f9f368e2b3ca5b6537715611bdde8239f678954e0b09de  data/cleaned/legislation/tuketici_kanunu_spacing_fixed.txt
