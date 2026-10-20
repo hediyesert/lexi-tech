@@ -1,0 +1,2 @@
+8cf60612b6ea8670a405e44c12629a6bb27505e01d69c46f338dbf66b21e9af3  data/raw/legislation/vergi_usul_kanunu.pdf
+9c0f9937d82ea50720dc27b0ced38e2af2cce9376f8bf61e8987c6c32715e2d5  data/cleaned/legislation/vergi_usul_kanunu_spacing_fixed.txt

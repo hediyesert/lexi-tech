@@ -12,7 +12,7 @@ clean_lines = []
 removed_pages = []
 i = 0
 
-date_pattern = r"\d{2}\.\d{2}\.\d{4}\s+\d{2}:\d{2}"
+date_pattern = r"\d{2}\.\d{2}\.\d{4}\s+\d{2}:\d{2}(?:\d{4})?"
 page_pattern = r"^Sayfa\s+(\d+)\s*/\s*(\d+)"
 
 while i < len(lines):
