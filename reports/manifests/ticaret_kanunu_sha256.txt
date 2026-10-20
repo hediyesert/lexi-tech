@@ -1,0 +1,2 @@
+fce2083a96b448ce7fcf7678013727271dd2195ed603a77c96976be9f616cd28  data/raw/legislation/ticaret_kanunu.pdf
+a255278a83b51c7f3465ad8ceacd3ac6968ab720874fb941a92a168b7a375fa8  data/cleaned/legislation/ticaret_kanunu_spacing_fixed.txt
