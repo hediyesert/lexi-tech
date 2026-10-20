@@ -1,0 +1,2 @@
+9f80918727d96b1bac2ee89601f1b92512157226651d12217f7a11299d8d0bea  data/raw/legislation/is_kanunu.pdf
+a86e17c8f284e4e050107964c2e0afd0eef47929be1add27f5a89aaaf548668d  data/cleaned/legislation/is_kanunu_spacing_fixed.txt
