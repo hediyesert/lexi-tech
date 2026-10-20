@@ -1,0 +1,2 @@
+64f7ad0afb5e426dddb88e395c69ea9cc72b9a3cfbd5e05ae4ea8cc6a5532887  data/raw/legislation/idari_yargilama_kanunu.pdf
+50526caad526538d953b6e1ee1dbdb3433d0609d5d27d960bdcdfd266b7255f1  data/cleaned/legislation/idari_yargilama_kanunu_spacing_fixed.txt

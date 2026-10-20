@@ -7,7 +7,7 @@ law_number,law_name,legal_area,status
 4857,Is Kanunu,labor_law,preprocessed_pending_review
 6102,Turk Ticaret Kanunu,commercial_law,preprocessed_pending_review
 6502,Tuketicinin Korunmasi Hakkinda Kanun,consumer_law,preprocessed_pending_review
-2577,Idari Yargilama Usulu Kanunu,administrative_law,pending
+2577,Idari Yargilama Usulu Kanunu,administrative_law,preprocessed_pending_review
 213,Vergi Usul Kanunu,tax_law,pending
 2004,Icra ve Iflas Kanunu,enforcement_bankruptcy,pending
 5510,Sosyal Sigortalar ve Genel Saglik Sigortasi Kanunu,social_security,pending
