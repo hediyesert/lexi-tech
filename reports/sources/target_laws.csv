@@ -9,5 +9,5 @@ law_number,law_name,legal_area,status
 6502,Tuketicinin Korunmasi Hakkinda Kanun,consumer_law,preprocessed_pending_review
 2577,Idari Yargilama Usulu Kanunu,administrative_law,preprocessed_pending_review
 213,Vergi Usul Kanunu,tax_law,preprocessed_pending_review
-2004,Icra ve Iflas Kanunu,enforcement_bankruptcy,pending
+2004,Icra ve Iflas Kanunu,enforcement_bankruptcy,preprocessed_pending_review
 5510,Sosyal Sigortalar ve Genel Saglik Sigortasi Kanunu,social_security,pending

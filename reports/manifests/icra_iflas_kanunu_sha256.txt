@@ -1,0 +1,2 @@
+26f263bc75a428760f65bae5668aba1719061b78acad31001ddd457c07c34244  data/raw/legislation/icra_iflas_kanunu.pdf
+a067d5712c2c82648094a6c11d444295e5c526e3c7c08be2b64ee8066fd2eeb5  data/cleaned/legislation/icra_iflas_kanunu_spacing_fixed.txt
