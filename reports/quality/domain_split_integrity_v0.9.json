@@ -1,0 +1,21 @@
+{
+  "source_file": "data/final/domain_corpus_v0.9_tokenized.jsonl",
+  "split_folder": "data/final/domain_v0.9",
+  "original_documents": 12,
+  "split_documents": 12,
+  "original_tokens": 1655887,
+  "split_tokens": 1655887,
+  "document_counts": {
+    "train": 10,
+    "validation": 1,
+    "test": 1
+  },
+  "token_counts": {
+    "train": 1480893,
+    "validation": 71041,
+    "test": 103953
+  },
+  "error_count": 0,
+  "errors": [],
+  "status": "PASS"
+}

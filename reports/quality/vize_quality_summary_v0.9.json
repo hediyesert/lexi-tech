@@ -1,0 +1,43 @@
+{
+  "version": "v0.9",
+  "date": "2026-10-27",
+  "domain": {
+    "documents": 12,
+    "tokens": 1655887,
+    "characters": 4471279
+  },
+  "instruction": {
+    "total": 124510,
+    "splits": {
+      "train": 111782,
+      "validation": 6397,
+      "test": 6331
+    },
+    "not_training_approved": 124510,
+    "rights_pending": 124510
+  },
+  "manual_review": {
+    "manual_review_required": 1,
+    "provisional_accept": 1,
+    "pending": 198
+  },
+  "source_entries": 22,
+  "source_types": {
+    "official_legislation": 12,
+    "third_party_qa_dataset": 2,
+    "reported_upstream_website": 8
+  },
+  "checks": {
+    "domain_document_count_12": true,
+    "instruction_total_124510": true,
+    "manual_sample_200": true,
+    "split_integrity_pass": true,
+    "leakage_fix_pass": true,
+    "cross_split_documents_zero": true,
+    "cross_split_normalized_questions_zero": true,
+    "near_pair_reconciliation": true,
+    "all_instruction_training_unapproved": true,
+    "all_instruction_rights_pending": true
+  },
+  "status": "provisional_quality_report"
+}

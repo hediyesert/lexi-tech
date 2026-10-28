@@ -54,3 +54,11 @@ data/deduplicated/*
 # Generated near-duplicate reports
 reports/deduplication/lsh_candidate_pairs.tsv
 reports/deduplication/near_duplicate_candidates.jsonl
+
+# LexiTech TR - local data and review files
+/data/interim/
+/*.md.backup
+/.gitignore.backup
+/reports/quality/instruction_manual_review_200_v0.9.csv
+/reports/quality/instruction_manual_review_200_v0.9_backup.csv
+/reports/quality/instruction_reference_mismatches_v0.9.csv

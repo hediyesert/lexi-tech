@@ -1,0 +1,79 @@
+{
+  "status": "PASS",
+  "dataset_version": "v0.9",
+  "training_approved": false,
+  "counts": {
+    "source_quarantine": 960,
+    "train": 116209,
+    "same_question_within_split": 2529,
+    "reference_quarantine": 933,
+    "validation": 6533,
+    "test": 6410
+  },
+  "law_distribution": {
+    "train": {
+      "6098": 9209,
+      "4721": 12626,
+      "5237": 48763,
+      "5271": 28476,
+      "2004": 3347,
+      "213": 874,
+      "2709": 2110,
+      "2577": 4660,
+      "6102": 1234,
+      "6502": 339,
+      "4857": 2931,
+      "5510": 1640
+    },
+    "validation": {
+      "5271": 2131,
+      "5237": 3033,
+      "2709": 104,
+      "4721": 409,
+      "2577": 292,
+      "6098": 254,
+      "6102": 54,
+      "5510": 18,
+      "2004": 118,
+      "213": 55,
+      "4857": 62,
+      "6502": 3
+    },
+    "test": {
+      "5237": 4290,
+      "5271": 1371,
+      "2709": 122,
+      "4721": 183,
+      "2577": 152,
+      "6102": 24,
+      "5510": 8,
+      "2004": 39,
+      "6098": 128,
+      "6502": 3,
+      "213": 89,
+      "4857": 1
+    }
+  },
+  "source_distribution": {
+    "train": {
+      "sinanelms/hukukisorular": 116209
+    },
+    "validation": {
+      "sinanelms/hukukisorular": 6533
+    },
+    "test": {
+      "sinanelms/hukukisorular": 6410
+    }
+  },
+  "distinct_source_documents": 286,
+  "distinct_normalized_questions": 126623,
+  "integrity_error_count": 0,
+  "errors": [],
+  "limitations": [
+    "Hukuki doğruluk henüz onaylanmadı.",
+    "Kullanım hakları ve lisanslar inceleniyor.",
+    "Yakın tekrarlar arasında sızıntı olabilir.",
+    "Madde numarası varlığı doğruluk kanıtı değildir.",
+    "Kaynak belge adları resmi kanun belgeleri değildir."
+  ]
+}

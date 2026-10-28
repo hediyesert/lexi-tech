@@ -1,0 +1,51 @@
+{
+  "original": {
+    "counts": {
+      "chunks": 980,
+      "main_law_boundaries": 866,
+      "article_heading": 799,
+      "possible_mid_sentence": 52,
+      "possible_sentence_end": 15,
+      "ends_with_legal_note": 8,
+      "starts_with_legal_note": 3
+    },
+    "integrity_error_count": 0,
+    "integrity_errors": [],
+    "word_break_examples": []
+  },
+  "sentence_aware": {
+    "counts": {
+      "chunks": 983,
+      "main_law_boundaries": 869,
+      "article_heading": 799,
+      "possible_sentence_end": 44,
+      "possible_mid_sentence": 26,
+      "ends_with_legal_note": 26,
+      "starts_with_legal_note": 3,
+      "inside_word": 1
+    },
+    "integrity_error_count": 0,
+    "integrity_errors": [],
+    "word_break_examples": [
+      {
+        "law": "5510",
+        "before": "şer aylık dönemler hâlinde azami otuz\naltı eşit taksitt",
+        "after": "e, bu madde ile bu maddeyi ihdas eden Kanunun 73 üncü m"
+      }
+    ]
+  },
+  "legal_aware": {
+    "counts": {
+      "chunks": 988,
+      "main_law_boundaries": 874,
+      "article_heading": 799,
+      "possible_sentence_end": 43,
+      "possible_mid_sentence": 32,
+      "ends_with_legal_note": 13,
+      "starts_with_legal_note": 20
+    },
+    "integrity_error_count": 0,
+    "integrity_errors": [],
+    "word_break_examples": []
+  }
+}

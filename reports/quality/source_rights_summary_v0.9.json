@@ -1,0 +1,23 @@
+{
+  "version": "v0.9",
+  "audit_date": "2026-10-27",
+  "total_source_entries": 22,
+  "source_types": {
+    "official_legislation": 12,
+    "third_party_qa_dataset": 2,
+    "reported_upstream_website": 8
+  },
+  "source_rights_approved_count": 0,
+  "training_approved_count": 0,
+  "evidence_urls": [
+    "https://huggingface.co/datasets/sinanelms/hukukisorular",
+    "https://huggingface.co/datasets/OrionCAF/turkish_law_qa_dataset"
+  ],
+  "important_notes": [
+    "Yayinci lisans beyani altta yatan tum kaynak haklarini otomatik kanitlamaz.",
+    "sinanelms icin veri seti lisansi net degil.",
+    "Resmi mevzuat metinleri icin guncellik ve dagitim kosullari ayrica incelenmeli.",
+    "Kaynak sitelerin tek tek izinleri bu adimda kontrol edilmedi.",
+    "Hicbir veri setine egitim onayi verilmedi."
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "document_count": 12,
+  "total_chunks": 980,
+  "split_counts": {
+    "train": 881,
+    "validation": 40,
+    "test": 59
+  },
+  "section_counts": {
+    "main_law": 878,
+    "unincorporated": 16,
+    "amendment_table": 86
+  },
+  "manual_review_pending": 980,
+  "max_allowed_tokens": 2048,
+  "error_count": 0,
+  "errors": []
+}

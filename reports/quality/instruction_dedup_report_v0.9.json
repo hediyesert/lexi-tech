@@ -1,0 +1,30 @@
+{
+  "version": "v0.9",
+  "status": "provisional_not_training_approved",
+  "original_records": 129152,
+  "unique_questions": 126623,
+  "alternative_answer_groups": 2108,
+  "identical_answer_groups": 7,
+  "counts": {
+    "kept": 124515,
+    "alternative_answer_records": 4630,
+    "identical_answer_duplicates_skipped": 7
+  },
+  "kept_per_split": {
+    "train": 111782,
+    "validation": 6401,
+    "test": 6332
+  },
+  "original_per_split": {
+    "train": 116209,
+    "validation": 6533,
+    "test": 6410
+  },
+  "limitations": [
+    "Farklı cevaplar mutlaka hukuken çelişkili değildir.",
+    "Tek cevaplı kayıtların hukuki doğruluğu onaylanmadı.",
+    "Yakın anlamlı sorular ayrıca incelenmelidir.",
+    "Kaynak ve lisans incelemesi tamamlanmadı.",
+    "Split dağılımının hukuk alanlarına göre dengesizliği sürüyor."
+  ]
+}

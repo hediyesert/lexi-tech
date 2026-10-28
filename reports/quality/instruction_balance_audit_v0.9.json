@@ -1,0 +1,109 @@
+{
+  "version": "v0.9",
+  "status": "audit_only",
+  "split_counts": {
+    "train": 111782,
+    "validation": 6401,
+    "test": 6332
+  },
+  "law_distribution": {
+    "6098": {
+      "train": 8738,
+      "validation": 254,
+      "test": 128
+    },
+    "4721": {
+      "train": 11714,
+      "validation": 387,
+      "test": 183
+    },
+    "5237": {
+      "train": 47206,
+      "validation": 2961,
+      "test": 4222
+    },
+    "5271": {
+      "train": 27568,
+      "validation": 2099,
+      "test": 1365
+    },
+    "2004": {
+      "train": 3208,
+      "validation": 118,
+      "test": 39
+    },
+    "213": {
+      "train": 852,
+      "validation": 53,
+      "test": 89
+    },
+    "2709": {
+      "train": 2037,
+      "validation": 104,
+      "test": 118
+    },
+    "2577": {
+      "train": 4509,
+      "validation": 288,
+      "test": 152
+    },
+    "6102": {
+      "train": 1201,
+      "validation": 54,
+      "test": 24
+    },
+    "6502": {
+      "train": 326,
+      "validation": 3,
+      "test": 3
+    },
+    "4857": {
+      "train": 2843,
+      "validation": 62,
+      "test": 1
+    },
+    "5510": {
+      "train": 1580,
+      "validation": 18,
+      "test": 8
+    }
+  },
+  "source_document_count": 286,
+  "cross_split_document_count": 0,
+  "cross_split_punctuation_normalized_questions": 5,
+  "cross_split_question_examples": [
+    "cmk madde 267 ye göre hangi kararlara karşı itiraz yoluna gidilebilir",
+    "cmk m 100 4 e göre hangi suçlarda tutuklama kararı verilemez",
+    "tck m 299 uyarınca cumhurbaşkanına hakaret suçundan kovuşturma yapılması hangi şarta bağlıdır",
+    "tck madde 22 3 e göre bilinçli taksir nedir ve cezası nasıl etkilenir",
+    "tck m 81 de düzenlenen kasten öldürme suçunun temel şeklinin cezası nedir"
+  ],
+  "weakly_represented_laws": [
+    {
+      "law_number": "4857",
+      "validation": 62,
+      "test": 1
+    },
+    {
+      "law_number": "5510",
+      "validation": 18,
+      "test": 8
+    },
+    {
+      "law_number": "6102",
+      "validation": 54,
+      "test": 24
+    },
+    {
+      "law_number": "6502",
+      "validation": 3,
+      "test": 3
+    }
+  ],
+  "limitations": [
+    "Bu kontrol anlamsal yakın tekrarları tespit etmez.",
+    "Düşük örnek sayısı tek başına veri hatası değildir.",
+    "Kaynak doğruluğu ve lisans durumu onaylanmadı.",
+    "Hukuki doğruluk değerlendirmesi tamamlanmadı."
+  ]
+}
