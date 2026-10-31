@@ -34,7 +34,7 @@ denenemedi.
 ## İşleme adımları
 
 - **Extraction:** pypdf. 1.540 sayfa, 12 dokümanın 12'si başarılı. Taranmış sayfa yok, OCR gerekmedi.
-- **Cleaning:** Sayfa başlığı silme, NFC, kırık kelime ve harf aralığı onarımı (2.335 kelime), boşluk ve satır
+- **Cleaning:** Sayfa başlığı silme, NFC, kırık kelime ve harf aralığı onarımı (2.266 kelime), boşluk ve satır
   normalizasyonu. Boşluk dışı karakterin değişmediği hash ile doğrulanır. Kurallar:
   [reports/cleaning_rules.md](reports/cleaning_rules.md).
 - **Filtering:** Hiçbir kanun elenmedi. 86 değişiklik tablosu chunk'ı kanun hükmü olmadığı için eğitimden çıkarıldı.
@@ -54,9 +54,9 @@ JSONL. `domain_corpus_v1.0.jsonl` doküman düzeyindedir: `document_id`, `title`
 | Ölçüt | Değer |
 |---|---:|
 | Doküman | 12 |
-| Toplam kelime | 582.750 |
-| Toplam token | 1.595.752 |
-| Eğitime giren token | 1.439.916 |
+| Toplam kelime | 581.694 |
+| Toplam token | 1.595.233 |
+| Eğitime giren token | 1.439.417 |
 | Eğitim chunk'ı | 820 |
 | Medyan chunk | 1.902 token |
 | Türkçe chunk | %99,9 (820 chunk'ın 1'i otomatik tespitte farklı dil) |
@@ -81,7 +81,7 @@ danışmanla netleştirilmeli. Kişisel veri beklenmez, mevzuat metnidir.
 - 1,44 milyon eğitim tokenı CPT için küçüktür. Model alan dilini sınırlı ölçüde öğrenir.
 - Metne yapışık dipnot rakamları var (`Belirlenmesi2`), karakter değiştirmemek için silinmedi.
 - Tablolarda sütun yapısı kaybolmuştur.
-- Az sayıda kırık kelime kalmıştır (`Pa şa`, `yava şlatan`, `kalkmamı şsa`).
+- Az sayıda kırık kelime kalmıştır (`Pa şa`, `bro şür`).
 - Test yalnızca ceza hukuku, validation yalnızca anayasa hukukudur. Küme sonuçları genellenemez.
 - Bazı bölüm başlıkları önceki chunk'ın sonunda kalır.
 - Metinler Ekim 2026 tarihlidir, güncellik zamanla bozulur.

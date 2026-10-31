@@ -31,6 +31,7 @@ Asistan turu temizleme düzeltilmeden önceki 150 chunk üzerindedir (`qc_domain
 | Hata | Sonuç |
 |---|---|
 | Harf aralıklı metin, kopuk baş harf (`B u K a n u n`, `Y aşlılığı`) | Düzeltildi: `join_fragments`, `collapse_letter_spacing` |
+| Kısmi harf aralığı (`p a r ç a l a r a`, `olunmamı şsa`) | Düzeltildi: `join_impossible_onset` ve genişletilmiş `collapse_letter_spacing` |
 | Boşluklu işaret (`( 1 )`, `IV .`) | Düzeltildi: `normalize_whitespace` |
 | Metne yapışık dipnot rakamı (`Belirlenmesi2`) | Düzeltilmedi. Rakam silmek karakter değiştirmektir; bilinen sorun |
 | Tablo yapısının kaybı | Düzeltilmedi; bilinen sorun |
@@ -51,10 +52,23 @@ Görev türü uyumu: 54/60.
 
 | Bulgu | Eklenen kural | Elenen kayıt |
 |---|---|---|
-| Cevapta site adresi | `source_artifact` | 62102 |
+| Cevapta site adresi | `source_artifact` | 96321 |
 | Soruda karar numarası (YCGK) | `unverifiable_case_law` genişletildi | sayıma dahil |
 | LLM notu (`metindeki`, `sehven`) | `context_dependent` genişletildi | sayıma dahil |
 | `nedeni`, `sebebi` görev türünü yanıltıyor | `neden_sonuc` kuralı daraltıldı | yeniden sınıflandırıldı |
+
+## Instruction Dataset: ikinci tur sonuçları
+
+200 rastgele örneğin 170'i okundu. Kısa maddelerde tam metin, uzun maddelerde cevaba en yakın satırlar karşılaştırıldı, 750 karakteri aşan cevapların sonu her zaman görülmedi. Kural ve şablon örnekleri tek tek okunmadı. Örneklerin bir bölümü önceki yapımdan geldiği için aşağıdaki sayılar temizlik sırasındaki durumu gösterir, son setin hata oranı değildir. Son yapımda örnekleme giren 14 kayıt okunmadı.
+
+| Sonuç | Kayıt |
+|---|---|
+| consistent_with_source | 153 |
+| rule_checked | 30 |
+| needs_legal_review | 10 |
+| reject | 7 |
+
+Reddedilen kayıtlar `qc_rejected_ids_v1.0.txt` dosyasındadır. Bulunan ve kurala çevrilen hatalar: ekli süre ifadeleri (`iki yıldan beş yıla`) kontrol dışı kalıyordu; `(Kaynak: gaiplik-nedir.html)` izleri; Terörle Mücadele Kanunu'nun `TMK` kısaltmasıyla Medeni Kanun sanılması; Tebligat Kanunu atıflarının İİK maddesi sanılması.
 
 ## Otomatik kontroller
 

@@ -5,9 +5,9 @@
     "extraction_failed": 0,
     "pages": 1540,
     "final_documents": 12,
-    "words": 582750,
-    "tokens": 1595752,
-    "training_tokens": 1439916,
+    "words": 581694,
+    "tokens": 1595233,
+    "training_tokens": 1439417,
     "training_chunks": 820,
     "chunks_by_split": {
       "train": 738,
@@ -18,7 +18,7 @@
       "amendment_table": 86
     },
     "turkish_chunk_share": 0.998780487804878,
-    "spaced_words_repaired": 2335
+    "spaced_words_repaired": 2266
   },
   "instruction": {
     "raw_records": 378903,
@@ -29,7 +29,7 @@
     "cleaned": 378902,
     "exact_unique": 308009,
     "exact_duplicates": 70893,
-    "after_kb_filter": 31962,
+    "after_kb_filter": 28866,
     "final_examples": 4000,
     "by_split": {
       "train": 3568,
@@ -37,44 +37,44 @@
       "test": 216
     },
     "by_task": {
-      "usul_sure": 800,
-      "kosul_unsur": 797,
-      "tanim_aciklama": 622,
+      "usul_sure": 798,
+      "kosul_unsur": 794,
+      "tanim_aciklama": 650,
       "madde_bulma": 351,
-      "hukuki_sonuc": 338,
-      "karsilastirma": 278,
+      "hukuki_sonuc": 335,
+      "karsilastirma": 275,
       "bilgi_yetersizligi": 229,
-      "olay_uygulama": 219,
-      "yaptirim": 194,
+      "olay_uygulama": 207,
+      "yaptirim": 189,
       "neden_sonuc": 90,
       "alan_disi": 42,
       "madde_aciklama": 40
     },
     "by_origin": {
-      "sinanelms/hukukisorular": 3314,
+      "sinanelms/hukukisorular": 3316,
       "mevzuat": 351,
       "lexitech": 271,
-      "OrionCAF/turkish_law_qa_dataset": 64
+      "OrionCAF/turkish_law_qa_dataset": 62
     },
     "by_method": {
-      "llm_uretimi_kaynak_veri_seti": 3314,
+      "llm_uretimi_kaynak_veri_seti": 3316,
       "kural_tabanli_kanun_metninden": 459,
       "elle_yazilan_sablon": 163,
-      "kaynak_veri_seti_yontem_bilinmiyor": 64
+      "kaynak_veri_seti_yontem_bilinmiyor": 62
     },
     "by_law": {
-      "5237": 627,
-      "5271": 459,
-      "6098": 459,
-      "4721": 445,
-      "2004": 309,
-      "4857": 283,
+      "5237": 684,
+      "5271": 472,
+      "6098": 470,
+      "4721": 455,
+      "2004": 305,
+      "4857": 261,
       "5510": 260,
-      "6102": 236,
-      "6502": 209,
-      "2577": 201,
-      "213": 142,
-      "2709": 99
+      "6102": 211,
+      "6502": 197,
+      "2577": 193,
+      "213": 127,
+      "2709": 94
     }
   }
 }

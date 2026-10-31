@@ -12,7 +12,7 @@ Mevzuat kuralları `scripts/03b_clean_legislation.py`, soru-cevap kuralları `sc
 | Unicode NFC | Karakter varyantlarını tek biçime çeker; NFKC seçilmedi | NFKC `²` gibi işaretleri rakama çevirir, hukuk metninde anlam değiştirebilir |
 | Özel karakter | NBSP boşluğa, `ﬁ`/`ﬂ` harflere döner | PDF yazı tipi kalıntısı |
 | Kırık kelime onarımı | `ki şi`, `Ba şbakan`, `b aşlangıcı` birleştirilir | PDF, `ş` ve `ğ` önüne boşluk ekliyor |
-| Harf aralığı onarımı | `B u K a n u n` sözlükle kelimelere bölünür | İki yana yaslı satırlarda harf aralığı |
+| Harf aralığı onarımı | `B u K a n u n` sözlükle kelimelere bölünür, sözlükte yoksa tek kelime kabul edilir | İki yana yaslı satırlarda harf aralığı |
 | Boşluk normalizasyonu | Satır içi boşluklar teke iner, boş satırlar kalkar | Hizalama boşlukları tokenizer'da gürültü yaratır |
 | Satır birleştirme | Küçük harfle başlayan satır öncekine bağlanır | PDF satır kırılması; madde ve bent başları korunur |
 
@@ -29,7 +29,7 @@ değişirse pipeline durur. Sayılar, madde numaraları ve kanun atıfları bu y
 | Etiket | Elenen kayıt | Gerekçe |
 |---|---|---|
 | `too_short` / `too_long` / `truncated_answer` | Eşikler `config.yaml` | Anlamlı cevap taşımayan veya kesilmiş kayıtlar |
-| `source_artifact` | Metinde site adresi | Kaynak sitenin izi ve üçüncü taraf içerik işareti |
+| `source_artifact` | Site adresi, `.html`, `(Kaynak: slug)` | Kaynak sitenin izi ve üçüncü taraf içerik işareti |
 | `personal_data` | E-posta, telefon, IBAN, geçerli TCKN | Kişisel veri corpus'a alınmaz |
 | `draft_legislation` | Taslak veya kanun teklifi | Yürürlükte olmayan metin |
 | `context_dependent` | `metinde`, `bu makale`, `yukarıdaki` | Soru tek başına anlaşılmıyor veya kaynak metne yaslanıyor |
@@ -39,7 +39,7 @@ değişirse pipeline durur. Sayılar, madde numaraları ve kanun atıfları bu y
 | `article_not_found` | Madde kanunda yok | Uydurma veya hatalı atıf riski |
 | `repealed_article` | Madde mülga | Güncel olmayan bilgi |
 | `low_evidence` | Kanıt skoru < 0,55 | Cevabın kelimeleri atıf yapılan maddede yeterince geçmiyor |
-| `numeric_mismatch` | Süre maddede yok | `30 gün` denip maddede `iki hafta` yazması gibi |
+| `numeric_mismatch` | Süre veya ceza aralığı maddede yok | `iki yıldan beş yıla` denip maddede `yedi yıla` yazması gibi |
 | `alternative_answer` | Aynı soruya farklı cevap | Kanıtı en güçlü cevap kalır |
 | `near_duplicate` | Soru Jaccard ≥ 0,85 | Kanıtı en güçlü kayıt kalır |
 

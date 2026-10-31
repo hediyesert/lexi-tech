@@ -41,6 +41,7 @@ def main():
     domain_round_one = read_csv(quality / "qc_domain_assistant_round1_v1.0.csv")
     instruction = read_csv(quality / "qc_instruction_sample_v1.0.csv")
     round_one = read_csv(quality / "qc_assistant_round1_v1.0.csv")
+    round_two = read_csv(quality / "qc_assistant_round2_v1.0.csv")
     filtering = json.loads((quality / "instruction_filter_v1.0.json").read_text(encoding="utf-8"))
 
     verdicts = Counter(r["assistant_verdict"] for r in round_one)
@@ -83,6 +84,7 @@ def main():
         "| Hata | Sonuç |",
         "|---|---|",
         "| Harf aralıklı metin, kopuk baş harf (`B u K a n u n`, `Y aşlılığı`) | Düzeltildi: `join_fragments`, `collapse_letter_spacing` |",
+        "| Kısmi harf aralığı (`p a r ç a l a r a`, `olunmamı şsa`) | Düzeltildi: `join_impossible_onset` ve genişletilmiş `collapse_letter_spacing` |",
         "| Boşluklu işaret (`( 1 )`, `IV .`) | Düzeltildi: `normalize_whitespace` |",
         "| Metne yapışık dipnot rakamı (`Belirlenmesi2`) | Düzeltilmedi. Rakam silmek karakter değiştirmektir; bilinen sorun |",
         "| Tablo yapısının kaybı | Düzeltilmedi; bilinen sorun |",
@@ -112,6 +114,21 @@ def main():
         ]
 
     lines += [
+        "",
+        "## Instruction Dataset: ikinci tur sonuçları",
+        "",
+        "200 rastgele örneğin 170'i okundu. Kısa maddelerde tam metin, uzun maddelerde cevaba en yakın satırlar "
+        "karşılaştırıldı, 750 karakteri aşan cevapların sonu her zaman görülmedi. Kural ve şablon örnekleri tek tek "
+        "okunmadı. Örneklerin bir bölümü önceki yapımdan geldiği için aşağıdaki sayılar temizlik sırasındaki "
+        "durumu gösterir, son setin hata oranı değildir. Son yapımda örnekleme giren 14 kayıt okunmadı.",
+        "",
+        "| Sonuç | Kayıt |",
+        "|---|---|",
+        *[f"| {verdict} | {count} |" for verdict, count in Counter(r["assistant_verdict"] for r in round_two).most_common()],
+        "",
+        "Reddedilen kayıtlar `qc_rejected_ids_v1.0.txt` dosyasındadır. Bulunan ve kurala çevrilen hatalar: ekli süre "
+        "ifadeleri (`iki yıldan beş yıla`) kontrol dışı kalıyordu; `(Kaynak: gaiplik-nedir.html)` izleri; Terörle Mücadele "
+        "Kanunu'nun `TMK` kısaltmasıyla Medeni Kanun sanılması; Tebligat Kanunu atıflarının İİK maddesi sanılması.",
         "",
         "## Otomatik kontroller",
         "",

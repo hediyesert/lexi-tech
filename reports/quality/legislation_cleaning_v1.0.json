@@ -4,78 +4,78 @@
       "document_id": "constitution_2709",
       "law_number": "2709",
       "page_headers_removed": 67,
-      "spaced_s_words_joined": 124,
+      "spaced_s_words_joined": 122,
       "chars_before": 193913,
-      "chars_after": 192793,
+      "chars_after": 192781,
       "lines_before": 2933,
       "lines_after": 1467,
-      "text_sha256": "ce01e75f284797b901efac1df4e1d3183dbe411722505a9cdbc9373627f44574"
+      "text_sha256": "bc4223f49225db14e666b724bc0853688c24605dc70882d61f0fb5a51ac4e84d"
     },
     {
       "document_id": "civil_law_4721",
       "law_number": "4721",
       "page_headers_removed": 164,
-      "spaced_s_words_joined": 182,
+      "spaced_s_words_joined": 164,
       "chars_before": 388119,
-      "chars_after": 383987,
+      "chars_after": 383807,
       "lines_before": 7495,
       "lines_after": 4063,
-      "text_sha256": "03fee00bb1ea0b4308aa198da4d4ae8a03320956155f6359bc1a36d69d7c463f"
+      "text_sha256": "f1243aae4034b27a46305a1b7408814846216fdf4639bb18d4ba6f83c30bd8e7"
     },
     {
       "document_id": "obligations_law_6098",
       "law_number": "6098",
       "page_headers_removed": 113,
-      "spaced_s_words_joined": 173,
+      "spaced_s_words_joined": 164,
       "chars_before": 290462,
-      "chars_after": 288272,
+      "chars_after": 288169,
       "lines_before": 5106,
       "lines_after": 2459,
-      "text_sha256": "59d5c040dd42d013458a2b3777550fae86c6c153b48069d21f6be78be5e32ca7"
+      "text_sha256": "b864e1cbb82b31135c6ef84bbd8bf57ccfef5bc48b066718fbde441dd192b98a"
     },
     {
       "document_id": "criminal_law_5237",
       "law_number": "5237",
       "page_headers_removed": 99,
-      "spaced_s_words_joined": 162,
+      "spaced_s_words_joined": 157,
       "chars_before": 281727,
-      "chars_after": 280043,
+      "chars_after": 280019,
       "lines_before": 4435,
       "lines_after": 1922,
-      "text_sha256": "e960ff0075275c24262107554c2c94bafa01e926614b87605de2536d72aac2ad"
+      "text_sha256": "a31dcea0adbf39af1ad95d839d5f2d295113db42a798d930e2367c4315ed5715"
     },
     {
       "document_id": "criminal_procedure_5271",
       "law_number": "5271",
       "page_headers_removed": 118,
-      "spaced_s_words_joined": 183,
+      "spaced_s_words_joined": 180,
       "chars_before": 340853,
-      "chars_after": 338772,
+      "chars_after": 338723,
       "lines_before": 5252,
       "lines_after": 2503,
-      "text_sha256": "7aff7559d9d4dfc7f8000e7faaafe313dee318a3e8b7ab90571ef87617fc6993"
+      "text_sha256": "cd77099c4a5fa76be2c1ad963c4f8aeadc07f618b6a9b00bc7bc8b0f67801a23"
     },
     {
       "document_id": "labor_law_4857",
       "law_number": "4857",
       "page_headers_removed": 45,
-      "spaced_s_words_joined": 90,
+      "spaced_s_words_joined": 87,
       "chars_before": 141511,
-      "chars_after": 140561,
+      "chars_after": 140513,
       "lines_before": 2008,
       "lines_after": 826,
-      "text_sha256": "4eb89e8f2eb5260c4745227903f36c954296cd369ee55b78d829c6bfd9d59c16"
+      "text_sha256": "786e3b4655394d9d577a8932c4998249d45d217276cfd9478859ad31fcaef70a"
     },
     {
       "document_id": "commercial_law_6102",
       "law_number": "6102",
       "page_headers_removed": 339,
-      "spaced_s_words_joined": 442,
+      "spaced_s_words_joined": 430,
       "chars_before": 964272,
-      "chars_after": 958943,
+      "chars_after": 958718,
       "lines_before": 15376,
       "lines_after": 6743,
-      "text_sha256": "8e7100025fbca333085b6986f169e2340350bf51c5545931b015e98d5f47e165"
+      "text_sha256": "5950920585e6d8b091a5ac7a8b59b1548d1f539099f22466dcfe0fa591744753"
     },
     {
       "document_id": "consumer_law_6502",
@@ -83,32 +83,32 @@
       "page_headers_removed": 45,
       "spaced_s_words_joined": 86,
       "chars_before": 137928,
-      "chars_after": 137379,
+      "chars_after": 137362,
       "lines_before": 2006,
       "lines_after": 830,
-      "text_sha256": "81991b714c5db7a18b89e466ba0729cccf13c3bfe2f85ca207b8089a951c2d24"
+      "text_sha256": "962c68a77ebcd6005f44c3b045f2193d6f95e003046284197177b1dbdfcb8821"
     },
     {
       "document_id": "administrative_procedure_law_2577",
       "law_number": "2577",
       "page_headers_removed": 33,
-      "spaced_s_words_joined": 42,
+      "spaced_s_words_joined": 38,
       "chars_before": 99088,
-      "chars_after": 97736,
+      "chars_after": 97690,
       "lines_before": 1467,
       "lines_after": 683,
-      "text_sha256": "a1a2b75edddc7a2c27e5955045196a01b58b6359a55bff44f5623ad6187bd86e"
+      "text_sha256": "9f5af66478a2ca3873513bef7ec36e7c6829982a17031e40cf70a2dd148761f4"
     },
     {
       "document_id": "tax_procedure_law_213",
       "law_number": "213",
       "page_headers_removed": 170,
-      "spaced_s_words_joined": 269,
+      "spaced_s_words_joined": 266,
       "chars_before": 491269,
-      "chars_after": 489492,
+      "chars_after": 489430,
       "lines_before": 7680,
       "lines_after": 3692,
-      "text_sha256": "640eee14b24a022767f252e385ffe86a49f76619485a49fcc14628e0b55ccf80"
+      "text_sha256": "d6a909747bc406ec16b37bbd2e01bda7e2402a39ce937c89aeec53b5bbe6a6d0"
     },
     {
       "document_id": "enforcement_bankruptcy_law_2004",
@@ -116,21 +116,21 @@
       "page_headers_removed": 141,
       "spaced_s_words_joined": 175,
       "chars_before": 417566,
-      "chars_after": 416186,
+      "chars_after": 416069,
       "lines_before": 6343,
       "lines_after": 2981,
-      "text_sha256": "352a735b6915b9bf80f1a5e778b07ce682599cfb62fe46a9ff6765cf36e33347"
+      "text_sha256": "734ed5e5e3eb0c0dbfeb26316a743deaa72fbc5d3563fe73013d6beab71c5ba8"
     },
     {
       "document_id": "social_security_law_5510",
       "law_number": "5510",
       "page_headers_removed": 206,
-      "spaced_s_words_joined": 407,
+      "spaced_s_words_joined": 397,
       "chars_before": 722424,
-      "chars_after": 718427,
+      "chars_after": 718254,
       "lines_before": 9298,
       "lines_after": 3336,
-      "text_sha256": "8e77831cbfdddc8db4f1c8012aa166bc7003f6e81cc25f714902587db65bb910"
+      "text_sha256": "ed166709877c14317429044c0c44f995624f9a751bd0e9489025434d52d0a3fb"
     }
   ]
 }

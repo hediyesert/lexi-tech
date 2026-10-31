@@ -17,11 +17,11 @@ mevzuat ve yargı içtihatlarının kullanımını serbest bırakıyor. Bu hükm
 ve veri setini teslim edebilir miyiz? Mevzuat Bilgi Sistemi'nin kullanım koşullarının ayrıca kısıt getirip getirmediğini
 kontrol etmemiz gerekir mi?
 
-**2. `sinanelms/hukukisorular`.** Örneklerimizin 3.314'ü bu Hugging Face veri setinden geliyor. Veri setinin kartında lisans
+**2. `sinanelms/hukukisorular`.** Örneklerimizin 3.316'sı bu Hugging Face veri setinden geliyor. Veri setinin kartında lisans
 beyanı yok. Yayıncıya göre hukuk makalelerinden Gemini 2.5 Pro ile üretilmiş, kaynak olarak 8 hukuk sitesi bildirilmiş.
 Bu kayıtları akademik proje kapsamında kullanabilir miyiz? Yayıncıdan veya sitelerden izin istememiz gerekir mi?
 
-Kullanamazsak bu 3.314 örneğin yerine kanun metninden yeni örnekler üretmemiz gerekir. Geri kalan 686 örnek (kural
+Kullanamazsak bu 3.316 örneğin yerine kanun metninden yeni örnekler üretmemiz gerekir. Geri kalan 684 örnek (kural
 tabanlı, elle yazılmış ve Apache-2.0 beyanlı) bu karardan etkilenmez. Ancak bu, setin büyük bölümünü yeniden
 hazırlamak demektir ve vize takvimini etkiler.
 

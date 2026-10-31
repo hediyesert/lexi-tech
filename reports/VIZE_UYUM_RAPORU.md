@@ -18,7 +18,7 @@ kararı grup üyelerini bekliyor.
 | 4 | Preprocessing kodları | Hazır | `scripts/`, `tests/` |
 | 5 | Dataset Card | Hazır, isimler eksik | `DATASET_CARD.md`, `INSTRUCTION_CARD.md` |
 | 6 | İstatistik raporu | Hazır | `reports/statistics/statistics_report_v1.0.md` |
-| 7 | Kalite kontrol raporu | Kısmen. Asistan ön incelemesi var, insan incelemesi yok | `reports/quality/quality_control_report_v1.0.md` |
+| 7 | Kalite kontrol raporu | Kısmen. 200 örneklik asistan incelemesi var, insan incelemesi yok | `reports/quality/quality_control_report_v1.0.md` |
 | 8 | Git deposu | Commit edildi, uzak depo tanımlı değil | `vize-v1.0-rc1` branch'i |
 | 9 | Sunum | Taslak hazır, isimler eksik | [LexiTech TR Vize Sunumu](https://claude.ai/artifact/Q5pfnhG4dCVUjLAvrfLaxx) |
 
@@ -65,7 +65,7 @@ korundu: dosyalar v1.0 adını taşır, durum `1.0-rc1` kalır, `training_approv
 | 6 | Hangi verileri neden çıkardık? | Neden tablosu istatistik raporunda, her kayıt loglu |
 | 7 | Exact ve near duplicate? | SHA-256; soru metninde MinHash + Jaccard ≥ 0,85 |
 | 8 | Metadata? | `DATASET_CARD.md` ve `INSTRUCTION_CARD.md` Format bölümleri |
-| 9 | Kaç token, hangi alt konular? | 1.595.752 token, 12 hukuk alanı |
+| 9 | Kaç token, hangi alt konular? | 1.595.233 token, 12 hukuk alanı |
 | 10 | Dil dağılımı? | Domain %99,9 Türkçe; instruction cevaplarının tamamı Türkçe (otomatik tespit) |
 | 11 | Split ve leakage? | Domain doküman düzeyinde; instruction kaynak dosya ve madde düzeyinde ayrık, testle doğrulanıyor |
 | 12 | Manuel kalite kontrol? | **Eksik.** Asistan turu yapıldı, insan incelemesi bekliyor |
@@ -82,7 +82,7 @@ korundu: dosyalar v1.0 adını taşır, durum `1.0-rc1` kalır, `training_approv
 1. **İnsan kalite kontrolü.** `reports/quality/kalite_inceleme_v1.0.xlsx` dosyasında 200 instruction ve 150 domain
    örneği, kaynak metniyle yan yana duruyor. Sarı sütunları doldurun, sonra
    `python scripts/qc_review_sheet.py import` ve `python scripts/11_quality_report.py` çalıştırın.
-   Rehber bunu grup üyelerinden bekliyor, asistan yerine yapamaz.
+   Asistan görüşleri ayrı sütunlarda, şüpheli satırlar üstte. İnsan onayı yerine geçmez.
 2. **Kullanım hakkı.** `reports/advisor_questions.md` taslağını kendi adınızla danışmana gönderin.
 3. **Hukukçu görüşü.** En azından test kümesi örneklenmeli.
 4. **Literatür.** `reports/literature_review.md` taslak. Birincil kaynakları okuyup sayıları doğrulayın.
@@ -95,7 +95,7 @@ korundu: dosyalar v1.0 adını taşır, durum `1.0-rc1` kalır, `training_approv
 
 Bunlar vizede zorunlu değil, ancak proje hedefiyle arasındaki farkı gösterir.
 
-- **Yargı kararı yok.** 78.837 kayıt karar atfı nedeniyle elendi. Hedef için resmî karar kaynağından corpus gerekir.
+- **Yargı kararı yok.** 69.259 kayıt karar atfı nedeniyle elendi. Hedef için resmî karar kaynağından corpus gerekir.
 - **Corpus küçük.** 1,44M token, rehberin örnek ölçeğinin (65M) çok altında. Daha çok kanun ve karar metni eklenmeli.
 - **Tek kaynak bağımlılığı.** Kaynaklı örneklerin %98'i lisansı belirsiz tek veri setinden geliyor.
 - **Dilekçe ve özetleme görevi yok.**

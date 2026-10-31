@@ -7,15 +7,15 @@
     "test": 216
   },
   "by_task": {
-    "usul_sure": 800,
-    "kosul_unsur": 797,
-    "tanim_aciklama": 622,
+    "usul_sure": 798,
+    "kosul_unsur": 794,
+    "tanim_aciklama": 650,
     "madde_bulma": 351,
-    "hukuki_sonuc": 338,
-    "karsilastirma": 278,
+    "hukuki_sonuc": 335,
+    "karsilastirma": 275,
     "bilgi_yetersizligi": 229,
-    "olay_uygulama": 219,
-    "yaptirim": 194,
+    "olay_uygulama": 207,
+    "yaptirim": 189,
     "neden_sonuc": 90,
     "alan_disi": 42,
     "madde_aciklama": 40
@@ -32,23 +32,23 @@
       "test": 23
     },
     "hukuki_sonuc": {
-      "train": 307,
-      "test": 14,
-      "validation": 17
+      "train": 305,
+      "test": 16,
+      "validation": 14
     },
     "karsilastirma": {
-      "train": 247,
-      "validation": 19,
+      "train": 246,
+      "validation": 17,
       "test": 12
     },
     "kosul_unsur": {
       "train": 720,
-      "test": 39,
-      "validation": 38
+      "test": 34,
+      "validation": 40
     },
     "madde_aciklama": {
-      "train": 36,
-      "test": 3,
+      "train": 35,
+      "test": 4,
       "validation": 1
     },
     "madde_bulma": {
@@ -57,70 +57,70 @@
       "validation": 18
     },
     "neden_sonuc": {
-      "train": 78,
-      "test": 7,
+      "train": 79,
+      "test": 6,
       "validation": 5
     },
     "olay_uygulama": {
-      "train": 196,
-      "test": 14,
-      "validation": 9
+      "train": 184,
+      "validation": 11,
+      "test": 12
     },
     "tanim_aciklama": {
-      "train": 558,
-      "validation": 35,
-      "test": 29
+      "train": 577,
+      "validation": 38,
+      "test": 35
     },
     "usul_sure": {
       "train": 720,
-      "test": 40,
-      "validation": 40
+      "validation": 38,
+      "test": 40
     },
     "yaptirim": {
-      "validation": 5,
-      "train": 178,
-      "test": 11
+      "train": 174,
+      "test": 10,
+      "validation": 5
     }
   },
   "by_method": {
-    "llm_uretimi_kaynak_veri_seti": 3314,
+    "llm_uretimi_kaynak_veri_seti": 3316,
     "kural_tabanli_kanun_metninden": 459,
     "elle_yazilan_sablon": 163,
-    "kaynak_veri_seti_yontem_bilinmiyor": 64
+    "kaynak_veri_seti_yontem_bilinmiyor": 62
   },
   "by_origin": {
-    "sinanelms/hukukisorular": 3314,
+    "sinanelms/hukukisorular": 3316,
     "mevzuat": 351,
     "lexitech": 271,
-    "OrionCAF/turkish_law_qa_dataset": 64
+    "OrionCAF/turkish_law_qa_dataset": 62
   },
   "by_law": {
-    "5237": 627,
-    "5271": 459,
-    "6098": 459,
-    "4721": 445,
-    "2004": 309,
-    "4857": 283,
+    "5237": 684,
+    "5271": 472,
+    "6098": 470,
+    "4721": 455,
+    "2004": 305,
+    "4857": 261,
     "5510": 260,
-    "6102": 236,
-    "6502": 209,
-    "2577": 201,
-    "213": 142,
-    "2709": 99
+    "6102": 211,
+    "6502": 197,
+    "2577": 193,
+    "213": 127,
+    "2709": 94
   },
   "candidate_task_pool": {
-    "diger": 13766,
-    "kosul_unsur": 5319,
-    "usul_sure": 5279,
-    "tanim_aciklama": 3715,
-    "yaptirim": 1577,
-    "hukuki_sonuc": 804,
-    "karsilastirma": 786,
-    "olay_uygulama": 517,
-    "neden_sonuc": 152,
-    "madde_aciklama": 47
+    "diger": 12468,
+    "kosul_unsur": 4781,
+    "usul_sure": 4761,
+    "tanim_aciklama": 3457,
+    "yaptirim": 1315,
+    "karsilastirma": 714,
+    "hukuki_sonuc": 712,
+    "olay_uygulama": 470,
+    "neden_sonuc": 142,
+    "madde_aciklama": 46
   },
-  "dropped_for_split_conflict": 7571,
-  "rejected_after_quality_review": 4,
+  "dropped_for_split_conflict": 6589,
+  "rejected_after_quality_review": 11,
   "non_turkish_responses": 0
 }

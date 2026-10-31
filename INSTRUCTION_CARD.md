@@ -17,8 +17,8 @@ ayrılamıyordu. Otomatik üretilmiş büyük bir havuz yerine, kaynağa bağlan
 
 | Yöntem | Örnek | Açıklama |
 |---|---:|---|
-| `llm_uretimi_kaynak_veri_seti` | 3.314 | `sinanelms/hukukisorular`. Yayıncıya göre Gemini 2.5 Pro ile üretildi; prompt ve parametreler bilinmiyor |
-| `kaynak_veri_seti_yontem_bilinmiyor` | 64 | `OrionCAF/turkish_law_qa_dataset`. Üretim yöntemi belirsiz |
+| `llm_uretimi_kaynak_veri_seti` | 3.316 | `sinanelms/hukukisorular`. Yayıncıya göre Gemini 2.5 Pro ile üretildi; prompt ve parametreler bilinmiyor |
+| `kaynak_veri_seti_yontem_bilinmiyor` | 62 | `OrionCAF/turkish_law_qa_dataset`. Üretim yöntemi belirsiz |
 | `kural_tabanli_kanun_metninden` | 459 | Kanun metninden kuralla üretildi, LLM kullanılmadı |
 | `elle_yazilan_sablon` | 163 | Sınır davranışı için elle yazılmış şablonlar |
 
@@ -29,15 +29,15 @@ içindedir.
 
 | Görev türü | Örnek | Oran |
 |---|---:|---:|
-| Usul ve süre | 800 | %20,0 |
-| Koşul ve unsur | 797 | %19,9 |
-| Tanım ve açıklama | 622 | %15,6 |
+| Usul ve süre | 798 | %20,0 |
+| Koşul ve unsur | 794 | %19,9 |
+| Tanım ve açıklama | 650 | %16,3 |
 | Madde bulma | 351 | %8,8 |
-| Hukuki sonuç | 338 | %8,5 |
-| Karşılaştırma | 278 | %7,0 |
+| Hukuki sonuç | 335 | %8,4 |
+| Karşılaştırma | 275 | %6,9 |
 | Bilgi yetersizliği | 229 | %5,7 |
-| Olaya uygulama | 219 | %5,5 |
-| Yaptırım | 194 | %4,9 |
+| Olaya uygulama | 207 | %5,2 |
+| Yaptırım | 189 | %4,7 |
 | Neden-sonuç | 90 | %2,3 |
 | Alan dışı | 42 | %1,1 |
 | Madde açıklama | 40 | %1,0 |
@@ -53,7 +53,8 @@ Her kaynak kaydı `scripts/06_filter_instruction.py` ile kanun metnine bağlanı
 2. Madde kanunda yoksa, mülgaysa veya 12 kanun dışındaysa kayıt elenir.
 3. Yargı kararı atfı olan kayıt elenir, çünkü corpus'ta karar metni yok.
 4. Cevap kelimelerinin maddede geçme oranı ölçülür (kanıt skoru, eşik 0,55).
-5. Cevaptaki süreler maddede veya soruda yoksa kayıt elenir.
+5. Cevaptaki süreler ve ceza aralıkları maddede veya soruda yoksa kayıt elenir.
+6. Kaynak izi taşıyan kayıtlar (site adresi, `(Kaynak: dosya.html)`) elenir.
 
 Bu otomatik kontroldür. **Bir cevabın hukuken doğru olduğunu kanıtlamaz.** Skor kelime örtüşmesidir.
 
@@ -64,8 +65,8 @@ Bu otomatik kontroldür. **Bir cevabın hukuken doğru olduğunu kanıtlamaz.** 
 | Ham | 378.903 |
 | Temizleme sonrası | 378.902 |
 | Birebir tekrar sonrası | 308.009 |
-| Kanun metni filtresi sonrası | 31.962 |
-| Görev türü bilinen ve kümeler arası çakışmayan havuz | 10.625 |
+| Kanun metni filtresi sonrası | 28.866 |
+| Görev türü bilinen ve kümeler arası çakışmayan havuz | 9.803 |
 | Final (kaynaklı 3.378 + üretilen 622) | 4.000 |
 
 Neden bazında tablo: [reports/statistics/statistics_report_v1.0.md](reports/statistics/statistics_report_v1.0.md).
@@ -100,6 +101,9 @@ Elle yazılan şablonlarda aile (`family`) bazında ayrım yapıldı.
 - Şablon örnekleri tekrarlı kalıplar içerir.
 - Kişisel veri taraması kural tabanlıdır (e-posta, telefon, IBAN, TCKN); isim tespiti yapılmaz.
 - Görev türü etiketleri kural tabanlıdır, bağımsız insan doğrulaması yoktur.
+- Aynı konunun farklı sözcüklerle yazılmış soruları kalmıştır (örneğin `mahsup` soruları).
+- Asistan incelemesinde kanun metniyle çelişen kayıtlar bulundu, kalıntı hata olasılığı vardır. Hata oranı insan incelemesiyle ölçülmelidir.
+- Kanunun Ekim 2026 sürümüyle karşılaştırılır; önceki sürüme göre üretilmiş ve uyuşan cevaplar güncel kabul edilir.
 
 ## Lisans ve kullanım
 

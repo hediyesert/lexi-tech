@@ -425,3 +425,14 @@ kalanların metni değişmiş olabilirdi.
 
 Karar: İlk asistan turu `qc_domain_assistant_round1_v1.0.csv` olarak ayrıldı, insan incelemesi için güncel veriden yeni
 150 chunk çekildi. Excel dosyası cevabı kaynak maddeyle yan yana gösterir, `qc_review_sheet.py import` sonuçları geri alır.
+
+## 21. Asistan Ön İncelemesi, İkinci Tur (31.10.2026)
+
+200 instruction örneği kaynak maddeyle karşılaştırıldı, 150 domain chunk'ı tam metin deseniyle tarandı. Bu insan onayı değildir.
+
+- Ekli süreler sayı kontrolünden kaçıyordu: TCK m. 106/2 için `beş yıla` diyen eski cevap geçmişti.
+- 166 cevapta `(Kaynak: gaiplik-nedir.html)` izi vardı.
+- `TMK` kısaltması Terörle Mücadele Kanunu'nu Medeni Kanun'a bağlıyordu.
+- Domain chunk'larının yaklaşık onda birinde kısmi harf aralığı kalmıştı.
+
+Karar: Hepsi kurala çevrildi, 7 kayıt elle reddedildi, 10 kayıt hukukçu görüşüne bırakıldı. Son yapımda filtreden 28.866 aday kaldı.

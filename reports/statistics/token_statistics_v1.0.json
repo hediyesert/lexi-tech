@@ -2,43 +2,43 @@
   "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
   "domain_documents": {
     "count": 12,
-    "total": 1595752,
-    "min": 36456,
-    "median": 113315.0,
-    "mean": 132979.3,
-    "p95": 335040,
-    "max": 335040
+    "total": 1595233,
+    "min": 36421,
+    "median": 113291.5,
+    "mean": 132936.1,
+    "p95": 334956,
+    "max": 334956
   },
   "domain_training_chunks": {
     "count": 820,
-    "total": 1439916,
+    "total": 1439417,
     "min": 59,
     "median": 1902.5,
-    "mean": 1756.0,
-    "p95": 2038,
+    "mean": 1755.4,
+    "p95": 2037,
     "max": 2048
   },
   "domain_chunks_by_split": {
-    "train": 1295014,
-    "validation": 57414,
-    "test": 87488
+    "train": 1294534,
+    "validation": 57411,
+    "test": 87472
   },
   "instruction_questions": {
     "count": 4000,
-    "total": 159170,
+    "total": 158580,
     "min": 8,
     "median": 35.0,
-    "mean": 39.8,
+    "mean": 39.6,
     "p95": 79,
-    "max": 155
+    "max": 167
   },
   "instruction_responses": {
     "count": 4000,
-    "total": 458725,
+    "total": 450232,
     "min": 21,
-    "median": 97.0,
-    "mean": 114.7,
-    "p95": 267,
-    "max": 937
+    "median": 95.0,
+    "mean": 112.6,
+    "p95": 263,
+    "max": 849
   }
 }

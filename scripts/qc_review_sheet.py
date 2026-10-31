@@ -108,18 +108,28 @@ def export_sheet(config, output):
             parts.append(f"[{citation}]\n{index[law][key]['text']}")
         return "\n\n".join(parts)
 
+    priority = {"needs_legal_review": 0, "not_reviewed": 1, "rule_checked": 3}
+    samples = sorted(
+        read_rows(quality / "qc_instruction_sample_v1.0.csv"),
+        key=lambda r: priority.get(r["assistant_verdict"], 2),
+    )
     instruction = [
-        [r["id"], r["task_type"], r["source_articles"], r["instruction"], r["response"], source_text(r["source_articles"])]
-        for r in read_rows(quality / "qc_instruction_sample_v1.0.csv")
+        [r["id"], r["assistant_verdict"], r["assistant_note"], r["task_type"], r["source_articles"],
+         r["instruction"], r["response"], source_text(r["source_articles"])]
+        for r in samples
     ]
     domain = []
     missing = 0
-    for row in read_rows(quality / "qc_domain_sample_v1.0.csv"):
+    domain_rows = sorted(
+        read_rows(quality / "qc_domain_sample_v1.0.csv"),
+        key=lambda r: not r["assistant_note"],
+    )
+    for row in domain_rows:
         chunk = chunks.get(row["chunk_id"])
         if chunk is None:
             missing += 1
             continue
-        domain.append([row["chunk_id"], row["law_number"], chunk["title"], chunk["text"]])
+        domain.append([row["chunk_id"], row["assistant_note"], row["law_number"], chunk["title"], chunk["text"]])
 
     book = Workbook()
     guide = book.active
@@ -127,6 +137,7 @@ def export_sheet(config, output):
     for line in [
         "Her satırı okuyun, sarı sütunlara yes veya no yazın, İnceleyen sütununa adınızı yazın.",
         "Instruction: cevabı yandaki kaynak maddeyle karşılaştırın. Emin değilseniz no deyip Not'a yazın.",
+        "Asistan sütunları yalnızca öneridir. Şüpheli satırlar üsttedir. Kararı siz verirsiniz.",
         "Domain: metin okunabilir mi, kalıntı var mı diye bakın.",
         "Bitince dosyayı kaydedin, ardından: python scripts/qc_review_sheet.py import",
     ]:
@@ -136,14 +147,14 @@ def export_sheet(config, output):
     build_sheet(
         book,
         "Instruction",
-        [("ID", 11), ("Görev", 16), ("Madde", 14), ("Soru", 45), ("Cevap", 60), ("Kaynak madde metni", 70)],
+        [("ID", 11), ("Asistan görüşü", 18), ("Asistan notu", 30), ("Görev", 16), ("Madde", 14), ("Soru", 45), ("Cevap", 60), ("Kaynak madde metni", 70)],
         instruction,
         INSTRUCTION_CHECKS,
     )
     build_sheet(
         book,
         "Domain",
-        [("Chunk", 26), ("Kanun", 8), ("Başlık", 24), ("Metin", 100)],
+        [("Chunk", 26), ("Asistan notu", 30), ("Kanun", 8), ("Başlık", 24), ("Metin", 100)],
         domain,
         DOMAIN_CHECKS,
     )

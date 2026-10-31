@@ -133,7 +133,7 @@ Sayfa 2 / 45https://www.mevzuat.gov.tr/anasayfa/MevzuatF"hr"stDetayIframe?Mevzua
 (Ek fıkra: 1/7/2006-5538/18 md.) Kanuna veya Cumhurbaşkanlığı kararnamesine dayanılarak
 
 --- SONRA ---
-Asıl işverenin işçilerinin alt işveren tarafından işe alınarak çalıştırılmaya devam ettirilmesi suretiyle hakları kısıtlanamaz veya daha önce o işyerinde çalıştırılan kimse ile alt işveren ilişkisi kurulamaz. Aksi halde ve genel olarak asıl işveren alt işveren ilişkisinin muvazaalı işleme dayandığı kabul edilerek alt işverenin işçileri başlangıçtan itibaren asıl işverenin işçisi sayılarak işlem gö
+Asıl işverenin işçilerinin alt işveren tarafından işe alınarak çalıştırılmaya devam ettirilmesi suretiyle hakları kısıtlanamaz veya daha önce oişyerinde çalıştırılan kimse ile alt işveren ilişkisi kurulamaz. Aksi halde ve genel olarak asıl işveren alt işveren ilişkisinin muvazaalı işleme dayandığı kabul edilerek alt işverenin işçileri başlangıçtan itibaren asıl işverenin işçisi sayılarak işlem gör
 ```
 
 ## 12. İş Kanunu (4857): Kırık kelime ve satır birleştirme

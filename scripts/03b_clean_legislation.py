@@ -24,6 +24,7 @@ PAGE_DATE = re.compile(r"\d{2}\.\d{2}\.\d{4}\s+\d{2}:\d{2}(?:\d{4})?")
 PAGE_LINE = re.compile(r"^Sayfa\s+(\d+)\s*/\s*(\d+)")
 SPACED_G = re.compile(rf"[{WORD_CHARS}]{{2,}} [ğĞ][{WORD_CHARS}]+")
 LETTER_RUN = re.compile(rf"(?<![{WORD_CHARS}])[{WORD_CHARS}](?: [{WORD_CHARS}])+(?: [{WORD_CHARS}]+)?")
+IMPOSSIBLE_ONSET = re.compile(rf"(?<![{WORD_CHARS}])([{WORD_CHARS}]+) (ş[bcçdfgğhjklmnprsştvyz][{WORD_CHARS}]*)")
 WORD_PAIR = re.compile(rf"(?<![{WORD_CHARS}/(\d])([{WORD_CHARS}]+) ([{WORD_CHARS}]+)(?![{WORD_CHARS}])")
 SPACED_S = re.compile(rf"\b([{WORD_CHARS}]+) ([şŞğĞ][{WORD_CHARS}]*)")
 
@@ -112,10 +113,19 @@ def collapse_letter_spacing(text, vocabulary):
     """'B u K a n u n d a' biçimindeki harf aralıklı yazımı kelimelere döndürür."""
 
     def replace(match):
-        words_found = segment(match.group().replace(" ", ""), vocabulary)
-        return " ".join(words_found) if words_found else match.group()
+        letters = match.group().replace(" ", "")
+        words_found = segment(letters, vocabulary)
+        if words_found:
+            return " ".join(words_found)
+        # Sözlükte yoksa ('p a r ç a l a r a') tek kelime kabul edilir.
+        return letters if len(letters) <= 24 else match.group()
 
     return LETTER_RUN.sub(replace, text)
+
+
+def join_impossible_onset(text):
+    """Türkçe kelime 'şs', 'şt' gibi başlamaz: 'olunmamı şsa' tek kelimedir."""
+    return IMPOSSIBLE_ONSET.sub(lambda m: m.group(1) + m.group(2), text)
 
 
 def join_fragments(text, vocabulary):
@@ -206,6 +216,7 @@ def main():
     for doc, stage in stages.items():
         row = stage["row"]
         repaired = collapse_letter_spacing(stage["text"], vocabulary)
+        repaired = join_impossible_onset(repaired)
         repaired, fragments = join_fragments(repaired, vocabulary)
         joined_total[doc].update(fragments)
         final = normalize_whitespace(repaired)

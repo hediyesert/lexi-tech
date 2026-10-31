@@ -42,7 +42,7 @@ LAW_MENTION = [(law, re.compile(pattern)) for law, pattern in LAW_PATTERNS.items
 
 # Dizinde metni bulunmayan kanunlar: atıf doğrulanamaz.
 EXTERNAL_LAW = re.compile(
-    r"\b(?:HMK|CGTİK|KTK|KVKK|FSEK|AATUHK|TBB|HUMK|CMUK|BK|EBK|ETCK|ETTK|PVSK|SGK Kanunu)\b"
+    r"\b(?:HMK|CGTİK|KTK|KVKK|FSEK|AATUHK|TBB|HUMK|CMUK|BK|EBK|ETCK|ETTK|PVSK|SGK Kanunu|Tebligat Kanunu)\b"
     r"|\b(?!(?:2709|4721|6098|5237|5271|4857|6102|6502|2577|213|2004|5510)\s)\d{3,4}\s+sayılı"
 )
 ARTICLE_MENTION = re.compile(
@@ -59,6 +59,7 @@ ALIAS_TO_LAW = {
     "İİK": "2004", "İYUK": "2577", "VUK": "213", "TKHK": "6502",
 }
 
+TERROR_LAW = re.compile(r"(?i)terörle mücadele|\bTMK\b[^.]{0,80}terör|terör[^.]{0,80}\bTMK\b")
 CASE_NUMBER = re.compile(
     r"\b\d{4}/\d+\s*(?:E\b|K\b|Esas|Karar)|\bE\.?\s*[:,]?\s*\d{4}/\d+|\bK\.?\s*[:,]?\s*\d{4}/\d+"
 )
@@ -73,7 +74,10 @@ CONTEXT = re.compile(
     r"bu makale|bu yazı|yazıda|yazar|parçada|verilen karar|bu karar|söz konusu karar|"
     r"yapay zek|gemini|veri seti)\b"
 )
-WEB_ADDRESS = re.compile(r"(?i)\bwww\.|https?://|\.av\.tr\b|\.com\.tr\b")
+WEB_ADDRESS = re.compile(
+    r"(?i)\bwww\.|https?://|\.av\.tr\b|\.com\b|\.html?\b|\.php\b|\bilgili metin\s*:"
+    r"|\(kaynak\s*:[^)]*(?:\w-\w|_|\.txt)|\bdosya_\d+"
+)
 EMAIL = re.compile(r"[\w.+-]+@[\w-]+\.[\w.]+")
 PHONE = re.compile(r"(?:\+?90|0)\s*\(?5\d{2}\)?[\s-]*\d{3}[\s-]*\d{2}[\s-]*\d{2}")
 IBAN = re.compile(r"\bTR\d{2}[\s\d]{20,30}\b")
@@ -88,7 +92,8 @@ NUMBER_WORDS = {
 NUMERIC_TERM = re.compile(
     rf"(?i)(\d+|(?:(?:on|yirmi|otuz|kırk|elli|altmış|yetmiş|seksen|doksan)\s+)?"
     rf"(?:bir|iki|üç|dört|beş|altı|yedi|sekiz|dokuz|on|yirmi|otuz|kırk|elli|altmış|"
-    rf"yetmiş|seksen|doksan|yüz))\s+(gün|hafta|ay|yıl|saat)\b"
+    rf"yetmiş|seksen|doksan|yüz))\s+(gün|hafta|ay|yıl|saat)"
+    rf"(?:a|e|dan|den|lık|lik|luk|lük|u|ü|ı|i|ın|in|un|ün)?\b"
 )
 
 STOPWORDS = set("""
@@ -239,6 +244,11 @@ def main():
             reject(record, "unverifiable_case_law")
             continue
         if EXTERNAL_LAW.search(combined):
+            reject(record, "law_outside_corpus")
+            continue
+
+        # TMK burada Terörle Mücadele Kanunu demektir, Medeni Kanun değil.
+        if TERROR_LAW.search(combined):
             reject(record, "law_outside_corpus")
             continue
 
