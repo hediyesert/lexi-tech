@@ -1,0 +1,98 @@
+{
+  "version": "v0.9.2",
+  "status": "development_candidate_not_independently_validated",
+  "total": 124510,
+  "distribution": {
+    "other": {
+      "count": 61125,
+      "percent": 49.09
+    },
+    "procedure_deadline": {
+      "count": 14646,
+      "percent": 11.76
+    },
+    "definition": {
+      "count": 13918,
+      "percent": 11.18
+    },
+    "legal_conditions": {
+      "count": 11646,
+      "percent": 9.35
+    },
+    "case_law_analysis": {
+      "count": 9470,
+      "percent": 7.61
+    },
+    "comparison": {
+      "count": 6956,
+      "percent": 5.59
+    },
+    "case_application": {
+      "count": 2742,
+      "percent": 2.2
+    },
+    "legal_effect": {
+      "count": 2399,
+      "percent": 1.93
+    },
+    "penalty_sanction": {
+      "count": 1597,
+      "percent": 1.28
+    },
+    "article_explanation": {
+      "count": 11,
+      "percent": 0.01
+    }
+  },
+  "by_split": {
+    "train": {
+      "other": 55350,
+      "procedure_deadline": 13364,
+      "definition": 12599,
+      "legal_conditions": 10539,
+      "legal_effect": 2169,
+      "penalty_sanction": 1536,
+      "comparison": 6230,
+      "case_application": 2447,
+      "case_law_analysis": 7538,
+      "article_explanation": 10
+    },
+    "validation": {
+      "legal_effect": 102,
+      "case_law_analysis": 973,
+      "other": 2818,
+      "definition": 662,
+      "comparison": 373,
+      "legal_conditions": 643,
+      "case_application": 114,
+      "procedure_deadline": 676,
+      "penalty_sanction": 36
+    },
+    "test": {
+      "definition": 657,
+      "other": 2957,
+      "legal_conditions": 464,
+      "legal_effect": 128,
+      "comparison": 353,
+      "case_law_analysis": 959,
+      "case_application": 181,
+      "procedure_deadline": 606,
+      "penalty_sanction": 25,
+      "article_explanation": 1
+    }
+  },
+  "development_review": {
+    "sample_size": 70,
+    "matches_assistant_proposed_labels": 51,
+    "mismatches": 19,
+    "agreement_percent": 72.86
+  },
+  "limitations": [
+    "Anahtar kelime ve kural tabanli deneysel sınıflandırıcı.",
+    "70 örnek geliştirme sürecinde kullanıldı.",
+    "70 örnekteki uyum bağımsız test başarısı değildir.",
+    "Etiketler bağımsız insan veya hukuk uzmanı onaylı değildir.",
+    "Hukuki cevap doğruluğu bu çalışmada değerlendirilmedi.",
+    "Other kategorisi belirsiz veya yakalanamayan görevleri içerir."
+  ]
+}

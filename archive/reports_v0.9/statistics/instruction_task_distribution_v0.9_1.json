@@ -1,0 +1,452 @@
+{
+  "version": "v0.9.1",
+  "method": "revised_question_keyword_heuristics",
+  "status": "experimental_not_independently_validated",
+  "total": 124510,
+  "distribution": {
+    "other": {
+      "count": 72256,
+      "percent": 58.03
+    },
+    "definition": {
+      "count": 17379,
+      "percent": 13.96
+    },
+    "procedure_deadline": {
+      "count": 16297,
+      "percent": 13.09
+    },
+    "legal_conditions": {
+      "count": 8587,
+      "percent": 6.9
+    },
+    "penalty_sanction": {
+      "count": 2741,
+      "percent": 2.2
+    },
+    "case_application": {
+      "count": 2275,
+      "percent": 1.83
+    },
+    "case_law_analysis": {
+      "count": 2220,
+      "percent": 1.78
+    },
+    "comparison": {
+      "count": 1787,
+      "percent": 1.44
+    },
+    "legal_effect": {
+      "count": 957,
+      "percent": 0.77
+    },
+    "article_explanation": {
+      "count": 11,
+      "percent": 0.01
+    }
+  },
+  "by_split": {
+    "train": {
+      "other": 64686,
+      "definition": 15619,
+      "penalty_sanction": 2585,
+      "legal_conditions": 7738,
+      "procedure_deadline": 14848,
+      "legal_effect": 873,
+      "comparison": 1617,
+      "case_application": 2012,
+      "article_explanation": 10,
+      "case_law_analysis": 1794
+    },
+    "validation": {
+      "other": 3692,
+      "case_law_analysis": 224,
+      "legal_effect": 52,
+      "definition": 879,
+      "comparison": 93,
+      "legal_conditions": 510,
+      "case_application": 121,
+      "procedure_deadline": 745,
+      "penalty_sanction": 81
+    },
+    "test": {
+      "definition": 881,
+      "other": 3878,
+      "legal_conditions": 339,
+      "case_application": 142,
+      "case_law_analysis": 202,
+      "procedure_deadline": 704,
+      "comparison": 77,
+      "penalty_sanction": 75,
+      "legal_effect": 32,
+      "article_explanation": 1
+    }
+  },
+  "by_law": {
+    "6098": {
+      "other": 5326,
+      "definition": 1739,
+      "penalty_sanction": 39,
+      "legal_conditions": 862,
+      "procedure_deadline": 952,
+      "legal_effect": 63,
+      "article_explanation": 1,
+      "comparison": 69,
+      "case_law_analysis": 61,
+      "case_application": 8
+    },
+    "4721": {
+      "other": 7423,
+      "definition": 2063,
+      "legal_conditions": 1087,
+      "legal_effect": 144,
+      "procedure_deadline": 1174,
+      "comparison": 169,
+      "case_application": 23,
+      "article_explanation": 2,
+      "case_law_analysis": 187,
+      "penalty_sanction": 12
+    },
+    "5237": {
+      "definition": 7743,
+      "other": 33709,
+      "penalty_sanction": 2401,
+      "legal_conditions": 3524,
+      "legal_effect": 341,
+      "procedure_deadline": 2493,
+      "case_application": 2095,
+      "comparison": 985,
+      "case_law_analysis": 1093,
+      "article_explanation": 2
+    },
+    "5271": {
+      "definition": 3803,
+      "other": 17003,
+      "procedure_deadline": 6652,
+      "legal_conditions": 2103,
+      "case_application": 106,
+      "comparison": 386,
+      "penalty_sanction": 133,
+      "legal_effect": 215,
+      "case_law_analysis": 624,
+      "article_explanation": 5
+    },
+    "2004": {
+      "procedure_deadline": 928,
+      "definition": 458,
+      "other": 1574,
+      "legal_conditions": 237,
+      "penalty_sanction": 40,
+      "legal_effect": 50,
+      "comparison": 38,
+      "case_law_analysis": 37,
+      "case_application": 3
+    },
+    "213": {
+      "other": 404,
+      "definition": 128,
+      "legal_conditions": 64,
+      "procedure_deadline": 307,
+      "penalty_sanction": 49,
+      "comparison": 14,
+      "case_law_analysis": 11,
+      "case_application": 9,
+      "legal_effect": 8
+    },
+    "2709": {
+      "definition": 339,
+      "other": 1331,
+      "procedure_deadline": 427,
+      "legal_conditions": 82,
+      "legal_effect": 12,
+      "penalty_sanction": 6,
+      "case_law_analysis": 38,
+      "comparison": 12,
+      "case_application": 11,
+      "article_explanation": 1
+    },
+    "2577": {
+      "procedure_deadline": 2365,
+      "other": 1752,
+      "legal_effect": 65,
+      "case_application": 13,
+      "legal_conditions": 173,
+      "definition": 422,
+      "comparison": 58,
+      "case_law_analysis": 98,
+      "penalty_sanction": 3
+    },
+    "6102": {
+      "legal_conditions": 86,
+      "procedure_deadline": 197,
+      "definition": 204,
+      "other": 729,
+      "legal_effect": 19,
+      "case_law_analysis": 16,
+      "case_application": 3,
+      "comparison": 11,
+      "penalty_sanction": 14
+    },
+    "6502": {
+      "other": 188,
+      "definition": 40,
+      "procedure_deadline": 72,
+      "legal_conditions": 20,
+      "legal_effect": 5,
+      "case_law_analysis": 2,
+      "penalty_sanction": 3,
+      "comparison": 2
+    },
+    "4857": {
+      "other": 1738,
+      "procedure_deadline": 521,
+      "legal_conditions": 225,
+      "definition": 283,
+      "case_law_analysis": 48,
+      "comparison": 33,
+      "penalty_sanction": 29,
+      "legal_effect": 29
+    },
+    "5510": {
+      "other": 1079,
+      "definition": 157,
+      "comparison": 10,
+      "legal_conditions": 124,
+      "procedure_deadline": 209,
+      "penalty_sanction": 12,
+      "legal_effect": 6,
+      "case_application": 4,
+      "case_law_analysis": 5
+    }
+  },
+  "examples": {
+    "other": [
+      {
+        "record_id": "dff9b1adaff9f4f66362b2d79609f27b6d533721c59b397326eae85bd394567f",
+        "question": "Türk Borçlar Kanunu'na göre bir sözleşme nasıl kurulur ve irade açıklaması ne şekilde olabilir?",
+        "split": "train"
+      },
+      {
+        "record_id": "0603561cf9de2c5a7e80703083c676731f890363cede3cebff4b111b4777e219",
+        "question": "Taraflar bir sözleşmenin esaslı noktalarında uyuşmuş ancak ikinci derecedeki noktalar üzerinde durmamışlarsa, sözleşmenin akıbeti ne olur?",
+        "split": "train"
+      },
+      {
+        "record_id": "8d6993461aa2518c538f1e5a5c2acc36842865fe5abe6a7230edb9e6c9dc4d0c",
+        "question": "Süreli bir öneri (icap) durumunda, önerenin bağlılığı ne kadar sürer ve bu bağlılıktan ne zaman kurtulur?",
+        "split": "train"
+      }
+    ],
+    "definition": [
+      {
+        "record_id": "fd7cdbf94b3d035284d16493afb38552d08a5c2a267293eca132e239d10feb5a",
+        "question": "Ismarlanmamış bir şeyin bir kişiye gönderilmesi hukuken ne anlama gelir ve bu şeyi alan kişinin yükümlülükleri nelerdir?",
+        "split": "train"
+      },
+      {
+        "record_id": "3163d8316789eb964f7927e00c4fe347a3a08f1b4fa74633b69fbbe18c481b67",
+        "question": "Kanunun emredici hükümlerine, ahlaka, kamu düzenine aykırı olan sözleşmelerin hukuki akıbeti nedir?",
+        "split": "train"
+      },
+      {
+        "record_id": "426b81bdf37cf43befa127b816604b3f712db8f9ed94778f44e5a939c7eb6403",
+        "question": "Müteselsil sorumluluk nedir ve ne zaman ortaya çıkar?",
+        "split": "train"
+      }
+    ],
+    "penalty_sanction": [
+      {
+        "record_id": "7a42f401af8f47844c8f9d83192b78da29ae68c32394d314caf24ee11646f79b",
+        "question": "Sözleşmelerin geçerliliği için genel kural nedir? Şekle uyulmamasının yaptırımı nedir?",
+        "split": "train"
+      },
+      {
+        "record_id": "cdae5cf46fe9cc8ffc26bcb46e3f32ba4fe7bd107c5a749b27a2535ae41c6c9a",
+        "question": "Kısa süreli hapis cezası nedir ve hangi yaptırımlara çevrilebilir?",
+        "split": "train"
+      },
+      {
+        "record_id": "da2155784dd0789a82bae2a8029c13da7acf0b2251f89c7fab4d2c75bd78247c",
+        "question": "Resmi belgede sahtecilik suçunu kamu görevlisi işlerse cezası ne şekilde değişir?",
+        "split": "train"
+      }
+    ],
+    "legal_conditions": [
+      {
+        "record_id": "4afd3f12c81ee4da44ff91dc77c2bf863d26891f27086b2cde471fe8aeb6c398",
+        "question": "Borç altına giren bir kişinin imzasının el yazısı dışında bir araçla atılması hangi durumlarda yeterli sayılır?",
+        "split": "train"
+      },
+      {
+        "record_id": "58ed0335bf04c79814046470e22f9bdf3a3f583920067f676cee11fb6b19b3d8",
+        "question": "Genel işlem koşulları nedir ve bir sözleşmede yer alması nasıl geçerlilik kazanır?",
+        "split": "train"
+      },
+      {
+        "record_id": "6576e6077a020c1926364c0664d0c0ab6f6246846b4cdb35081896f383323345",
+        "question": "Bir kimsenin bedensel bütünlüğünün zedelenmesi durumunda talep edilebilecek manevi tazminatın şartları nelerdir?",
+        "split": "train"
+      }
+    ],
+    "procedure_deadline": [
+      {
+        "record_id": "abd42ad2aaf08a6325727f28b1e1e9f41594191de9486a005c9d1b8141dc1ea7",
+        "question": "Aşırı yararlanma (gabin) durumunda, zarar gören taraf hangi haklara sahiptir ve bu haklarını ne kadar sürede kullanabilir?",
+        "split": "train"
+      },
+      {
+        "record_id": "fea631526162960311c1ed0f334c9816d81a9fd6e5a1441c78a631d5a6e19e1b",
+        "question": "Haksız fiillerden doğan tazminat istemi için genel zamanaşımı süreleri nelerdir?",
+        "split": "train"
+      },
+      {
+        "record_id": "a6c91da143f883d498909417b19437d8274e8f26f6d46af9ecd2a65ec60d9508",
+        "question": "Sebepsiz zenginleşmeden doğan istem hakkı için zamanaşımı süreleri nasıldır?",
+        "split": "train"
+      }
+    ],
+    "legal_effect": [
+      {
+        "record_id": "0d8a6b1afbe604a3b452960726d2b18f772062cb69ac81d477adc4d9d64a6348",
+        "question": "Adın değiştirilmesi hangi koşullarda mümkündür ve bu değişikliğin sonuçları nelerdir?",
+        "split": "train"
+      },
+      {
+        "record_id": "d8a3921a1be34d609a222681e8a2c73c286fc74ce6b9c054f50f11465b012992",
+        "question": "Tekerrür nedir ve sonuçları nelerdir?",
+        "split": "train"
+      },
+      {
+        "record_id": "4fe8f81d1730fbfdfb675b5abd6a2945aa51217319ddb1a20a233dae392641c9",
+        "question": "TCK Madde 53'e göre, kasten işlenen bir suçtan dolayı hapis cezasına mahkumiyetin sonuçları nelerdir?",
+        "split": "train"
+      }
+    ],
+    "comparison": [
+      {
+        "record_id": "6d8f6b8d554febc6446fcc405f06e634a7aa4ee96dc2990647870e59afd9f715",
+        "question": "Vakfın, dernekten temel farkı nedir?",
+        "split": "train"
+      },
+      {
+        "record_id": "fd0760118d8b42f6a4019753b7bc9096a26099f8d465af6c0378985eae5a16e5",
+        "question": "Paylaşmalı mal ayrılığı rejiminin, edinilmiş mallara katılma rejiminden temel farkı nedir?",
+        "split": "train"
+      },
+      {
+        "record_id": "34be0220e4d4a9dbdd8cddbfa6e1faf3ff75606f8d104dae37c3e005d3ee10ff",
+        "question": "Suç işlemek amacıyla örgüt kurma suçu ile silahlı örgüt suçu arasındaki temel fark ve ceza farkı nedir?",
+        "split": "train"
+      }
+    ],
+    "case_application": [
+      {
+        "record_id": "7527cf7dae6344ac9fc408495fac76fbf7fefc3ed96a1c8e8d263044a7d615a0",
+        "question": "Bir kişinin, diğerinin 'hayatına kastetmesi' hangi boşanma sebebini oluşturur ve dava açma süresi nedir?",
+        "split": "train"
+      },
+      {
+        "record_id": "74bc396fb6b3d40e78a1818c564ad763afd7571896844ff079e16a07fe2091be",
+        "question": "Bir kişinin, bir başkasını kanuna aykırı bir şeyi yapmaya zorlaması hangi suçu oluşturur?",
+        "split": "train"
+      },
+      {
+        "record_id": "cf0a6dcd0a8749a8d8bdc9f0b2af846bac04f4dbe73a039be6b9c73d2433c053",
+        "question": "Bir kişinin, diğer bir kişiyi alenen işlemiş olduğu bir suçtan dolayı övmesi hangi suçu oluşturur?",
+        "split": "train"
+      }
+    ],
+    "article_explanation": [
+      {
+        "record_id": "a48a41d72ecf702ed5f20cb3e3003ae804a29a46467b1005eed65063106e9de1",
+        "question": "6098 sayılı TBK'nın 'Haksız Fiillerden Doğan Borç İlişkileri' başlığı altındaki 49. maddesi neyi düzenler?",
+        "split": "train"
+      },
+      {
+        "record_id": "edb8ed841633827407385845f9f7e1b5770512c453aaf36795e43193a2bb1263",
+        "question": "4721 sayılı TMK'nın 'Tüzel Kişiliğin Sona Ermesi' başlığı altındaki 52. madde neyi düzenler?",
+        "split": "train"
+      },
+      {
+        "record_id": "8058360b00ac736cffbab04d12403d74a9c7ae3ddd501360a27e03061315b3bf",
+        "question": "Metinde, CMK m.151 ile m.188 arasında bir çelişki olabileceği belirtilmektedir. Bu iki madde neyi düzenler ve yazar bu çelişkinin nasıl çözülmesi gerektiğini savunur?",
+        "split": "train"
+      }
+    ],
+    "case_law_analysis": [
+      {
+        "record_id": "aa8b4e8d97962b07cda53eeabbe77c5fda96968a97661520f732a5b95ee463d7",
+        "question": "Bir avukatın konutunda arama yapılması, CMK 130'daki özel usullere mi tabidir, yoksa genel hükümlere mi? Yargıtay'ın ilgili kararındaki yaklaşımı açıklayınız.",
+        "split": "train"
+      },
+      {
+        "record_id": "8e7cbedf02c486be67754226a6bab3d4fabf7d2807ed38b3f3432a900cb72f24",
+        "question": "Ceza verilmesine yer olmadığına karar verilen sanığa, yargılama giderleri yüklenebilir mi? Yargıtay'ın bu konudaki yaklaşımı nasıldır?",
+        "split": "train"
+      },
+      {
+        "record_id": "c15d36f183f0658f3c67a1380195a10c84e18d3a21ca0161e7fa9748fbcf9e59",
+        "question": "Ceza davasında beraat eden ve kendisini vekil ile temsil ettiren sanık yararına vekalet ücretine hükmedilmemesi durumunda Yargıtay'ın yaklaşımı nasıldır? Bu durum hangi kanun maddelerine dayanmaktadır ve Yargıtay bu tür bir eksikliği nasıl düzeltmektedir?",
+        "split": "train"
+      }
+    ]
+  },
+  "development_sample": {
+    "size": 70,
+    "agreement_with_assistant_proposed_labels": 35,
+    "disagreement": 35,
+    "agreement_percent": 50.0,
+    "confusion": {
+      "comparison": {
+        "comparison": 4,
+        "procedure_deadline": 2,
+        "other": 4
+      },
+      "case_application": {
+        "procedure_deadline": 3,
+        "penalty_sanction": 1,
+        "other": 4,
+        "definition": 1,
+        "legal_conditions": 1,
+        "case_application": 1
+      },
+      "penalty_sanction": {
+        "penalty_sanction": 6,
+        "procedure_deadline": 1
+      },
+      "procedure_deadline": {
+        "procedure_deadline": 7,
+        "other": 4
+      },
+      "legal_effect": {
+        "procedure_deadline": 1,
+        "legal_effect": 2
+      },
+      "legal_conditions": {
+        "legal_conditions": 8,
+        "definition": 2,
+        "other": 5
+      },
+      "case_law_analysis": {
+        "legal_conditions": 1,
+        "case_law_analysis": 5,
+        "definition": 1,
+        "other": 2
+      },
+      "definition": {
+        "legal_conditions": 1,
+        "definition": 2,
+        "other": 1
+      }
+    }
+  },
+  "limitations": [
+    "Bu yöntem anahtar kelime tabanlıdır.",
+    "70 örnek kuralları geliştirmekte kullanılmıştır.",
+    "70 örnekteki uyum bağımsız test başarısı değildir.",
+    "Örnek etiketler asistan tarafından önerilmiştir.",
+    "Yeni ve bağımsız insan etiketli test örneği gereklidir.",
+    "Görev etiketleri hukuki cevap doğruluğunu göstermez.",
+    "Birincil etiket çok görevli soruları basitleştirir."
+  ]
+}

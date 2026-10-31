@@ -1,0 +1,63 @@
+{
+  "counts": {
+    "total": 308009,
+    "no_target_law_indicator": 137360,
+    "answer_without_article_indicator": 108845,
+    "single_target_law": 160294,
+    "review_candidates": 131045,
+    "case_law_indicator": 101151,
+    "draft_indicator": 8449,
+    "multiple_target_laws": 10355
+  },
+  "review_candidates_by_law": {
+    "4721": 13404,
+    "6098": 10007,
+    "2709": 2490,
+    "5271": 32065,
+    "5237": 56391,
+    "2577": 5388,
+    "2004": 3656,
+    "4857": 3072,
+    "6102": 1435,
+    "213": 1074,
+    "6502": 378,
+    "5510": 1685
+  },
+  "review_candidates_by_source": {
+    "OrionCAF/turkish_law_qa_dataset": 960,
+    "sinanelms/hukukisorular": 130085
+  },
+  "examples": [
+    {
+      "law": "4721",
+      "question": "İstihkak davasının taşınmazlar üzerindeki işlevi nedir ve hangi durumlarda tapu sicilinin düzeltilmesi davası ile ilişkilidir?",
+      "answer": "İstihkak davasının taşınmazlar üzerindeki işlevi, tapu sicilinin düzeltilmesi davası yerine geçmesidir. Türk Medeni Kanunu’nun 992. maddesi gereği, tapuda hak sahibi olarak görünen malik dolaysız zilyet konumundadır ve bu nedenle ",
+      "source_document": null
+    },
+    {
+      "law": "4721",
+      "question": "Türk Medeni Kanunu'na göre taşınır davası açılabilmesi için hangi maddeye atıfta bulunulmaktadır?",
+      "answer": "Taşınır davası açılabilmesi için Türk Medeni Kanunu'nun 991. maddesi çerçevesinde hareket edilmektedir.",
+      "source_document": null
+    },
+    {
+      "law": "4721",
+      "question": "Türk Medeni Kanunu’nun 639. maddesi uyarınca miras sebebiyle istihkak davası için hangi süreler öngörülmüştür?",
+      "answer": "Türk Medeni Kanunu’nun 639. maddesi uyarınca miras sebebiyle istihkak davası için iyi niyetli davalılara karşı bir yıl, kötü niyetli davalılara karşı ise yirmi yıl zamanaşımı süresi öngörülmüştür.",
+      "source_document": null
+    },
+    {
+      "law": "6098",
+      "question": "Borçlanılmamış edimin ifası ile ilgili olarak 6098 Sayılı Türk Borçlar Kanunu’nun 78. maddesi neyi düzenlemektedir?",
+      "answer": "6098 Sayılı Türk Borçlar Kanunu’nun 78. maddesi, borçlanmamış edimin ifasını düzenlemekte ve bu edimi kendi isteğiyle yerine getiren kişinin, ancak kendisini borçlu sanarak yerine getirdiğini ispat etmesi durumunda geri isteyebile",
+      "source_document": null
+    },
+    {
+      "law": "4721",
+      "question": "Taşınmaz rehni ile ilgili düzenlemelerin hangi kanun maddesinde yer aldığı belirtilmiştir?",
+      "answer": "Taşınmaz rehni ile ilgili düzenlemeler, Türk Medeni Kanunu’nun 850. maddesi ve devamındaki maddelerde yer almaktadır.",
+      "source_document": null
+    }
+  ],
+  "warning": "This is a heuristic review pool, not a legally verified or training-approved instruction dataset."
+}

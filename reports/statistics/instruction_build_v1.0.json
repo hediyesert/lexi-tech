@@ -1,0 +1,126 @@
+{
+  "target": 4000,
+  "examples": 4000,
+  "by_split": {
+    "train": 3568,
+    "validation": 216,
+    "test": 216
+  },
+  "by_task": {
+    "usul_sure": 800,
+    "kosul_unsur": 797,
+    "tanim_aciklama": 622,
+    "madde_bulma": 351,
+    "hukuki_sonuc": 338,
+    "karsilastirma": 278,
+    "bilgi_yetersizligi": 229,
+    "olay_uygulama": 219,
+    "yaptirim": 194,
+    "neden_sonuc": 90,
+    "alan_disi": 42,
+    "madde_aciklama": 40
+  },
+  "by_task_and_split": {
+    "alan_disi": {
+      "test": 6,
+      "train": 30,
+      "validation": 6
+    },
+    "bilgi_yetersizligi": {
+      "train": 183,
+      "validation": 23,
+      "test": 23
+    },
+    "hukuki_sonuc": {
+      "train": 307,
+      "test": 14,
+      "validation": 17
+    },
+    "karsilastirma": {
+      "train": 247,
+      "validation": 19,
+      "test": 12
+    },
+    "kosul_unsur": {
+      "train": 720,
+      "test": 39,
+      "validation": 38
+    },
+    "madde_aciklama": {
+      "train": 36,
+      "test": 3,
+      "validation": 1
+    },
+    "madde_bulma": {
+      "train": 315,
+      "test": 18,
+      "validation": 18
+    },
+    "neden_sonuc": {
+      "train": 78,
+      "test": 7,
+      "validation": 5
+    },
+    "olay_uygulama": {
+      "train": 196,
+      "test": 14,
+      "validation": 9
+    },
+    "tanim_aciklama": {
+      "train": 558,
+      "validation": 35,
+      "test": 29
+    },
+    "usul_sure": {
+      "train": 720,
+      "test": 40,
+      "validation": 40
+    },
+    "yaptirim": {
+      "validation": 5,
+      "train": 178,
+      "test": 11
+    }
+  },
+  "by_method": {
+    "llm_uretimi_kaynak_veri_seti": 3314,
+    "kural_tabanli_kanun_metninden": 459,
+    "elle_yazilan_sablon": 163,
+    "kaynak_veri_seti_yontem_bilinmiyor": 64
+  },
+  "by_origin": {
+    "sinanelms/hukukisorular": 3314,
+    "mevzuat": 351,
+    "lexitech": 271,
+    "OrionCAF/turkish_law_qa_dataset": 64
+  },
+  "by_law": {
+    "5237": 627,
+    "5271": 459,
+    "6098": 459,
+    "4721": 445,
+    "2004": 309,
+    "4857": 283,
+    "5510": 260,
+    "6102": 236,
+    "6502": 209,
+    "2577": 201,
+    "213": 142,
+    "2709": 99
+  },
+  "candidate_task_pool": {
+    "diger": 13766,
+    "kosul_unsur": 5319,
+    "usul_sure": 5279,
+    "tanim_aciklama": 3715,
+    "yaptirim": 1577,
+    "hukuki_sonuc": 804,
+    "karsilastirma": 786,
+    "olay_uygulama": 517,
+    "neden_sonuc": 152,
+    "madde_aciklama": 47
+  },
+  "dropped_for_split_conflict": 7571,
+  "rejected_after_quality_review": 4,
+  "non_turkish_responses": 0
+}

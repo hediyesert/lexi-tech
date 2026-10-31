@@ -1,0 +1,15 @@
+{
+  "dataset": "domain_corpus_v0.9",
+  "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+  "transformers_version": "4.57.6",
+  "tokenizers_version": "0.22.2",
+  "add_special_tokens": false,
+  "truncation": false,
+  "document_count": 12,
+  "total_tokens": 1655887,
+  "min_tokens": 38333,
+  "max_tokens": 348094,
+  "mean_tokens": 137990.58,
+  "median_tokens": 117693.5,
+  "p95_tokens": 302599.1
+}

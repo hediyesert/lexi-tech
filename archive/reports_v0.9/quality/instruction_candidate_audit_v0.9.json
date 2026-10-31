@@ -1,0 +1,51 @@
+{
+  "input": "data/deduplicated/exact_unique.jsonl",
+  "counts": {
+    "total": 308009,
+    "missing_source_document": 18185,
+    "short_question_under_15_chars": 16,
+    "short_answer_under_30_chars": 16
+  },
+  "sources": {
+    "OrionCAF/turkish_law_qa_dataset": 18185,
+    "sinanelms/hukukisorular": 289824
+  },
+  "missing_source_document_by_source": {
+    "OrionCAF/turkish_law_qa_dataset": 18185
+  },
+  "examples": {
+    "OrionCAF/turkish_law_qa_dataset": [
+      {
+        "id": "dc5b805fd48e5dcf96789e0cc305d4def1f28d88bc3793c21880ecc3c8138eb9",
+        "question_preview": "İstihkak davasının amacı nedir ve hangi durumlarda uygulanır?",
+        "answer_preview": "İstihkak davasının amacı, haksız olarak elde bulundurulan malın geri alınmasıdır ve bu durum taşınır mallar için geçerlidir.",
+        "source_document": "None",
+        "metadata_type": "dict"
+      },
+      {
+        "id": "6b63676eea169585829133640e5901abf4222f421300e567fa61fe46aea7778e",
+        "question_preview": "Tapuya kayıtlı taşınmazlarda istihkak davasının işlevi nasıl değişir?",
+        "answer_preview": "Tapuya kayıtlı taşınmazlarda istihkak davasının işlevi, tapu sicilinde asıl malik kayıtlı değilse tapu sicilinin düzeltilmesi davası ile yerine getirilir.",
+        "source_document": "None",
+        "metadata_type": "dict"
+      }
+    ],
+    "sinanelms/hukukisorular": [
+      {
+        "id": "dff9b1adaff9f4f66362b2d79609f27b6d533721c59b397326eae85bd394567f",
+        "question_preview": "Türk Borçlar Kanunu'na göre bir sözleşme nasıl kurulur ve irade açıklaması ne şekilde olabilir?",
+        "answer_preview": "Sözleşme, tarafların iradelerini karşılıklı ve birbirine uygun olarak açıklamalarıyla kurulur. İrade açıklaması, açık veya örtülü olabilir. (Türk Borçlar Kanunu, Madde 1)",
+        "source_document": "0.json",
+        "metadata_type": "dict"
+      },
+      {
+        "id": "0603561cf9de2c5a7e80703083c676731f890363cede3cebff4b111b4777e219",
+        "question_preview": "Taraflar bir sözleşmenin esaslı noktalarında uyuşmuş ancak ikinci derecedeki noktalar üzerinde durmamışlarsa, sözleşmenin akıbeti ne olur?",
+        "answer_preview": "Taraflar sözleşmenin esaslı noktalarında uyuşmuşlarsa, ikinci derecedeki noktalar üzerinde durulmamış olsa bile, sözleşme kurulmuş sayılır. Bu ikinci derecedeki noktalarda uyuşulamazsa, hâkim uyuşmazlığı işin özelliğine bakarak karara bağlar. (Türk B",
+        "source_document": "0.json",
+        "metadata_type": "dict"
+      }
+    ]
+  },
+  "status": "automatic_screening_only"
+}

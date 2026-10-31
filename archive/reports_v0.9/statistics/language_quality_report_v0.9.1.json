@@ -1,0 +1,69 @@
+{
+  "project": "LexiTech TR",
+  "version": "v0.9.1",
+  "supersedes": "language_quality_report_v0.9",
+  "advisor_question": 10,
+  "status": "automated_scan_plus_assistant_preliminary_review",
+  "instruction_total_qa": 124510,
+  "instruction": {
+    "question": {
+      "automatic_tr": 124389,
+      "assistant_preliminary_tr": 121,
+      "combined_tr": 124510,
+      "combined_tr_percent": 100.0,
+      "unresolved": 0,
+      "automatic_categories": {
+        "tr": 124389,
+        "uncertain_short": 92,
+        "other_language": 5,
+        "uncertain": 24
+      }
+    },
+    "answer": {
+      "automatic_tr": 124508,
+      "assistant_preliminary_tr": 1,
+      "combined_tr": 124509,
+      "combined_tr_percent": 99.9992,
+      "unresolved": 1,
+      "automatic_categories": {
+        "tr": 124508,
+        "other_language": 1,
+        "uncertain": 1
+      }
+    }
+  },
+  "flagged_texts_reviewed": 123,
+  "assistant_preliminary_tr": 122,
+  "language_not_assessable": 1,
+  "independent_human_approved": 0,
+  "question_quality_issues": [
+    {
+      "review_number": 120,
+      "flag": "incomplete_question_fragment",
+      "record_id": "ec5c4ff997f67055def8083072be0210315f44f33746ead4c2616274b31317ae"
+    }
+  ],
+  "answer_quality_issues": [
+    {
+      "review_number": 36,
+      "flag": "citation_only_answer",
+      "record_id": "1a566c9ff57a595336c1a220034522abcc1a46c02e765cbd1bf970f0b73d16d2"
+    }
+  ],
+  "domain_sample": {
+    "documents": 12,
+    "passages": 60,
+    "automatic_categories": {
+      "tr": 60
+    }
+  },
+  "limitations": [
+    "Otomatik dil tespiti hatasız değildir.",
+    "Asistan değerlendirmesi bağımsız uzman onayı değildir.",
+    "Bir cevap dil açısından sınıflandırılamadı.",
+    "Domain sonucu 60 örnek metin parçasına dayanır.",
+    "Karma dil içeriği her zaman tespit edilemeyebilir.",
+    "Soru ve cevap kalitesi sorunları henüz giderilmedi.",
+    "Dil analizi hukuki doğruluğu ve lisansı kanıtlamaz."
+  ]
+}

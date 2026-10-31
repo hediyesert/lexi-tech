@@ -348,3 +348,80 @@ Exact-unique corpus mevcut durumda 308,009 kayıttan oluşmaktadır.
 
 Near-duplicate analizi corpus üzerinde herhangi bir otomatik kayıt silme
 işlemi gerçekleştirmemiştir.
+
+---
+
+## 13. Vize Rehberi Karşılaştırması (31.10.2026)
+
+Vize Rehberi ile v0.9 karşılaştırıldı. Ana bulgular:
+
+- Instruction seti 124.510 kayıt, rehber kontrollü 3-5 bin örnek istiyor. Görev türlerinin %49'u `other`,
+  sınır davranışı örneği yok, `source_document` bir kanun belgesine değil batch dosyasına bağlı.
+- PDF çıkarma script'i yok, 8 temizleme script'i kaydı tutulmamış argümanlarla çalışmış.
+- Domain kayıtlarında URL boş, `publication_year` ve `subtopic` yok, 3 chunk sürümü yan yana duruyor.
+- Manuel incelemede 200 kayıttan 2'si bakılmış.
+
+Karar: v0.9 havuzunu düzeltmek yerine, birebir tekrardan arındırılmış havuzdan yeniden seçim yapılacak.
+
+## 14. Extraction Aracı Tespiti (31.10.2026)
+
+PyMuPDF, pdfplumber ve pypdf, mevcut `data/extracted/legislation` dosyalarıyla karşılaştırıldı.
+
+- pypdf, sayfalar `\n\n` ile birleştirildiğinde 12 dosyanın 12'sini bayt düzeyinde üretti.
+- PyMuPDF her dosyada farklı sonuç verdi.
+
+Karar: pypdf `02b_extract_legislation.py` içinde kullanılacak. 1.540 sayfanın hepsinde metin katmanı var, OCR gerekmedi.
+
+## 15. Tek Temizleme Script'i (31.10.2026)
+
+Sayfa başlığı silme, NFC ve `ğ` boşluğu düzeltmesi tek fonksiyonda birleştirildi.
+
+- 12 kanunun 11'i v0.9 temiz metniyle bayt düzeyinde aynı çıktı.
+- 5510 farklı: yalnızca o kanunda `ş` önündeki boşluk düzeltilmişti.
+- Aynı hata diğer 11 kanunda duruyordu (`Ba şbakan`, `ki şilik`).
+
+Karar: Sözlük tabanlı onarım tüm kanunlara uygulanacak. Boşluk dışı karakterin değişmediği hash ile doğrulanacak.
+
+## 16. Kanıt Filtresi (31.10.2026)
+
+Her soru-cevabın atıf yaptığı madde metni bulundu, cevap kelimelerinin maddede geçme oranı ölçüldü.
+
+- Girdi 308.009, aday 31.962.
+- En büyük eleme nedeni doğrulanamayan içtihat atfı (78.837), sonra cevaptaki site adresi (62.102).
+
+Karar: Corpus'ta karar metni olmadığı için içtihat atıfları dışarıda kalacak. Hedefteki yargı kararı desteği
+için ayrı karar kaynağı gerekiyor.
+
+## 17. Görev Türleri ve Sınır Örnekleri (31.10.2026)
+
+Kaynak veri setinde bulunmayan üç örnek türü eklendi:
+
+- `madde_bulma`: 351 örnek, kanun başlıklarından kuralla üretildi, doğruluğu metinden garantili.
+- `bilgi_yetersizligi`: 229 örnek. Olmayan madde, doğrulanamayan karar, kapsam dışı kanun, kişiye özel tahmin.
+- `alan_disi`: 42 örnek, elle yazıldı.
+
+Karar: Görev türü başına tavan %20, kanun başına tavan %20. Sonuç 4.000 örnek.
+
+## 18. İlk Kalite Turu (31.10.2026)
+
+Asistan ön incelemesi yapıldı, insan onayı değildir.
+
+- Domain: 150 chunk'ın başı ve sonu okundu. Harf aralıklı metin ve kopuk baş harf bulundu, temizleme düzeltildi.
+- Instruction: 60 kaynaklı kayıt maddesiyle karşılaştırıldı. 3 kayıt reddedildi (site adresi, karar numarası,
+  LLM notu), 1 kayıt hukukçuya bırakıldı.
+
+Karar: Tekil silme yerine aynı türü yakalayan kurallar eklendi. `source_artifact` kuralı 62.102 kayıt eledi.
+`neden_sonuc` kuralı daraltıldı, çünkü `nedeni` ve `sebebi` kelimeleri 60 kayıtta 4 yanlış etikete yol açtı.
+
+## 19. Pipeline Sadeleştirme (31.10.2026)
+
+95 script 13 adımlı pipeline ve yardımcı dosyalarla toplam 15 dosyaya indi, eskiler `archive/` altına taşındı. `run_pipeline.py` ve 14 otomatik test eklendi.
+Domain v1.0 `reports/sources/domain_sections_v1.0.csv` dosyasıyla v0.9 ara dosyalarından bağımsız hale getirildi.
+
+## 20. İnsan İncelemesi Hazırlığı (31.10.2026)
+
+Domain örneklemi son temizlik turundan önce çekildiği için chunk kimlikleri kaymıştı: 150 kimlikten 1'i bulunamadı,
+kalanların metni değişmiş olabilirdi.
+
+Karar: İlk asistan turu `qc_domain_assistant_round1_v1.0.csv` olarak ayrıldı, insan incelemesi için güncel veriden yeni
+150 chunk çekildi. Excel dosyası cevabı kaynak maddeyle yan yana gösterir, `qc_review_sheet.py import` sonuçları geri alır.

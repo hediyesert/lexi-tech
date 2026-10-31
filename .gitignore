@@ -51,14 +51,15 @@ data/final/*
 data/deduplicated/*
 !data/deduplicated/.gitkeep
 
-# Generated near-duplicate reports
-reports/deduplication/lsh_candidate_pairs.tsv
-reports/deduplication/near_duplicate_candidates.jsonl
 
 # LexiTech TR - local data and review files
 /data/interim/
-/*.md.backup
-/.gitignore.backup
-/reports/quality/instruction_manual_review_200_v0.9.csv
-/reports/quality/instruction_manual_review_200_v0.9_backup.csv
-/reports/quality/instruction_reference_mismatches_v0.9.csv
+
+# Archived v0.9 data and pipeline logs
+/archive/data_v0.9/
+/archive/reports_v0.9/deduplication/lsh_candidate_pairs.tsv
+/archive/reports_v0.9/deduplication/near_duplicate_candidates.jsonl
+/archive/reports_v0.9/quality/instruction_manual_review_200_v0.9.csv
+/archive/reports_v0.9/quality/instruction_manual_review_200_v0.9_backup.csv
+/archive/reports_v0.9/quality/instruction_reference_mismatches_v0.9.csv
+/logs/

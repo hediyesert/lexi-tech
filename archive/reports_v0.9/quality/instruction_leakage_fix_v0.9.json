@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "old_counts": {
+    "train": 111782,
+    "validation": 6401,
+    "test": 6332
+  },
+  "new_counts": {
+    "train": 111782,
+    "validation": 6397,
+    "test": 6331
+  },
+  "quarantined_counts": {
+    "validation": 4,
+    "test": 1
+  },
+  "cross_split_groups_before": 5,
+  "cross_split_groups_after": 0,
+  "cross_split_source_documents_after": 0,
+  "removed_examples": [
+    {
+      "id": "9ef9b485639a5a610b4694bcbe789cb6529550c884b21150610f0592441aa64a",
+      "question": "TCK Madde 22(3)'e göre 'bilinçli taksir' nedir ve cezası nasıl etkilenir?",
+      "excluded_from": "validation",
+      "retained_in": "train"
+    },
+    {
+      "id": "6f59da950de11c0a982e2eb5f4d934ead165faedc9746c2db136ff42350f368e",
+      "question": "CMK m. 100/4'e göre, hangi suçlarda tutuklama kararı verilemez?",
+      "excluded_from": "validation",
+      "retained_in": "train"
+    },
+    {
+      "id": "b89663858175fcf51e2cb45c0c1fffccc4b93a88e388ac3872ad8635ff03fef2",
+      "question": "TCK m. 81'de düzenlenen 'kasten öldürme' suçunun temel şeklinin cezası nedir?",
+      "excluded_from": "validation",
+      "retained_in": "train"
+    },
+    {
+      "id": "f412e11415b88449a7faf905c917d233edab25d1ab36a7c77db7fa7310e68e25",
+      "question": "CMK madde 267'ye göre hangi kararlara karşı itiraz yoluna gidilebilir?",
+      "excluded_from": "validation",
+      "retained_in": "train"
+    },
+    {
+      "id": "9aaa3c54ab621c9cbd4158603673a2d698fe6427db0a7bbde5ebf3bf23ec5a84",
+      "question": "TCK m.299 uyarınca Cumhurbaşkanına hakaret suçundan kovuşturma yapılması hangi şarta bağlıdır?",
+      "excluded_from": "test",
+      "retained_in": "train"
+    }
+  ],
+  "errors": [],
+  "training_approved": false
+}

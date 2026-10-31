@@ -1,0 +1,513 @@
+{
+  "version": "v0.9",
+  "method": "question_keyword_heuristics",
+  "status": "automatic_labels_not_human_verified",
+  "total": 124510,
+  "distribution": {
+    "other": {
+      "count": 38802,
+      "percent": 31.16
+    },
+    "article_explanation": {
+      "count": 35560,
+      "percent": 28.56
+    },
+    "definition": {
+      "count": 16279,
+      "percent": 13.07
+    },
+    "procedure_deadline": {
+      "count": 15751,
+      "percent": 12.65
+    },
+    "legal_conditions": {
+      "count": 7232,
+      "percent": 5.81
+    },
+    "comparison": {
+      "count": 5941,
+      "percent": 4.77
+    },
+    "penalty_sanction": {
+      "count": 4945,
+      "percent": 3.97
+    }
+  },
+  "by_split": {
+    "train": {
+      "other": 35230,
+      "legal_conditions": 6566,
+      "definition": 14570,
+      "penalty_sanction": 4550,
+      "procedure_deadline": 14266,
+      "comparison": 5321,
+      "article_explanation": 31279
+    },
+    "validation": {
+      "legal_conditions": 392,
+      "article_explanation": 2007,
+      "definition": 859,
+      "other": 1874,
+      "comparison": 319,
+      "procedure_deadline": 784,
+      "penalty_sanction": 162
+    },
+    "test": {
+      "definition": 850,
+      "other": 1698,
+      "article_explanation": 2274,
+      "legal_conditions": 274,
+      "comparison": 301,
+      "procedure_deadline": 701,
+      "penalty_sanction": 233
+    }
+  },
+  "by_law": {
+    "6098": {
+      "other": 3158,
+      "legal_conditions": 953,
+      "definition": 1696,
+      "penalty_sanction": 58,
+      "procedure_deadline": 1125,
+      "comparison": 256,
+      "article_explanation": 1874
+    },
+    "4721": {
+      "other": 5306,
+      "definition": 2003,
+      "legal_conditions": 1033,
+      "comparison": 434,
+      "procedure_deadline": 1321,
+      "article_explanation": 2152,
+      "penalty_sanction": 35
+    },
+    "5237": {
+      "definition": 6881,
+      "other": 14948,
+      "penalty_sanction": 4069,
+      "legal_conditions": 2651,
+      "comparison": 3445,
+      "procedure_deadline": 2352,
+      "article_explanation": 20040
+    },
+    "5271": {
+      "definition": 3745,
+      "comparison": 1232,
+      "legal_conditions": 1696,
+      "other": 9531,
+      "procedure_deadline": 5885,
+      "article_explanation": 8591,
+      "penalty_sanction": 350
+    },
+    "2004": {
+      "procedure_deadline": 1178,
+      "article_explanation": 516,
+      "definition": 399,
+      "other": 875,
+      "legal_conditions": 174,
+      "penalty_sanction": 82,
+      "comparison": 141
+    },
+    "213": {
+      "other": 145,
+      "article_explanation": 220,
+      "procedure_deadline": 247,
+      "definition": 87,
+      "comparison": 88,
+      "legal_conditions": 50,
+      "penalty_sanction": 157
+    },
+    "2709": {
+      "definition": 333,
+      "article_explanation": 352,
+      "other": 997,
+      "procedure_deadline": 450,
+      "penalty_sanction": 38,
+      "legal_conditions": 56,
+      "comparison": 33
+    },
+    "2577": {
+      "penalty_sanction": 37,
+      "procedure_deadline": 2044,
+      "article_explanation": 920,
+      "other": 1180,
+      "legal_conditions": 161,
+      "definition": 454,
+      "comparison": 153
+    },
+    "6102": {
+      "legal_conditions": 83,
+      "procedure_deadline": 213,
+      "comparison": 43,
+      "definition": 195,
+      "other": 508,
+      "article_explanation": 215,
+      "penalty_sanction": 22
+    },
+    "6502": {
+      "comparison": 7,
+      "definition": 43,
+      "procedure_deadline": 72,
+      "other": 139,
+      "article_explanation": 47,
+      "legal_conditions": 21,
+      "penalty_sanction": 3
+    },
+    "4857": {
+      "other": 1249,
+      "article_explanation": 429,
+      "procedure_deadline": 625,
+      "legal_conditions": 183,
+      "definition": 281,
+      "comparison": 77,
+      "penalty_sanction": 62
+    },
+    "5510": {
+      "other": 766,
+      "definition": 162,
+      "comparison": 32,
+      "legal_conditions": 171,
+      "article_explanation": 204,
+      "procedure_deadline": 239,
+      "penalty_sanction": 32
+    }
+  },
+  "examples": {
+    "other": [
+      {
+        "id": "dff9b1adaff9f4f66362b2d79609f27b6d533721c59b397326eae85bd394567f",
+        "question": "Türk Borçlar Kanunu'na göre bir sözleşme nasıl kurulur ve irade açıklaması ne şekilde olabilir?",
+        "law": "6098",
+        "split": "train",
+        "all_matched_types": []
+      },
+      {
+        "id": "0603561cf9de2c5a7e80703083c676731f890363cede3cebff4b111b4777e219",
+        "question": "Taraflar bir sözleşmenin esaslı noktalarında uyuşmuş ancak ikinci derecedeki noktalar üzerinde durmamışlarsa, sözleşmenin akıbeti ne olur?",
+        "law": "6098",
+        "split": "train",
+        "all_matched_types": []
+      },
+      {
+        "id": "27fc15048c1d704e0f051cb967f227ba9d284369e6f83f91fc2b672fe34f1616",
+        "question": "Bir sonucun gerçekleşmesi karşılığında ödül vaadinde bulunan bir kimse, bu sözünden cayabilir mi? Cayarsa hukuki sonucu ne olur?",
+        "law": "6098",
+        "split": "train",
+        "all_matched_types": []
+      },
+      {
+        "id": "488a15524c13a38a7972c8da0c24650a05bea37074b76e22952bd7f4d27b6d0a",
+        "question": "Genel işlem koşullarında yer alan bir hüküm açık ve anlaşılır değilse veya birden çok anlama geliyorsa, nasıl yorumlanır?",
+        "law": "6098",
+        "split": "train",
+        "all_matched_types": []
+      },
+      {
+        "id": "3ef5881bb3b9feffeb527b60f0e66d441e793d1917e19dcc3d009c02796c913a",
+        "question": "Sözleşme kurulurken esaslı yanılmaya düşen bir tarafın durumu ne olur?",
+        "law": "6098",
+        "split": "train",
+        "all_matched_types": []
+      }
+    ],
+    "legal_conditions": [
+      {
+        "id": "8d6993461aa2518c538f1e5a5c2acc36842865fe5abe6a7230edb9e6c9dc4d0c",
+        "question": "Süreli bir öneri (icap) durumunda, önerenin bağlılığı ne kadar sürer ve bu bağlılıktan ne zaman kurtulur?",
+        "law": "6098",
+        "split": "train",
+        "all_matched_types": [
+          "legal_conditions"
+        ]
+      },
+      {
+        "id": "3a30290129c87d2724b34bd7b1fe0c71cb30798e10512ad7f805b56a30c4d324",
+        "question": "Hazır olanlar arasında süresiz bir öneri yapıldığında, önerenin bağlılığı ne zaman sona erer?",
+        "law": "6098",
+        "split": "train",
+        "all_matched_types": [
+          "legal_conditions"
+        ]
+      },
+      {
+        "id": "4afd3f12c81ee4da44ff91dc77c2bf863d26891f27086b2cde471fe8aeb6c398",
+        "question": "Borç altına giren bir kişinin imzasının el yazısı dışında bir araçla atılması hangi durumlarda yeterli sayılır?",
+        "law": "6098",
+        "split": "train",
+        "all_matched_types": [
+          "legal_conditions"
+        ]
+      },
+      {
+        "id": "58ed0335bf04c79814046470e22f9bdf3a3f583920067f676cee11fb6b19b3d8",
+        "question": "Genel işlem koşulları nedir ve bir sözleşmede yer alması nasıl geçerlilik kazanır?",
+        "law": "6098",
+        "split": "train",
+        "all_matched_types": [
+          "legal_conditions",
+          "definition"
+        ]
+      },
+      {
+        "id": "6576e6077a020c1926364c0664d0c0ab6f6246846b4cdb35081896f383323345",
+        "question": "Bir kimsenin bedensel bütünlüğünün zedelenmesi durumunda talep edilebilecek manevi tazminatın şartları nelerdir?",
+        "law": "6098",
+        "split": "train",
+        "all_matched_types": [
+          "legal_conditions"
+        ]
+      }
+    ],
+    "definition": [
+      {
+        "id": "fd7cdbf94b3d035284d16493afb38552d08a5c2a267293eca132e239d10feb5a",
+        "question": "Ismarlanmamış bir şeyin bir kişiye gönderilmesi hukuken ne anlama gelir ve bu şeyi alan kişinin yükümlülükleri nelerdir?",
+        "law": "6098",
+        "split": "train",
+        "all_matched_types": [
+          "definition"
+        ]
+      },
+      {
+        "id": "3163d8316789eb964f7927e00c4fe347a3a08f1b4fa74633b69fbbe18c481b67",
+        "question": "Kanunun emredici hükümlerine, ahlaka, kamu düzenine aykırı olan sözleşmelerin hukuki akıbeti nedir?",
+        "law": "6098",
+        "split": "train",
+        "all_matched_types": [
+          "definition"
+        ]
+      },
+      {
+        "id": "4bcfde47c16d5d9f4d672ae915774bfc3979aada1ad96a824f5689dec1553520",
+        "question": "Karşılıklı borç yükleyen bir sözleşmede, ifada güçsüzlüğe düşen taraf karşısında diğer tarafın hakkı nedir?",
+        "law": "6098",
+        "split": "train",
+        "all_matched_types": [
+          "definition"
+        ]
+      },
+      {
+        "id": "5c9f2eea4fc4e742904e1f096c4548157743c87120378fd2a404a3df9009faa3",
+        "question": "Alacaklının temerrüdü ne demektir ve hangi durumda gerçekleşir?",
+        "law": "6098",
+        "split": "train",
+        "all_matched_types": [
+          "definition"
+        ]
+      },
+      {
+        "id": "63a2f4adfb315b26ea86c6530e4c9e0b6e1d119b3045d47d64817f7f347ca27e",
+        "question": "Borcun hiç veya gereği gibi ifa edilmemesi durumunda borçlunun sorumluluğu nedir?",
+        "law": "6098",
+        "split": "train",
+        "all_matched_types": [
+          "definition"
+        ]
+      }
+    ],
+    "penalty_sanction": [
+      {
+        "id": "7a42f401af8f47844c8f9d83192b78da29ae68c32394d314caf24ee11646f79b",
+        "question": "Sözleşmelerin geçerliliği için genel kural nedir? Şekle uyulmamasının yaptırımı nedir?",
+        "law": "6098",
+        "split": "train",
+        "all_matched_types": [
+          "penalty_sanction",
+          "definition"
+        ]
+      },
+      {
+        "id": "cdae5cf46fe9cc8ffc26bcb46e3f32ba4fe7bd107c5a749b27a2535ae41c6c9a",
+        "question": "Kısa süreli hapis cezası nedir ve hangi yaptırımlara çevrilebilir?",
+        "law": "5237",
+        "split": "train",
+        "all_matched_types": [
+          "penalty_sanction",
+          "definition"
+        ]
+      },
+      {
+        "id": "da2155784dd0789a82bae2a8029c13da7acf0b2251f89c7fab4d2c75bd78247c",
+        "question": "Resmi belgede sahtecilik suçunu kamu görevlisi işlerse cezası ne şekilde değişir?",
+        "law": "5237",
+        "split": "train",
+        "all_matched_types": [
+          "penalty_sanction"
+        ]
+      },
+      {
+        "id": "8d352ea0d3dae8e3de204afc67237c30958dd41f2b6d62967fe79ba05debcbe7",
+        "question": "Kasten öldürme suçunun basit halinin cezası nedir?",
+        "law": "5237",
+        "split": "train",
+        "all_matched_types": [
+          "penalty_sanction",
+          "definition"
+        ]
+      },
+      {
+        "id": "04bf03befc971440655869acc6a5121f33f4355f8d1667d6591ed247967c7d19",
+        "question": "Kişiyi hürriyetinden yoksun kılma suçunun temel şeklinin cezası nedir?",
+        "law": "5237",
+        "split": "train",
+        "all_matched_types": [
+          "penalty_sanction",
+          "definition"
+        ]
+      }
+    ],
+    "procedure_deadline": [
+      {
+        "id": "abd42ad2aaf08a6325727f28b1e1e9f41594191de9486a005c9d1b8141dc1ea7",
+        "question": "Aşırı yararlanma (gabin) durumunda, zarar gören taraf hangi haklara sahiptir ve bu haklarını ne kadar sürede kullanabilir?",
+        "law": "6098",
+        "split": "train",
+        "all_matched_types": [
+          "procedure_deadline"
+        ]
+      },
+      {
+        "id": "0d94b2ddda7cb761fce0799737fb6345678efbe210b51a6d0cc5fa6f8c67d9c0",
+        "question": "Genel zamanaşımı süresi kaç yıldır?",
+        "law": "6098",
+        "split": "train",
+        "all_matched_types": [
+          "procedure_deadline"
+        ]
+      },
+      {
+        "id": "674160e1e01dd38db2dea29f7288e8437389775c505658f37c78018edb215492",
+        "question": "Kira bedelleri ve otel konaklama bedelleri gibi alacaklar için zamanaşımı süresi ne kadardır?",
+        "law": "6098",
+        "split": "train",
+        "all_matched_types": [
+          "procedure_deadline"
+        ]
+      },
+      {
+        "id": "b0441b592bdb18acdb0f8f43f141e160b4911486e78b5774dc5301865a941228",
+        "question": "Önalım, geri alım ve alım hakları en çok ne kadar süre için kararlaştırılabilir ve tapuya şerh edilebilir?",
+        "law": "6098",
+        "split": "train",
+        "all_matched_types": [
+          "procedure_deadline"
+        ]
+      },
+      {
+        "id": "490e996525322b6a308f89e58fcc11ce4193939ae8470ebc36556cfffe221204",
+        "question": "CMK'ya göre gözaltı süresi ne kadardır?",
+        "law": "5271",
+        "split": "train",
+        "all_matched_types": [
+          "procedure_deadline"
+        ]
+      }
+    ],
+    "comparison": [
+      {
+        "id": "752c2de851cfe3a9a91d5a46df59edcac9e5838548433af648b16a40421ec1bc",
+        "question": "Genel ve özel af arasındaki temel fark nedir?",
+        "law": "5237",
+        "split": "train",
+        "all_matched_types": [
+          "comparison",
+          "definition"
+        ]
+      },
+      {
+        "id": "49cb33a749b292feec6f695af1eb50d87a80ba2f4656dec5edcf49c5482d5d82",
+        "question": "Şüpheli ve sanık arasındaki temel fark nedir?",
+        "law": "5271",
+        "split": "train",
+        "all_matched_types": [
+          "comparison",
+          "definition"
+        ]
+      },
+      {
+        "id": "a2184bd9cc678d5ab4034af827f9b602f8ba766ef72015b1ec599e9cbac39221",
+        "question": "Zamanaşımının durması ve kesilmesi arasındaki temel fark nedir?",
+        "law": "6098",
+        "split": "train",
+        "all_matched_types": [
+          "comparison",
+          "definition"
+        ]
+      },
+      {
+        "id": "26ca1c5c87f9cf2d3fcdc090bce00e67b1e9a4cc8e2b29a4bd40ca845141c3ab",
+        "question": "Belirli ve belirsiz süreli kira sözleşmeleri arasındaki temel fark nedir?",
+        "law": "6098",
+        "split": "train",
+        "all_matched_types": [
+          "comparison",
+          "definition"
+        ]
+      },
+      {
+        "id": "6d8f6b8d554febc6446fcc405f06e634a7aa4ee96dc2990647870e59afd9f715",
+        "question": "Vakfın, dernekten temel farkı nedir?",
+        "law": "4721",
+        "split": "train",
+        "all_matched_types": [
+          "comparison",
+          "definition"
+        ]
+      }
+    ],
+    "article_explanation": [
+      {
+        "id": "62966bfede6ecee2d27cbeb6e5847cc73455e68e9c039a5440ebd442b8c7882d",
+        "question": "TCK m.220'ye göre bir oluşumun 'örgüt' sayılması için en az kaç kişiden oluşması gerekir?",
+        "law": "5237",
+        "split": "train",
+        "all_matched_types": [
+          "article_explanation"
+        ]
+      },
+      {
+        "id": "94121bdb354015a40e4a9e84ba8ecce1db97f32455835a5daf1d287969e019cd",
+        "question": "Geçici Madde 1 (Ek:8/6/2022-7409/4 md.) uyarınca konut kiralarında kira artış oranı nasıl sınırlandırılmıştır?",
+        "law": "6098",
+        "split": "train",
+        "all_matched_types": [
+          "article_explanation"
+        ]
+      },
+      {
+        "id": "34e495399e87feb4492ad266d6000af64f0b155088c4e7e035c47ce36f210ff4",
+        "question": "CMK m.250 uyarınca uygulanan seri muhakeme usulü hangi suçlar için geçerlidir?",
+        "law": "5271",
+        "split": "train",
+        "all_matched_types": [
+          "article_explanation"
+        ]
+      },
+      {
+        "id": "de5cfabe87d38dcdf4fea5957382f93d38890e106cef0d964d946759fcbeb075",
+        "question": "TCK m. 227 uyarınca fuhuş suçunun mağduru çocuk ise ceza artırılır mı?",
+        "law": "5237",
+        "split": "train",
+        "all_matched_types": [
+          "article_explanation"
+        ]
+      },
+      {
+        "id": "592164971dd024259a61b9e4d1c560ec104dd8d461f888434ae92bc319722620",
+        "question": "TCK m. 220 kapsamında 'örgüt yöneticisi'nin cezai sorumluluğu nasıldır?",
+        "law": "5237",
+        "split": "train",
+        "all_matched_types": [
+          "article_explanation"
+        ]
+      }
+    ]
+  },
+  "limitations": [
+    "Etiketler yalnızca soru metnindeki anahtar sözcüklerle atanır.",
+    "Bir soru birden fazla görev türünü kapsayabilir.",
+    "Birincil etiket ilk eşleşen kategoriye göre seçilir.",
+    "Other kategorisi görev türünün bilinmediği anlamına gelir.",
+    "Etiket doğruluğu manuel örneklemle henüz ölçülmedi."
+  ]
+}

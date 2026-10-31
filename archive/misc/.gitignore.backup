@@ -1,0 +1,56 @@
+# Python virtual environment
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# IDE / Editor
+.vscode/
+.idea/
+
+# Environment / secrets
+.env
+.env.*
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Model / checkpoint files
+*.pt
+*.pth
+*.bin
+*.safetensors
+checkpoints/
+models/
+
+# Raw and processed datasets
+data/raw/*
+data/extracted/*
+data/cleaned/*
+data/final/*
+
+# Keep directories in Git
+!data/raw/.gitkeep
+!data/extracted/.gitkeep
+!data/cleaned/.gitkeep
+!data/final/.gitkeep
+
+data/deduplicated/*
+!data/deduplicated/.gitkeep
+
+# Generated near-duplicate reports
+reports/deduplication/lsh_candidate_pairs.tsv
+reports/deduplication/near_duplicate_candidates.jsonl

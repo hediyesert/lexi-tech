@@ -1,0 +1,1072 @@
+{
+  "project": "LexiTech TR",
+  "version": "v0.9",
+  "method": "langdetect_1.0.9",
+  "scope": "all_instruction_records",
+  "total_records": 124510,
+  "confidence_threshold": 0.8,
+  "short_text_threshold": 30,
+  "question_categories": {
+    "tr": 124389,
+    "uncertain_short": 92,
+    "other_language": 5,
+    "uncertain": 24
+  },
+  "answer_categories": {
+    "tr": 124508,
+    "other_language": 1,
+    "uncertain": 1
+  },
+  "question_detected_languages": {
+    "tr": 124400,
+    "unknown": 92,
+    "da": 2,
+    "id": 8,
+    "et": 1,
+    "hr": 1,
+    "ro": 2,
+    "it": 1,
+    "en": 1,
+    "sl": 1,
+    "no": 1
+  },
+  "answer_detected_languages": {
+    "tr": 124508,
+    "sv": 1,
+    "cy": 1
+  },
+  "metadata_languages": {
+    "tr": 124510
+  },
+  "by_split": {
+    "train": {
+      "total": 111782,
+      "question_categories": {
+        "tr": 111664,
+        "uncertain_short": 91,
+        "other_language": 5,
+        "uncertain": 22
+      },
+      "answer_categories": {
+        "tr": 111780,
+        "other_language": 1,
+        "uncertain": 1
+      }
+    },
+    "validation": {
+      "total": 6397,
+      "question_categories": {
+        "tr": 6395,
+        "uncertain_short": 1,
+        "uncertain": 1
+      },
+      "answer_categories": {
+        "tr": 6397
+      }
+    },
+    "test": {
+      "total": 6331,
+      "question_categories": {
+        "tr": 6330,
+        "uncertain": 1
+      },
+      "answer_categories": {
+        "tr": 6331
+      }
+    }
+  },
+  "flagged_records": [
+    {
+      "id": "178c5a86bf848d3a8845c0e939139a1166ac686ba0188015db32cca6befd3af9",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "5b2f4ea704e38183c8433ef9a17d53f3217b95267f95876798cfc803b84e2920",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "1ab027d2f097feb0f0568628407e253179c9967759fd04a48223332f57e23dce",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "01e155db54fcf03fe2b4c1bd57005398713e50bcdda234aa5270390b90bbfec1",
+      "split": "train",
+      "question_category": "other_language",
+      "question_language": "da",
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "dc348a8b57000a21bd50b0a7d2c9aae31f44f8d59aca1d6c4c60a01583533200",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "328d191e2a37f712b477da674d68448a5dc5a872bf877700ce21ad29473ca5af",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "f6e02cbe49e1c82a15d871c49712c94a97fc12b071165a98c9bf69acc0958d95",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "6f4a3991875b746b23275ff6b8b98daae7cd7835607b2b3fecf66105684d0aa8",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "58e4852f39b17258dc890fe8ac0929fbb5829840493dcd3159c4f883d219afd9",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "909d37f438a9ef544b66264cbea6a88a1f81dfcae182e9a07007a63a915c3e32",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "57771dddfd7a038eff141cdc75252b869834a30e216706547e45f207031d2eb3",
+      "split": "train",
+      "question_category": "uncertain",
+      "question_language": "id",
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "42b063dfaf87179f5d19a1660796be787e704bd1261cf6d19e679bde319c7fc3",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "23900ccd6cff441de7a4f687f63659cf460d70a8b4fcfb3c313b2c6eb25ae6e4",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "31529a78238a31893361d023b2995bc8e1f607a41f162db375fe6d28d3ba8b58",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "1bea5e8c6e77eacae71fe91e45dcddfbe1aa4f2a4f42fb081ae340d51ce73365",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "f755eff840892406633cc4cb3f0807ebf7cca18bfed9a3b06d04eb053c9aa777",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "3ad1abea4fc58035b2d1ef8301de7eeb65807f5d7f5c79e6acda1dadab23b557",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "4ccdfb66384efa0378c5ed66731c5dea14dd1d1f38a3c3a18a40008a0b41300c",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "9b01a4f2b3b124cf0fe04761f7d65a9ccadc2696d05f620c030474f722de1118",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "d7a0f318050f5c083f73aaee06d4b28dee54c0af27bd8b8bc891b44ddfa46013",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "ecaa6e0eb95534caf2ab1dad0bec60430c0762d4255a6c21e2322b6c9d4c2c37",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "f5315051b27631ef03c555128166be1c85b3347d6bf7b64d225a6727344d4b40",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "c4d2eb2b1e64e249c6b616adfc06f49175be073e6c18f4bbd2b06d1c77ad795e",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "e617197c2fe8c82cb687447d05217e3761bdcac1754ba0827b5c98b999f8a6ca",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "fd2b7d8e01f80bbbc1a817728197deba4aa79c01f2c2842ae2113586a0fe5538",
+      "split": "train",
+      "question_category": "uncertain",
+      "question_language": "id",
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "891f79373236f3ea149c5882093199d2aacc6139af33caa3826ffeba6acca4fa",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "f66bf15cd5cc37f6b3242f597148a0cf42cda537743224a02f0831d31d024d38",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "1cdd4e4951ce400310125c6e7e6636cb226b137063f628005c5c5496662e5b4d",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "b82d5fddd43e716600f2889504ea1745dde0cbd03e8fba8911bc8d9fd7289cfc",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "5bab1a8008a46c349404ce4be4d43a4bc7801d09d1934577ab5f22b28fa4858e",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "e1899e2576b3ef9f8eaf6c30028fbd19b8370d46bf8706b177d8ada7b844dd5f",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "3b86a42c1aeab72900f00c99c350aabd4a0fc55205878030ca289e3e8cd0c044",
+      "split": "train",
+      "question_category": "uncertain",
+      "question_language": "tr",
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "04acea279f002e14fbb0953c500acdf3650c7d5b746a923a8d6f511e1b952c2a",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "79e1d9a48f3745c3bf188c318787d0006a372f9a329bf89f5106d924a6c5b8c4",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "dfa36013155c93486841ed1c033d359c2cbe6bde363a916ad2c71c8b884e86a8",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "38d5c46a90815a7f6cb1aefe0fccefd793df289765ff2160c7c2abc0cfcab2de",
+      "split": "train",
+      "question_category": "uncertain",
+      "question_language": "tr",
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "f02823715b138c18c84e9716a019ac3a9ff89f86df912cd572fb365f98c7c782",
+      "split": "train",
+      "question_category": "other_language",
+      "question_language": "id",
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "91b098fcb64ef3e515ed2eb2af680bce34c5203cc0c1f89028a8613789ba33ca",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "f694208b43e9175496be64dac0634432271c084b99df55223cbc6963af243222",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "61060e23f4eaf58f3e742291adbd7866fc0fe6258067feb9e59293019d1868ee",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "723a961c4756f0dd35dbef248e33a53d13abb1d5958bc6e545df482f6b371f78",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "4f1dd865d8aa8101916207a671ee94cbdafa3ac6411601b2985cd60c46f494d1",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "15e0d358c0eb0a9cdadd059b7fca509a0485bbc69db011c763c70d30f8a9376a",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "486a13f530abaaeeb586062b256425b4320c8b0b8d5d3704965a39dcfbef7f4c",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "d875f0611e7da1761b3c1c1ab7850b6f679bc77b43cdd43dd1f3f61209d1f0fc",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "df4dabd41f6075e43d9beba68869323cf4269109a0675718d873523c6bbd1d92",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "3136d726f287e2f056f394125c4237ac1c680097fbb1ceeccf656b07e5813b12",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "6f47c8411177210d61ad7be390e0ceb0fbf42a33cc489c3d2a970a2847bada05",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "f4843cc18c3b58fcbd5f6d1533f10344c32ce20c39f5a0b9b513ab02b0d91971",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "43fb1fd896b4a2718d04f7414bcfe51e2689693d937519d9638e0959b3705569",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "dd47a79e8336452f6be658289424e747cc78c72990e45dfd4d6baea2d475e924",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "7cd8f3d8571189d1763cd93721a93f07681f43da55fc99ba619f603ad44697d2",
+      "split": "train",
+      "question_category": "uncertain",
+      "question_language": "id",
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "5b554e04d0e4adc3378afe43e1a03e4977bf13accf4bae74c97d48e99cbfeb37",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "63ed6e83b1e29a234846908d002f6fbda060fe93d5fffcbee7633538a57761c8",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "22beedc5673b2b19338ff2210ab38ae00db371f3f67212e38076c19600b820c0",
+      "split": "train",
+      "question_category": "uncertain",
+      "question_language": "id",
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "7ec28ae1621074b041ed9b2b7ba4a7f1fd3242975232ca1d4d2802ddacc1716c",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "0599b91e9c06273f6c5a28fc8cc839e30c1024d8e021807b077389f8feda813d",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "8967ab561229716d1e66dd9afdae7dd143a866e0e57c40528fb5a0c13939299f",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "3b83d601a51607d9bdd8f9d00c5a78b5c5c3f778d957579f1df5ba5baa90a474",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "d05f7cb7d60f4a70c901076d8b6a8cc340fcfd132c8d98c7e6952d9d05230e55",
+      "split": "train",
+      "question_category": "uncertain",
+      "question_language": "id",
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "7fe574ee3bc2ee9e17851d5d705fc548c24204ce837dd67d4cae69954d766be7",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "37fde3cc33f7221d3c41d8abeecaacc1d187dad5ca73ab0ece85c4dad7276217",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "b378a6ef59c2c36e65396e74cec082f2527657d05ccb2b2160431e25f9b39156",
+      "split": "train",
+      "question_category": "uncertain",
+      "question_language": "tr",
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "8541ef14e704e17174f5b57ad81f832a619ee26dc9ece197fc4da1762c42aee6",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "9b83e8b341d0ee99b4cd977a9276c52bf9467155e64486a4101cd53bcb9ddb69",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "cbbf40d3776d71bb518cf5205aadbcd7b6b1b269c4359f26fc0e8d07a11aa81f",
+      "split": "train",
+      "question_category": "uncertain",
+      "question_language": "tr",
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "bbb81a86ec49172222316f75ece04ebd22134497763d3864cbae846df1dda484",
+      "split": "train",
+      "question_category": "uncertain",
+      "question_language": "tr",
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "960117e89f1c9d1d21a7a2adbdb5d65997709578e879fe951771a7d3d8139010",
+      "split": "train",
+      "question_category": "uncertain",
+      "question_language": "tr",
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "ac5bf9d54bb22c882250b1c36798c35e511a67d87300156bfe3e20276ef627a6",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "233ad8b7a8201a36648af92c46e485a581db9db4060531a7333d571ce79b4e75",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "31bc59b4c6b709ab32a2107d3307840c4c71921cbd3bcddf871c71a253ba58bd",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "de2b9cb5f09bcc3f2e228259e31ab5024990526572b85b462b1e5ae66f616017",
+      "split": "train",
+      "question_category": "uncertain",
+      "question_language": "et",
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "af4848e81d4797286b6e0e2324e5c9976695beefb3b9ffd4d1065fc0522afeeb",
+      "split": "train",
+      "question_category": "uncertain",
+      "question_language": "tr",
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "2f8bb92bc86baf161c179373b35b0595a7e113c41d922b62f918c9482565aac1",
+      "split": "train",
+      "question_category": "uncertain",
+      "question_language": "tr",
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "05c6eb6fbb36db44a4c3ec8fe9539ffd45dba10c08c6014a0909435a75c3a68c",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "5db544a7ab7866d499b171ea2ef4d1fb9d0fe34a52404e0dd5b0815aa7e27d23",
+      "split": "train",
+      "question_category": "uncertain",
+      "question_language": "hr",
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "8ef33932f315e76a9be73b646b3af2fb49ecf5a81e1ec5ecaa9e6be7713ff906",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "6dcf2e5c3ef97dcf8727cf186c3b03a7d225f9c114ed9d5485f0d694a0607511",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "9956afe7d05fdbff07097bc0b3d0c26657192b6247d93ad5c3d8693cdf7060fd",
+      "split": "train",
+      "question_category": "uncertain",
+      "question_language": "ro",
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "e3a4ae8fbe23961b24dd66488b2c8b9f3409880207358a10c38725da73a49fda",
+      "split": "train",
+      "question_category": "tr",
+      "question_language": "tr",
+      "answer_category": "other_language",
+      "answer_language": "sv"
+    },
+    {
+      "id": "4a9e3cc23b98e8e100c7c7ac2653a7a8700132a79f343e954f49cc15a60f559b",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "6fc604df81bb3b3269ef19a155d14dba45269f6c630f43364b985ce5d859f32b",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "49f24051935d756adf68d57d1c3be33484e007a8e629f2b822c470bf1c329bef",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "86f413c474640e91d24e15263daec9250e5ecb1f60feb928e2110951451f9c1d",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "2bb6050a427043255db39e1a19f49e40d272261ab51513ee638f9cde7eaef3d5",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "34f4c6576397955ae890f8bcfad423a2c20973664a77d81a7617d5f1551fa6c0",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "9fdde14331cff1a74933c1f6addb061e3455faa97628e861a020aee206853fe3",
+      "split": "train",
+      "question_category": "uncertain",
+      "question_language": "tr",
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "7aae144b589bedf18ae8090592aa3fc8d3def7a76b983cbc484ae93caf118d52",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "bd3ea3be888435165c6421ebda30adae9b69567916eea608ddd1a6136adca1ea",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "904cda2b4d06dcd4c74dd491007411638397ad7faf194a1def1db1777095af73",
+      "split": "train",
+      "question_category": "other_language",
+      "question_language": "it",
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "2b1cd7f33759da700389c3dd7009f1260fab8fdbe67049913eb8c2c3c1071c58",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "2b9d1884bc2ab87610442d4187e99b52f06d6152b29bc6c2e2279c3bae3af929",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "15e1b9bb6cbf3e04819b7330ebd841a0e73f16409d640eac38a47b3bea742503",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "fff8f99a7abcf4d929ad8de24507b78c9959df060de1dc8b5e692ef403c784c3",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "1a0ea8723368a4922a0d474521a95c012fa747e4d039d63783b36ad450bbc80a",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "7050949e4217b506d9c403c947de233dd8d4a4b4f4a58d0f96d26b9d4f0fd202",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "282952929f1411c0903b43695460c55b45fbf9278d63eb0e5a83443c5f0dc4c7",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "4f1a07104a5e736dbd9bf074df49900d5ebe5bdae7bb555ae5f67412a799d9b7",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "a5d20c9229c0624275f884ee935484450840c2ac8418e33e97db74aa35a56a64",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "8d2161a47dc3109b2c3cf2eafe6bbbcd2012da001fd1995a840d1e535c567886",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "e521c5c39a90a83fa16a64a8806441d69933479259ef2ffafe787d8a1358779c",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "9624127680d30cdd42be5d2ea0221c6b748419b0fa82220a1d8f76d07667c3b4",
+      "split": "train",
+      "question_category": "uncertain",
+      "question_language": "id",
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "53bb4657c2b65839b95261f4fe9dbea1112422d6ced11b2aa2c1d38257a36583",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "aaeb3d599547ccc6561cc26d7aaa9ef165dc5411b218f9291e26ced2f9d0a05c",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "05edf2543c3f45a32b9a4a999292ebcedb0dcb5264ed58c992c62ed298a2a36c",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "29d7dd3bbc3f2c64945296bc8796dcc7b55fd883fbe5906690d8830352bfd491",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "2aca8a15a810a8d366cf073657cb4cb08f02ee0e374526b90b2a89f1aa02d508",
+      "split": "train",
+      "question_category": "uncertain",
+      "question_language": "en",
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "2a573b1a92ccfaa7a565ae64d1cffa10d607b3e73c5b2c52dce4b2b230985a27",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "2dd2c7f95f1a45ff0421a0bf7c77709e7c0c80a51e1b5dbecaa19120e87889d9",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "da0dbc3c175fc30fba86c38b066a720683aec362c59542c669f489e13857367a",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "dc0813690d7e8656454fa12ae9645c3a25441bc272d5b5d6d6cd5272ffddbf14",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "498911202aa1c5287ab49f764d7eaea5a59b78fc7088115c5b76ccedc36f8f64",
+      "split": "train",
+      "question_category": "other_language",
+      "question_language": "sl",
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "1a93403f2d2e7ec4f96f5363ada40bdf61c4cc8317a8bc68fa505c56d0d279aa",
+      "split": "train",
+      "question_category": "uncertain",
+      "question_language": "no",
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "b8d04f3e932902152a39d9e720007426651d1be6bb20c9c08bb22b1e6d9592a8",
+      "split": "train",
+      "question_category": "uncertain",
+      "question_language": "ro",
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "1a566c9ff57a595336c1a220034522abcc1a46c02e765cbd1bf970f0b73d16d2",
+      "split": "train",
+      "question_category": "tr",
+      "question_language": "tr",
+      "answer_category": "uncertain",
+      "answer_language": "cy"
+    },
+    {
+      "id": "ec5c4ff997f67055def8083072be0210315f44f33746ead4c2616274b31317ae",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "4d4a6ba122d7fa55e4452d6f36332c2cf9f034e092af0c7dc710c90a76a61ca0",
+      "split": "train",
+      "question_category": "uncertain",
+      "question_language": "tr",
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "4eeebcd2fc675ceb23d05204e39553857ead9c6a00668be8204a8a2a91c9e6ed",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "f00caabd97f0bf7bd98eee2b736444eec8979213c4265c8fb300ed76bd251868",
+      "split": "train",
+      "question_category": "other_language",
+      "question_language": "da",
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "b0bbe6ced6242a45b6c839d5e1c5edbaf3688f1f3889158fedae35e4752fdb43",
+      "split": "train",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "3643caafafdd8c3f6b0ca3268102a2506bb1d1ac08b1967e1e0eed9b65f660d4",
+      "split": "validation",
+      "question_category": "uncertain_short",
+      "question_language": null,
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "7f8475adab54c0713f58af3975c31a751e84826d5a7bb6e32d62e2bcc5fe282c",
+      "split": "validation",
+      "question_category": "uncertain",
+      "question_language": "tr",
+      "answer_category": "tr",
+      "answer_language": "tr"
+    },
+    {
+      "id": "f913c7f54c22c4d4470d5ad7544d4aecf7a6737a6670a9637bfd6ceef5198e8b",
+      "split": "test",
+      "question_category": "uncertain",
+      "question_language": "id",
+      "answer_category": "tr",
+      "answer_language": "tr"
+    }
+  ],
+  "limitations": [
+    "Otomatik dil tespiti hatasız değildir.",
+    "30 karakterden kısa metinler belirsiz sayılır.",
+    "Karma dilli metinler tek dil etiketi alabilir.",
+    "Langdetect olasılığı kalibre edilmiş doğruluk değildir.",
+    "İşaretlenen kayıtların manuel kontrolü gereklidir.",
+    "Bu analiz hukuki doğruluk veya lisans kanıtı değildir."
+  ]
+}

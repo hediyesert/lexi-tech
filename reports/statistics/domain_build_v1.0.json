@@ -1,0 +1,16 @@
+{
+  "documents": 12,
+  "chunks_by_split": {
+    "train": 738,
+    "validation": 33,
+    "test": 49
+  },
+  "chunks_excluded": {
+    "amendment_table": 86
+  },
+  "chunk_languages": {
+    "tr": 819,
+    "et": 1
+  },
+  "max_chunk_tokens": 2048
+}

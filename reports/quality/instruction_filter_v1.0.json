@@ -1,0 +1,34 @@
+{
+  "input_records": 308009,
+  "output_candidates": 31962,
+  "exclusion_reasons": {
+    "unverifiable_case_law": 78837,
+    "source_artifact": 62102,
+    "no_resolvable_citation": 40016,
+    "low_evidence": 36524,
+    "law_outside_corpus": 27590,
+    "context_dependent": 23056,
+    "too_short": 1741,
+    "draft_legislation": 1477,
+    "numeric_mismatch": 1175,
+    "alternative_answer": 1091,
+    "article_not_found": 1044,
+    "too_long": 581,
+    "repealed_article": 512,
+    "truncated_answer": 180,
+    "near_duplicate": 121
+  },
+  "question_near_duplicate_pairs": 121,
+  "min_evidence_score": 0.55,
+  "candidates_by_source": {
+    "sinanelms/hukukisorular": 31441,
+    "OrionCAF/turkish_law_qa_dataset": 521
+  },
+  "evidence_score_quantiles": {
+    "0.1": 0.21052631578947367,
+    "0.25": 0.3333333333333333,
+    "0.5": 0.5357142857142857,
+    "0.75": 0.8,
+    "0.9": 0.9545454545454546
+  }
+}

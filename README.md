@@ -1,150 +1,100 @@
 # LexiTech TR
 
-Türkçe Hukuk Alanı için Veri Mühendisliği ve Yapay Zekâ Veri Seti Hazırlama Projesi.
+Türk hukuku için yapay zekâ destekli hukuk asistanı projesi. Hedef kullanıcılar stajyer avukatlar, hukuk
+öğrencileri, avukatlar ve hukuki bilgiye erişmek isteyen vatandaşlardır.
 
-## Projenin Amacı
+**Durum: v1.0-rc1.** Veri setleri teknik olarak hazır. İnsan kalite kontrolü ve kullanım hakkı onayı tamamlanmadı.
+Vize aşamasında model eğitimi yapılmadı. Bu proje hukuki danışmanlık sunmaz.
 
-LexiTech TR, Türkçe hukuk alanında kullanılabilecek dil modelleri için veri hazırlama, temizleme, kalite denetimi ve veri seti oluşturma süreçlerine odaklanan bir bitirme projesidir.
+## Hedef ve mevcut durum
 
-**Vize kapsamında yalnızca veri mühendisliği yapılmıştır. Model eğitimi gerçekleştirilmemiştir.**
+| Hedef | Mevcut durum |
+|---|---|
+| Türk hukuku sorularını cevaplamak | Veri hazır, model henüz yok |
+| Kanun ve madde bulmak | 12 kanun, 351 madde bulma örneği |
+| Yargı kararıyla desteklenen analiz | Yok. Corpus'ta karar metni bulunmuyor, karar atıflı kayıtlar elendi |
+| Dilekçe taslağı | Yok |
+| Doğrulanabilir kaynağa dayanmak | Her kaynaklı örnek kanun maddesine bağlı; hukuki doğruluk insanla doğrulanmadı |
+| Uydurma madde ve karar riskini azaltmak | 229 bilgi yetersizliği örneği; etkisi model eğitilmeden ölçülemez |
+| Türk hukukunun geniş alanı | 12 temel kanun. Geniş kapsam uzun vadeli hedef |
 
-## 1. Domain Corpus v0.9
+## Veri setleri
 
-Resmî mevzuat kaynaklarından elde edilen 12 kanunun metinlerinden hazırlanmıştır.
+| | Domain Corpus | Instruction Dataset |
+|---|---|---|
+| Kullanım | CPT | SFT |
+| Boyut | 12 kanun, 820 chunk, 1,44M eğitim tokenı | 4.000 örnek |
+| Split | 738 / 33 / 49 chunk | 3.568 / 216 / 216 örnek |
+| Kart | [DATASET_CARD.md](DATASET_CARD.md) | [INSTRUCTION_CARD.md](INSTRUCTION_CARD.md) |
 
-| Özellik | Değer |
-|---|---:|
-| Kanun sayısı | 12 |
-| Karakter sayısı | 4.471.279 |
-| Qwen tokenizer token sayısı | 1.655.887 |
-| Sürüm | v0.9 |
+## Kurulum ve çalıştırma
 
-Kapsanan kanunlar: Anayasa (2709), Türk Medeni Kanunu (4721), Türk Borçlar Kanunu (6098), Türk Ceza Kanunu (5237), Ceza Muhakemesi Kanunu (5271), İş Kanunu (4857), Türk Ticaret Kanunu (6102), Tüketicinin Korunması Hakkında Kanun (6502), İdari Yargılama Usulü Kanunu (2577), Vergi Usul Kanunu (213), İcra ve İflas Kanunu (2004) ve Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu (5510).
+```bash
+python3.11 -m venv .venv
+```
 
-Yapılan işlemler: PDF metin çıkarımı, temizleme, metadata oluşturma, SHA-256 kaydı, token sayımı, belge bazlı train/validation/test ayrımı ve hukuki yapıya duyarlı parçalama.
+```bash
+.venv/bin/pip install -r requirements.txt
+```
 
-Ayrıntılar: [DATASET_CARD.md](DATASET_CARD.md)
+```bash
+.venv/bin/python scripts/run_pipeline.py
+```
 
-## 2. Instruction Dataset v0.9
+İlk adımı atlamak için:
 
-Türkçe hukuk soru-cevaplarından oluşturulan SFT aday veri setidir.
+```bash
+.venv/bin/python scripts/run_pipeline.py --from-step 02_extract.py
+```
 
-Başlangıç kaynakları:
-- sinanelms/hukukisorular
-- OrionCAF/turkish_law_qa_dataset
+Otomatik kalite testleri:
 
-| Aşama | Kayıt sayısı |
-|---|---:|
-| Başlangıç havuzu | 378.903 |
-| Birebir tekrar sonrası | 308.009 |
-| Madde göstergeli aday havuzu | 131.045 |
-| Güncel teknik ön taslak | 124.510 |
+```bash
+.venv/bin/python -m pytest tests -q
+```
 
-### Veri bölmeleri
+Kanun PDF'leri otomatik indirilmez, tarayıcıyla kaydedildi. Pipeline'ı sıfırdan çalıştırmak için `data/raw/legislation/`
+gerekir. Tüm yollar ve eşikler `config.yaml` içindedir, rastgelelik `random_seed: 42` ile sabitlenmiştir.
 
-| Küme | Kayıt |
-|---|---:|
-| Train | 111.782 |
-| Validation | 6.397 |
-| Test | 6.331 |
-| **Toplam** | **124.510** |
+## Pipeline
 
-Kayıtlar soru-cevap içeren `messages` alanı ve kaynak/kalite metadata'sı taşır.
+| Adım | Script | Çıktı |
+|---|---|---|
+| İndirme | `01_download.py` | `data/raw/` |
+| Extraction | `02_extract.py`, `02b_extract_legislation.py` | `data/extracted/` |
+| Temizleme | `03_clean.py`, `03b_clean_legislation.py` | `data/cleaned/` |
+| Birebir tekrar | `04_deduplicate_exact.py` | `data/deduplicated/` |
+| Domain Corpus | `05_build_domain_corpus.py` | `data/final/` |
+| Filtre ve yakın tekrar | `06_filter_instruction.py` | `data/interim/` |
+| Instruction seti | `07_build_instruction_set.py` | `data/final/instruction_v1.0/` |
+| Token sayımı | `08_token_count.py` | `reports/statistics/` |
+| İstatistik | `09_statistics.py` | `reports/statistics/` |
+| Kalite örneklemi | `10_sample_quality_review.py` | `reports/quality/` |
+| Kalite raporu | `11_quality_report.py` | `reports/quality/` |
 
-Ayrıntılar: [INSTRUCTION_CARD.md](INSTRUCTION_CARD.md)
+## Veri nerede
 
-## 3. Veri Mühendisliği Süreci
+`data/` Git'e girmez, boyutu 1,6 GB'tır. Kaynak dosyalar Hugging Face'ten ve mevzuat.gov.tr'den alınır; bütünlük
+değerleri `reports/manifests/` ve `reports/sources/legislation_documents.csv` içindedir. Üretilen dosyalar yerel
+ortamda tutulur. Paylaşım yeri: [belirlenecek].
 
-1. Veri kaynaklarının temini ve kayıt altına alınması.
-2. PDF metin çıkarımı ve temizleme.
-3. Metadata ve belge kimliklerinin oluşturulması.
-4. Birebir tekrarların tespit edilmesi.
-5. MinHash/LSH ile yakın tekrar analizi.
-6. Kanun ve madde atıflarının yapısal denetimi.
-7. Alternatif cevapların inceleme havuzuna ayrılması.
-8. Kaynak dosyası bazlı train/validation/test bölme.
-9. Kümeler arası tekrar ve veri sızıntısı kontrolü.
-10. İstatistik ve kalite raporlarının hazırlanması.
+## Belgeler
 
-## 4. Kalite Denetimi
+- [Vize uyum raporu](reports/VIZE_UYUM_RAPORU.md): rehberle karşılaştırma ve 19 sorunun cevabı
+- [Problem tanımı](reports/problem_definition.md)
+- [Kaynak listesi](reports/sources/data_sources.csv)
+- [Temizleme kuralları](reports/cleaning_rules.md) ve [öncesi-sonrası örnekleri](reports/cleaning_examples_v1.0.md)
+- [İstatistik raporu](reports/statistics/statistics_report_v1.0.md)
+- [Kalite kontrol raporu](reports/quality/quality_control_report_v1.0.md)
+- [Değerlendirme planı](reports/evaluation_plan.md)
+- [Literatür taraması (taslak)](reports/literature_review.md)
+- [Danışman soruları (taslak)](reports/advisor_questions.md)
+- [İnsan kalite kontrolü dosyası](reports/quality/kalite_inceleme_v1.0.xlsx): doldurduktan sonra `python scripts/qc_review_sheet.py import`
+- [Deney günlüğü](experiments.md)
+- [v0.9 arşivi](archive/README.md)
 
-Güncel Instruction Dataset üzerinde:
-- Kümeler arası normalize birebir soru tekrarı: **0**
-- Kümeler arası ortak kaynak dosyası: **0**
-- Eski MinHash raporundan güncel veri setinde kalan yakın tekrar çifti: **527**
-- Bunlardan farklı kümelerde bulunan çift: **0**
-- Alternatif cevap incelemesine ayrılan kayıt: **4.630**
-- Kümeler arası tekrar nedeniyle ayrılan kayıt: **5**
+## Bilinen sınırlılıklar
 
-Bu kontroller, bütün anlamsal tekrarların giderildiği veya cevapların hukuken doğru olduğu anlamına gelmez.
-
-### Manuel değerlendirme
-
-200 örnekten 1 kayıt ek inceleme gerektiriyor, 1 kayıt geçici kabul aldı, 198 kayıt ise henüz değerlendirilmedi.
-
-**Nihai hukuk uzmanı onayı verilmemiştir.**
-
-## 5. Kaynak ve Kullanım Hakları
-
-22 kaynak girdisi kaydedilmiştir:
-- 12 resmî mevzuat kaynağı
-- 2 üçüncü taraf soru-cevap veri seti
-- 8 kaynak olarak belirtilen hukuk sitesi
-
-Kaynakların lisansları, altta yatan içeriklerin hakları ve yeniden dağıtım koşulları için inceleme devam etmektedir.
-
-**Veri setleri eğitim ve yeniden dağıtım için nihai onay almamıştır.**
-
-## 6. Proje Yapısı
-
-Ana klasörler:
-
-- `data/raw/` — Ham veriler
-- `data/extracted/` — Çıkarılan metinler
-- `data/cleaned/` — Temizlenmiş metinler
-- `data/deduplicated/` — Tekrarları ayıklanan veriler
-- `data/interim/` — Ara veri setleri
-- `data/final/` — Oluşturulan veri dosyaları
-- `scripts/` — Veri işleme kodları
-- `reports/` — İstatistikler ve denetim raporları
-
-Bazı büyük veri dosyaları ve manuel inceleme materyalleri `.gitignore` kapsamında yerel ortamda tutulur.
-
-## 7. Geliştirme Ortamı
-
-- Python 3.11
-- macOS
-- JSONL ve CSV
-- datasketch / MinHash / LSH
-- Hugging Face tokenizer
-
-## 8. Vize Teslim Belgeleri
-
-- [Domain Corpus Kartı](DATASET_CARD.md)
-- [Instruction Dataset Kartı](INSTRUCTION_CARD.md)
-- [Genel Kalite Raporu](reports/quality/VIZE_DATA_QUALITY_REPORT_v0.9.md)
-- [Kaynak Hakları Denetimi](reports/sources/source_rights_audit_v0.9.csv)
-
-## 9. Bilinen Sınırlamalar
-
-- PDF/OCR kaynaklı metin hataları bulunabilir.
-- Mevzuat güncelliği ayrıca doğrulanmalıdır.
-- Hukuki cevaplar henüz uzman onayından geçmemiştir.
-- Bazı hukuk alanlarının test kümesindeki temsili düşüktür.
-- Kapsamlı anlamsal yakın tekrar taraması tamamlanmamıştır.
-- Kaynak lisansları ve kişisel veri denetimleri açıktır.
-
-## 10. Sonraki Aşamalar
-
-- Manuel kalite değerlendirmelerini tamamlamak.
-- Mevzuat güncelliğini kontrol etmek.
-- Kaynak kullanım haklarını doğrulamak.
-- Yakın tekrar analizini genişletmek.
-- Değerlendirme kümelerini iyileştirmek.
-- Onaylanan verilerle v1.0 sürümünü hazırlamak.
-
----
-
-**Proje durumu: v0.9 — Veri mühendisliği ön taslağı.**
-
-Bu proje hukuki danışmanlık hizmeti sunmaz.
+- Kullanım hakları onaylanmadı. Instruction kaynaklarının büyük kısmının lisansı belirsizdir.
+- Örnekler otomatik doğrulandı, hukukçu onayı yoktur.
+- Domain Corpus küçüktür ve yalnızca kanun metni içerir.

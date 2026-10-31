@@ -1,0 +1,99 @@
+{
+  "project": "LexiTech TR",
+  "version": "v0.9",
+  "scope": "source_rights_evidence_gaps",
+  "audit_entry_count": 22,
+  "audit_source_type_counts": {
+    "official_legislation": 12,
+    "third_party_qa_dataset": 2,
+    "reported_upstream_website": 8
+  },
+  "audit_license_status_counts": {
+    "not_assessed": 12,
+    "unclear": 1,
+    "apache-2.0_publisher_claim": 1,
+    "not_verified": 8
+  },
+  "training_approved_entries": 0,
+  "redistribution_approved_entries": 0,
+  "pending_review_entries": 22,
+  "huggingface_datasets": [
+    {
+      "dataset": "sinanelms/hukukisorular",
+      "dataset_url": "https://huggingface.co/datasets/sinanelms/hukukisorular",
+      "evidence_url": "https://huggingface.co/datasets/sinanelms/hukukisorular/blob/main/README.md",
+      "observed_date": "2026-10-28",
+      "published_license": "not_explicitly_declared_in_card_metadata",
+      "reported_origin": "third_party_legal_articles_and_gemini_2.5_pro_generation",
+      "underlying_content_rights": "unverified",
+      "training_permission_status": "pending_review",
+      "redistribution_permission_status": "pending_review",
+      "required_action": "verify_dataset_license_and_upstream_article_permissions",
+      "notes": "MIT text inside example training code is not sufficient evidence of a dataset license"
+    },
+    {
+      "dataset": "OrionCAF/turkish_law_qa_dataset",
+      "dataset_url": "https://huggingface.co/datasets/OrionCAF/turkish_law_qa_dataset",
+      "evidence_url": "https://huggingface.co/datasets/OrionCAF/turkish_law_qa_dataset/blob/main/README.md",
+      "observed_date": "2026-10-28",
+      "published_license": "apache-2.0_publisher_declared",
+      "reported_origin": "turkish_legislation_case_law_and_legal_articles",
+      "underlying_content_rights": "unverified",
+      "training_permission_status": "pending_review",
+      "redistribution_permission_status": "pending_review",
+      "required_action": "verify_upstream_provenance_and_license_scope",
+      "notes": "Publisher license declaration does not independently verify third-party source rights"
+    }
+  ],
+  "legislation_document_count": 12,
+  "legislation_missing_document_urls": 12,
+  "actions": [
+    {
+      "priority": 1,
+      "subject": "sinanelms/hukukisorular",
+      "action": "Veri seti lisansini ve kaynak makalelerin egitim/turev kullanim izinlerini kanitla."
+    },
+    {
+      "priority": 1,
+      "subject": "OrionCAF/turkish_law_qa_dataset",
+      "action": "Yayinci Apache-2.0 beyaninin kapsamini ve ozgun kaynaklarin haklarini dogrula."
+    },
+    {
+      "priority": 1,
+      "subject": "12 resmi kanun belgesi",
+      "action": "Belgeye ozel kaynak URL'lerini, metin surumlerini, kullanim ve dagitim kosullarini incele."
+    },
+    {
+      "priority": 2,
+      "subject": "8 ek kaynak kaydi",
+      "action": "Kaynak izlerini tekil QA kayitlariyla eslestir; izin ve lisans kanitlarini topla."
+    },
+    {
+      "priority": 2,
+      "subject": "Kisisel veri ve hukuki dogruluk",
+      "action": "Kisisel veri taramasi ve bagimsiz hukuki kalite incelemesini tamamla."
+    },
+    {
+      "priority": 2,
+      "subject": "Surum ve dokumantasyon",
+      "action": "124510 ana veri surumu ile 124496 gecici calisma kopyasini ayri belgele."
+    }
+  ],
+  "evidence_files": [
+    "reports/sources/hf_license_evidence_v0.9.csv",
+    "reports/sources/source_rights_audit_v0.9.csv",
+    "reports/sources/legislation_documents.csv",
+    "DATASET_CARD.md",
+    "INSTRUCTION_CARD.md"
+  ],
+  "notes": [
+    "Bu bir mevcut kanit envanteri raporudur.",
+    "Lisans beyanlari bagimsiz olarak yeniden dogrulanmamistir.",
+    "22 denetim kaydi, 22 ayri veri seti anlamina gelmez.",
+    "Resmi kanun metinleri ile ucuncu taraf veri setleri ayri degerlendirilmelidir.",
+    "Onay verilmemis olmasi otomatik olarak kesin hukuki yasak anlamina gelmez.",
+    "Teknik kalite PASS sonuclari kullanim izni veya hukuki dogruluk kaniti degildir."
+  ],
+  "training_approved": false,
+  "rights_status": "pending_review"
+}

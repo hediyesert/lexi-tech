@@ -1,0 +1,68 @@
+{
+  "project": "LexiTech TR",
+  "version": "v0.9",
+  "advisor_question": 10,
+  "status": "automated_full_scan_and_assistant_preliminary_review",
+  "instruction_total_records": 124510,
+  "instruction": {
+    "question": {
+      "automatically_detected_tr": 124389,
+      "assistant_assessed_tr": 121,
+      "combined_tr_count": 124510,
+      "combined_tr_percent": 100.0,
+      "still_unclassified": 0,
+      "automatic_categories": {
+        "tr": 124389,
+        "uncertain_short": 92,
+        "other_language": 5,
+        "uncertain": 24
+      }
+    },
+    "answer": {
+      "automatically_detected_tr": 124508,
+      "assistant_assessed_tr": 1,
+      "combined_tr_count": 124509,
+      "combined_tr_percent": 99.9992,
+      "still_unclassified": 1,
+      "automatic_categories": {
+        "tr": 124508,
+        "other_language": 1,
+        "uncertain": 1
+      }
+    }
+  },
+  "flagged_texts": 123,
+  "assistant_preliminary_tr": 122,
+  "not_assessable": 1,
+  "pending_assistant_review": 0,
+  "independent_human_review_count": 0,
+  "question_quality_flags": [
+    {
+      "review_number": 36,
+      "record_id": "1a566c9ff57a595336c1a220034522abcc1a46c02e765cbd1bf970f0b73d16d2",
+      "flag": "source_url_contamination"
+    },
+    {
+      "review_number": 120,
+      "record_id": "ec5c4ff997f67055def8083072be0210315f44f33746ead4c2616274b31317ae",
+      "flag": "incomplete_question_fragment"
+    }
+  ],
+  "domain_sample": {
+    "documents": 12,
+    "passages": 60,
+    "categories": {
+      "tr": 60
+    }
+  },
+  "limitations": [
+    "Dil tespiti langdetect 1.0.9 ile yapıldı.",
+    "Otomatik dil tespiti ve olasılıkları hatasız değildir.",
+    "123 işaretli metin asistan tarafından ön değerlendirildi.",
+    "Bağımsız insan uzman onayı bulunmuyor.",
+    "Karma dil içeriği her zaman yakalanamayabilir.",
+    "Domain sonucu bütün metnin değil 60 parçanın analizidir.",
+    "İki soru kalitesi uyarısı henüz çözülmedi.",
+    "Dil kontrolü hukuki doğruluğu veya kullanım hakkını kanıtlamaz."
+  ]
+}

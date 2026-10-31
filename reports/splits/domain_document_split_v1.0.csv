@@ -1,0 +1,13 @@
+document_id,law_number,title,split,token_count
+constitution_2709,2709,Türkiye Cumhuriyeti Anayasası,validation,71041
+civil_law_4721,4721,Türk Medeni Kanunu,train,142295
+obligations_law_6098,6098,Türk Borçlar Kanunu,train,104380
+criminal_law_5237,5237,Türk Ceza Kanunu,test,103953
+criminal_procedure_5271,5271,Ceza Muhakemesi Kanunu,train,131007
+labor_law_4857,4857,İş Kanunu,train,51379
+commercial_law_6102,6102,Türk Ticaret Kanunu,train,348094
+consumer_law_6502,6502,Tüketicinin Korunması Hakkında Kanun,train,49815
+administrative_procedure_law_2577,2577,İdari Yargılama Usulü Kanunu,train,38333
+tax_procedure_law_213,213,Vergi Usul Kanunu,train,189139
+enforcement_bankruptcy_law_2004,2004,İcra ve İflas Kanunu,train,161075
+social_security_law_5510,5510,Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu,train,265376

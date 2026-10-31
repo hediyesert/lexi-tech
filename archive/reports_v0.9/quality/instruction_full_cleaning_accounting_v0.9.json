@@ -1,0 +1,125 @@
+{
+  "project": "LexiTech TR",
+  "version": "v0.9",
+  "advisor_questions": [
+    5,
+    6
+  ],
+  "scope": "Instruction Dataset: exact_unique sonrasi aday seciminden kalite bekletmeli calisma kopyasina kadar kayit muhasebesi",
+  "stages": [
+    {
+      "stage": "Instruction aday secimi",
+      "input": 308009,
+      "set_aside": 176964,
+      "remaining": 131045,
+      "decision_type": "heuristic_scope_selection",
+      "evidence": "pool",
+      "note": "Secim kriterlerini karsilamayanlar hatali veya silinmis olarak yorumlanamaz."
+    },
+    {
+      "stage": "Atif inceleme karantinasi",
+      "input": 131045,
+      "set_aside": 933,
+      "remaining": 130112,
+      "decision_type": "pending_reference_review",
+      "evidence": "plan",
+      "note": "Atif uyumsuzlugu kesin hukuki hata kaniti degildir."
+    },
+    {
+      "stage": "Kaynak belgesi karantinasi",
+      "input": 130112,
+      "set_aside": 960,
+      "remaining": 129152,
+      "decision_type": "pending_source_review",
+      "evidence": "plan",
+      "note": "Karantina, kalici silme karari degildir."
+    },
+    {
+      "stage": "Alternatif cevaplarin ayrilmasi",
+      "input": 129152,
+      "set_aside": 4630,
+      "remaining": 124522,
+      "decision_type": "alternative_answer_separation",
+      "evidence": "dedup",
+      "note": "Alternatif cevap kayitlari ayrildi; bunlarin yanlis oldugu kanitlanmadi."
+    },
+    {
+      "stage": "Ayni cevapli tekrarlar",
+      "input": 124522,
+      "set_aside": 7,
+      "remaining": 124515,
+      "decision_type": "duplicate_skip",
+      "evidence": "dedup",
+      "note": "Ayni cevapli 7 tekrar atlandi."
+    },
+    {
+      "stage": "Splitler arasi leakage duzeltmesi",
+      "input": 124515,
+      "set_aside": 5,
+      "remaining": 124510,
+      "decision_type": "cross_split_quarantine",
+      "evidence": "leakage",
+      "note": "Validation'dan 4 ve testten 1 kayit ayrildi; raporlanan capraz-split soru gruplari sifira indi."
+    },
+    {
+      "stage": "Gecici kalite bekletme",
+      "input": 124510,
+      "set_aside": 14,
+      "remaining": 124496,
+      "decision_type": "assistant_preliminary_hold",
+      "evidence": "audit",
+      "note": "Yalnizca calisma kopyasindan ayrildi. Nihai insan karari yok."
+    }
+  ],
+  "quality_scan": {
+    "scanned": 124510,
+    "heuristic_review_candidates": 2678,
+    "preliminary_held": 14,
+    "final_human_decisions": 0
+  },
+  "working_copy_splits": [
+    {
+      "split": "train",
+      "original": 111782,
+      "held": 14,
+      "working_copy": 111768
+    },
+    {
+      "split": "validation",
+      "original": 6397,
+      "held": 0,
+      "working_copy": 6397
+    },
+    {
+      "split": "test",
+      "original": 6331,
+      "held": 0,
+      "working_copy": 6331
+    }
+  ],
+  "source_queue_sha256": "b60c21fd96c7db0bac246a5417b311bd5a61f382ab37afe6cedf239547beb74a",
+  "evidence_files": {
+    "pool": "reports/quality/instruction_citation_pool_v0.9.json",
+    "plan": "reports/splits/instruction_split_plan_v0.9.json",
+    "dedup": "reports/quality/instruction_dedup_report_v0.9.json",
+    "leakage": "reports/quality/instruction_leakage_fix_v0.9.json",
+    "signals": "reports/quality/instruction_quality_signals_v0.9.json",
+    "queue": "data/interim/instruction_quality_decision_queue_14_v0.9.csv",
+    "manifest": "data/interim/instruction_quality_hold_manifest_v0.9.json",
+    "audit": "data/interim/instruction_quality_held_working_v0.9/quality_hold_audit.json"
+  },
+  "previous_integrity_test": "Adim 351: 124496 korunan kaydin bayt duzeyinde karsilastirmasi PASS",
+  "limitations": [
+    "Bu muhasebe 308009 kayitlik exact_unique asamasindan baslar.",
+    "Ham veri indirme ve ilk exact dedup asamalari kapsam disidir.",
+    "Kanun metinleri/domain corpus temizligi ayri bir is akisidir.",
+    "176964 kayda tek bir hata gerekcesi atfedilemez.",
+    "4630 alternatif cevap kaydi hatali ilan edilmemistir.",
+    "2678 heuristik aday kesin hatali kayit sayisi degildir.",
+    "14 gecici bekletme icin nihai insan karari yoktur.",
+    "Bagimsiz hukuki dogruluk ve kaynak incelemesi tamamlanmadi.",
+    "Kullanim haklari ve egitim izni henuz onaylanmadi."
+  ],
+  "training_approved": false,
+  "rights_status": "pending_review"
+}

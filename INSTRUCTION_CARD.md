@@ -1,212 +1,112 @@
-# LexiTech TR — INSTRUCTION_CARD
+# LexiTech TR Instruction Dataset v1.0-rc1
 
-**Sürüm:** Instruction Dataset v0.9 (ön taslak)
-**Belge tarihi:** 2026-10-27
-**Dil:** Türkçe
-**Alan:** Türkiye hukuku
-**Durum:** Eğitim için onaylanmadı.
+**Durum:** Teknik olarak eğitime hazır aday. İnsan kalite kontrolü ve kullanım hakkı onayı bekliyor.
+Tüm kayıtlarda `verified=false`, `training_approved=false`.
 
-## 1. Amaç
+## Amaç
 
-Türkçe hukuk soru-cevap biçimindeki instruction verilerini,
-ileriki SFT çalışmaları için incelemek ve hazırlamak.
+Modele Türk hukuku sorularını cevaplamayı, ilgili kanun maddesini göstermeyi ve bilmediğini söylemeyi öğretmek
+için supervised fine-tuning (SFT) aşamasında kullanılmak üzere hazırlandı.
 
-**Vize aşamasında model eğitimi gerçekleştirilmemiştir.**
+## Örnek sayısı neden 4.000
 
-## 2. Kaynaklar
+Rehberin 3-5 bin hedefine uyar. v0.9'daki 124.510 kayıt kontrol edilemeyecek kadar büyüktü, %49'u görev türüne
+ayrılamıyordu. Otomatik üretilmiş büyük bir havuz yerine, kaynağa bağlanmış ve dengeli küçük bir set seçildi.
 
-İlk havuzda iki Hugging Face kaynağı değerlendirilmiştir:
+## Kaynaklar ve üretim yöntemi
 
-- `sinanelms/hukukisorular`
-- `OrionCAF/turkish_law_qa_dataset`
+| Yöntem | Örnek | Açıklama |
+|---|---:|---|
+| `llm_uretimi_kaynak_veri_seti` | 3.314 | `sinanelms/hukukisorular`. Yayıncıya göre Gemini 2.5 Pro ile üretildi; prompt ve parametreler bilinmiyor |
+| `kaynak_veri_seti_yontem_bilinmiyor` | 64 | `OrionCAF/turkish_law_qa_dataset`. Üretim yöntemi belirsiz |
+| `kural_tabanli_kanun_metninden` | 459 | Kanun metninden kuralla üretildi, LLM kullanılmadı |
+| `elle_yazilan_sablon` | 163 | Sınır davranışı için elle yazılmış şablonlar |
 
-Başlangıç havuzu: **378.903 kayıt**.
-Birebir tekrar giderilmiş ilk havuz: **308.009 kayıt**.
-Madde göstergeli inceleme havuzu: **131.045 kayıt**.
+Proje kapsamında LLM ile yeni örnek üretilmedi. Kural tabanlı ve şablon örnekleri `scripts/07_build_instruction_set.py`
+içindedir.
 
-Güncel ön taslaktaki kaynaklar:
+## Görev türü dağılımı
 
-- `sinanelms/hukukisorular`: 124,510 kayıt
+| Görev türü | Örnek | Oran |
+|---|---:|---:|
+| Usul ve süre | 800 | %20,0 |
+| Koşul ve unsur | 797 | %19,9 |
+| Tanım ve açıklama | 622 | %15,6 |
+| Madde bulma | 351 | %8,8 |
+| Hukuki sonuç | 338 | %8,5 |
+| Karşılaştırma | 278 | %7,0 |
+| Bilgi yetersizliği | 229 | %5,7 |
+| Olaya uygulama | 219 | %5,5 |
+| Yaptırım | 194 | %4,9 |
+| Neden-sonuç | 90 | %2,3 |
+| Alan dışı | 42 | %1,1 |
+| Madde açıklama | 40 | %1,0 |
 
-Kaynaklara ait kullanım lisansları ve veri üretim
-kökenleri **ayrıca doğrulanmalıdır**.
+Görev türü başına tavan %20, kanun başına tavan %20. Görev türü kural tabanlıdır, ilk kalite turunda 60 kayıtta
+54 uyum görüldü. Özetleme ve dilekçe görevi yoktur.
 
-Kaynakta görülen `0.json`, `24.json` benzeri etiketler,
-**resmî kanun belgesi kimliği değildir**.
+## Doğrulama yöntemi
 
-## 3. Güncel veri kümesi
+Her kaynak kaydı `scripts/06_filter_instruction.py` ile kanun metnine bağlanır:
 
-Toplam: **124,510** soru-cevap kaydı.
+1. Soru ve cevaptaki kanun-madde atıfları çözülür.
+2. Madde kanunda yoksa, mülgaysa veya 12 kanun dışındaysa kayıt elenir.
+3. Yargı kararı atfı olan kayıt elenir, çünkü corpus'ta karar metni yok.
+4. Cevap kelimelerinin maddede geçme oranı ölçülür (kanıt skoru, eşik 0,55).
+5. Cevaptaki süreler maddede veya soruda yoksa kayıt elenir.
 
-- Train: **111,782**
-- Validation: **6,397**
-- Test: **6,331**
+Bu otomatik kontroldür. **Bir cevabın hukuken doğru olduğunu kanıtlamaz.** Skor kelime örtüşmesidir.
 
-Dosyalar:
+## Elenen kayıtlar
 
-- `data/interim/instruction_leakage_clean_v0.9/train.jsonl`
-- `data/interim/instruction_leakage_clean_v0.9/validation.jsonl`
-- `data/interim/instruction_leakage_clean_v0.9/test.jsonl`
+| Aşama | Kayıt |
+|---|---:|
+| Ham | 378.903 |
+| Temizleme sonrası | 378.902 |
+| Birebir tekrar sonrası | 308.009 |
+| Kanun metni filtresi sonrası | 31.962 |
+| Görev türü bilinen ve kümeler arası çakışmayan havuz | 10.625 |
+| Final (kaynaklı 3.378 + üretilen 622) | 4.000 |
 
-Bunlar **ara aşama veri dosyalarıdır**; eğitim onayı
-verilmiş nihai dosyalar değildir.
+Neden bazında tablo: [reports/statistics/statistics_report_v1.0.md](reports/statistics/statistics_report_v1.0.md).
+Her eleme `data/interim/instruction_exclusions_v1.0.jsonl` dosyasındadır.
 
-### Kanun bazında dağılım
+## Format
 
-| Kanun | Train | Validation | Test | Toplam |
-|---|---:|---:|---:|---:|
-| 2004 | 3,208 | 118 | 39 | 3,365 |
-| 213 | 852 | 53 | 89 | 994 |
-| 2577 | 4,509 | 288 | 152 | 4,949 |
-| 2709 | 2,037 | 104 | 118 | 2,259 |
-| 4721 | 11,714 | 387 | 183 | 12,284 |
-| 4857 | 2,843 | 62 | 1 | 2,906 |
-| 5237 | 47,206 | 2,959 | 4,221 | 54,386 |
-| 5271 | 27,568 | 2,097 | 1,365 | 31,030 |
-| 5510 | 1,580 | 18 | 8 | 1,606 |
-| 6098 | 8,738 | 254 | 128 | 9,120 |
-| 6102 | 1,201 | 54 | 24 | 1,279 |
-| 6502 | 326 | 3 | 3 | 332 |
+`data/final/instruction_v1.0.jsonl` tamamı, `data/final/instruction_v1.0/` küme dosyalarıdır. Alanlar:
 
-## 4. Veri şeması
+`id`, `split`, `task_type`, `messages`, `instruction`, `response`, `source_document`, `source_articles`,
+`generation_method`, `origin`, `evidence_score`, `language`, `verified`, `verified_by`, `rights_status`,
+`training_approved`, `dataset_version`.
 
-Her kayıt şu alanları taşır:
+`source_document` kanun belgesine, `source_articles` maddeye (`5237:81`), `origin` özgün kaynak kayda işaret eder.
 
-- `id`
-- `messages`: `user` sorusu ve `assistant` cevabı
-- `metadata`: dil, kanun göstergesi, kaynak,
-  kaynak dosya etiketi, split ve kalite bayrakları.
+## Veri ayrımı
 
-Kalite bayrakları arasında:
+| Küme | Örnek |
+|---|---:|
+| Train | 3.568 |
+| Validation | 216 |
+| Test | 216 |
 
-- `training_approved: false`
-- `legal_accuracy_verified: false`
-- `citation_accuracy_verified: false`
-- `rights_status: pending_review`
+Kümeler arasında ortak kaynak dosyası, ortak kanun maddesi ve soru Jaccard ≥ 0,85 yakın tekrarı yoktur. Test kümesi
+böylece modelin eğitimde görmediği maddeleri ölçer. Bu koşullar `tests/test_release.py` ile her çalışmada denenir.
+Elle yazılan şablonlarda aile (`family`) bazında ayrım yapıldı.
 
-Bu alanlar, otomatik işlemin hukuki doğrulama
-yerine geçmediğini açıkça gösterir.
+## Bilinen problemler
 
-## 5. Seçim ve filtreleme
+- Kaynaklı örneklerin %98'i tek veri setinden gelir, bu setin lisansı belirsizdir.
+- Corpus'un ve örneklerin kanun dışına çıkmaması için yorum ağırlıklı cevaplar elendi; cevaplar kanun diline yakındır.
+- Şablon örnekleri tekrarlı kalıplar içerir.
+- Kişisel veri taraması kural tabanlıdır (e-posta, telefon, IBAN, TCKN); isim tespiti yapılmaz.
+- Görev türü etiketleri kural tabanlıdır, bağımsız insan doğrulaması yoktur.
 
-1. Kaynakların normalize edilmesi.
-2. İlk birebir tekrarların kaldırılması.
-3. Kanun ve madde göstergeleriyle aday havuzu oluşturulması.
-4. Madde numarası yapısal kontrolü.
-5. Şüpheli atıfların ve köken bilgisi yetersiz
-   kayıtların geçici olarak ayrılması.
-6. Kaynak dosya ve aynı soru bağlantılarına dayanan
-   belge gruplu split planı.
-7. Aynı sorunun alternatif cevap versiyonlarının
-   inceleme havuzuna ayrılması.
-8. Normalize edilmiş kümeler arası birebir soru
-   sızıntısının giderilmesi.
-9. Önceden belirlenmiş MinHash yakın tekrar çiftlerinin
-   güncel veri setiyle karşılaştırılması.
+## Lisans ve kullanım
 
-## 6. Kayıt muhasebesi
+`rights_status=pending_review`. Yayıncı beyanı üst kaynakların haklarını kanıtlamaz. Ayrıntı:
+`reports/sources/source_rights_audit_v0.9.csv`, `reports/sources/hf_license_evidence_v0.9.csv`.
 
-Madde göstergeli havuz: **131.045**
+## Sürüm geçmişi
 
-- Şüpheli atıf nedeniyle ayrılan: **933**
-- Kaynak kökeni yetersiz OrionCAF adayları: **960**
-- İlk splitli ön taslak: **129.152**
-- Alternatif cevaplı kayıtlar: **4.630**
-- Eşdeğer tekrar nedeniyle atlanan kayıtlar: **7**
-- Kümeler arası normalize soru tekrarı nedeniyle
-  ayrılan kayıtlar: **5**
-- Güncel ön taslak: **124,510**
-
-Bu eleme gerekçeleri **hukuki doğruluk kararları
-olarak yorumlanmamalıdır**.
-
-## 7. Split ve sızıntı denetimi
-
-- İlk plan: Kaynak dosya bağlantılı 74 grup.
-- En büyük bağlantılı grup: 97.033 kayıt.
-- Güncel splitlerde ortak kaynak dosya sayısı: **0**.
-- Kontrol edilen normalize soru düzeyinde ortak
-  train/validation/test soru sayısı: **0**.
-- Eski MinHash raporundan güncel veri setinde
-  kalan yakın tekrar çifti: **527**.
-- Bunların farklı splitlerde bulunanı: **0**.
-- Aynı split içindeki çiftler: **527**.
-
-Önceki MinHash yöntemi soru **ve cevabı birlikte**
-karşılaştırmış, üç kelimelik parçalar ve 0,85
-Jaccard eşiği kullanmıştır.
-
-**Sınırlama:** Güncel veri üzerinde yalnızca soru
-metnine dayanan kapsamlı yeni yakın tekrar taraması
-yapılmadı. Dolayısıyla sıfır sızıntı garantisi yoktur.
-
-## 8. Dengesizlikler
-
-Veriler özellikle Türk Ceza Kanunu ve Ceza
-Muhakemesi Kanunu soruları bakımından yoğunlaşmaktadır.
-
-İş Kanunu, sosyal sigorta, ticaret ve tüketici
-hukuku alanlarında validation/test örneği
-sayısı bazı kümelerde çok düşüktür.
-
-Bu kümelerle her hukuk alanında aynı güvenilirlikte
-performans ölçümü yapıldığı iddia edilmemelidir.
-
-## 9. İnsan değerlendirmesi
-
-200 soruluk tabakalı manuel değerlendirme örneklemi:
-
-`reports/quality/instruction_manual_review_200_v0.9.csv`
-
-Mevcut ilerleme:
-
-- 1 kayıt: Ek inceleme gerekli.
-- 1 kayıt: Geçici kabul.
-- 198 kayıt: Henüz değerlendirilmedi.
-
-**Nihai hukuk uzmanı onayı verilmedi.**
-
-Örneklem kanun bazında tabakalıdır; genel veri
-kümesinin rastgele ve temsili örneklemi değildir.
-
-## 10. Hukuki ve etik riskler
-
-- Yanlış kanun-madde eşleştirmeleri.
-- Gerçekte doğrulanmamış yargı kararı atıfları.
-- Tarihi geçmiş veya mevzuat değişikliklerinden
-  etkilenmiş cevaplar.
-- Farklı cevap versiyonlarında eksik bilgi ve
-  olası hukuki çelişkiler.
-- Otomatik hazırlanmış veya üretim kökeni
-  belirsiz kaynak metinleri.
-- Kaynak lisanslarının ve kullanım izinlerinin
-  henüz netleşmemiş olması.
-- Soru-cevaplar üzerinden gerçek kişilere ilişkin
-  kişisel veri risklerinin ayrıca incelenmesi gereği.
-
-**Madde numarasının ilgili kanunda bulunması,
-cevabın hukuken doğru olduğunu göstermez.**
-
-## 11. İlgili denetim raporları
-
-- `reports/quality/instruction_article_audit_v0.9.json`
-- `reports/quality/instruction_reference_mismatches_v0.9.csv`
-- `reports/splits/instruction_split_plan_v0.9.json`
-- `reports/quality/instruction_split_integrity_v0.9.json`
-- `reports/quality/instruction_dedup_report_v0.9.json`
-- `reports/quality/instruction_balance_audit_v0.9.json`
-- `reports/quality/instruction_leakage_fix_v0.9.json`
-- `reports/quality/instruction_existing_near_duplicates_v0.9.json`
-
-## 12. Eğitim ve paylaşım kısıtları
-
-Güncel ön taslaktaki **124,510** kayıtta
-`training_approved: false` bulunmaktadır.
-
-**124,510** kaydın kullanım hakkı durumu
-`pending_review` olarak işaretlidir.
-
-Kaynak kullanım izinleri, kişisel veri incelemesi
-ve hukuki kalite denetimleri tamamlanmadan
-bu veri seti `v1.0` veya eğitim için onaylı
-olarak sunulmamalıdır.
+- v0.9 (27.10.2026): 124.510 kayıtlık teknik ön taslak.
+- v1.0-rc1 (31.10.2026): Kanun metnine bağlı 4.000 örnek, görev dengesi, sınır davranışı örnekleri.

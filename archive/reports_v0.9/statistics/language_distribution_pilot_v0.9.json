@@ -1,0 +1,165 @@
+{
+  "project": "LexiTech TR",
+  "version": "v0.9",
+  "status": "pilot_sample_not_full_corpus_measurement",
+  "method": "langdetect_1.0.9",
+  "confidence_threshold": 0.8,
+  "instruction": {
+    "population": 124510,
+    "sample_size": 1200,
+    "sampling_method": "reservoir_random_seed_20261028",
+    "population_by_split": {
+      "train": 111782,
+      "validation": 6397,
+      "test": 6331
+    },
+    "question_categories": {
+      "tr": 1198,
+      "uncertain_short": 2
+    },
+    "answer_categories": {
+      "tr": 1200
+    },
+    "question_detected_languages": {
+      "tr": 1198,
+      "unknown": 2
+    },
+    "answer_detected_languages": {
+      "tr": 1200
+    },
+    "sample_metadata_languages": {
+      "tr": 1200
+    },
+    "flagged_example_metadata": [
+      {
+        "id": "f6e02cbe49e1c82a15d871c49712c94a97fc12b071165a98c9bf69acc0958d95",
+        "split": "train",
+        "question_category": "uncertain_short",
+        "question_detected_language": null,
+        "question_confidence": 0.0,
+        "answer_category": "tr",
+        "answer_detected_language": "tr",
+        "answer_confidence": 1.0
+      },
+      {
+        "id": "f66bf15cd5cc37f6b3242f597148a0cf42cda537743224a02f0831d31d024d38",
+        "split": "train",
+        "question_category": "uncertain_short",
+        "question_detected_language": null,
+        "question_confidence": 0.0,
+        "answer_category": "tr",
+        "answer_detected_language": "tr",
+        "answer_confidence": 1.0
+      }
+    ]
+  },
+  "domain": {
+    "documents": 12,
+    "sampled_passages": 60,
+    "passage_length_chars": 1500,
+    "categories": {
+      "tr": 60
+    },
+    "detected_languages": {
+      "tr": 60
+    },
+    "document_metadata_languages": {
+      "tr": 12
+    },
+    "per_document": [
+      {
+        "law_number": "2709",
+        "sampled_passages": 5,
+        "detection_categories": {
+          "tr": 5
+        }
+      },
+      {
+        "law_number": "4721",
+        "sampled_passages": 5,
+        "detection_categories": {
+          "tr": 5
+        }
+      },
+      {
+        "law_number": "6098",
+        "sampled_passages": 5,
+        "detection_categories": {
+          "tr": 5
+        }
+      },
+      {
+        "law_number": "5237",
+        "sampled_passages": 5,
+        "detection_categories": {
+          "tr": 5
+        }
+      },
+      {
+        "law_number": "5271",
+        "sampled_passages": 5,
+        "detection_categories": {
+          "tr": 5
+        }
+      },
+      {
+        "law_number": "4857",
+        "sampled_passages": 5,
+        "detection_categories": {
+          "tr": 5
+        }
+      },
+      {
+        "law_number": "6102",
+        "sampled_passages": 5,
+        "detection_categories": {
+          "tr": 5
+        }
+      },
+      {
+        "law_number": "6502",
+        "sampled_passages": 5,
+        "detection_categories": {
+          "tr": 5
+        }
+      },
+      {
+        "law_number": "2577",
+        "sampled_passages": 5,
+        "detection_categories": {
+          "tr": 5
+        }
+      },
+      {
+        "law_number": "213",
+        "sampled_passages": 5,
+        "detection_categories": {
+          "tr": 5
+        }
+      },
+      {
+        "law_number": "2004",
+        "sampled_passages": 5,
+        "detection_categories": {
+          "tr": 5
+        }
+      },
+      {
+        "law_number": "5510",
+        "sampled_passages": 5,
+        "detection_categories": {
+          "tr": 5
+        }
+      }
+    ]
+  },
+  "limitations": [
+    "Instruction sonuçları 1200 kayıtlık rastgele örneklemdir.",
+    "Domain sonuçları her belgeden beş metin parçasına dayanır.",
+    "langdetect olasılıkları kalibre edilmiş doğruluk oranları değildir.",
+    "Kısa metinlerde otomatik dil tespiti yanılabilir.",
+    "Karma dilli metinleri tek bir dil etiketi temsil edebilir.",
+    "İnsan doğrulaması henüz yapılmamıştır.",
+    "Bu çalışma kullanım hakkını veya hukuki doğruluğu kanıtlamaz."
+  ]
+}

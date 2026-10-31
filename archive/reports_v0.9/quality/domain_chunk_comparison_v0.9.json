@@ -1,0 +1,112 @@
+{
+  "old": {
+    "total_chunks": 980,
+    "split_counts": {
+      "train": 881,
+      "validation": 40,
+      "test": 59
+    },
+    "boundary_counts": {
+      "article_heading": 799,
+      "possible_mid_sentence": 52,
+      "possible_sentence_end": 15
+    },
+    "mid_sentence_by_law": {
+      "2004": 8,
+      "213": 9,
+      "2577": 1,
+      "2709": 1,
+      "4857": 1,
+      "5271": 3,
+      "5510": 26,
+      "6102": 1,
+      "6502": 2
+    },
+    "integrity_errors": [],
+    "examples": [
+      {
+        "law_number": "5271",
+        "before": "245),\nsuçlarının işlendiği hususunda makul şüphe bulunması halinde banka, ödeme hizmeti sağlayıcısı\n",
+        "after": "veya kripto varlık hizmet sağlayıcısı nezdinde veya bunlar aracılığıyla yapılan ya da yapılmaya teşe"
+      },
+      {
+        "law_number": "5271",
+        "before": "lanmaz.\n(13) Resmî mercilere beyan edilmiş olup da soruşturma dosyasında yer alan adreste bulunmama\n",
+        "after": "veya yurt dışında olma (…)  hâlinde, seri muhakeme usulü uygulanmaz.\n(14) (Değişik:8/7/2021-7331/22 "
+      },
+      {
+        "law_number": "5271",
+        "before": "eren raporda, ne suretle uzlaşıldığı ayrıntılı olarak açıklanır. (Ek cümle: 24/11/2016-6763/34 md.)\n",
+        "after": "Uzlaştırma bürosu soruşturma dosyasını, raporu ve varsa yazılı anlaşmayı Cumhuriyet savcısına gönder"
+      },
+      {
+        "law_number": "4857",
+        "before": "un\nalacağından mahsup etmek kaydıyla geçici işçilerin en çok üç aya kadar olan ücretlerini doğrudan\n",
+        "after": "işçilerin banka hesabına yatırır. Ücreti ödenmeyen i şçiler ve ödenmeyen ücret tutarları geçici i şç"
+      },
+      {
+        "law_number": "6102",
+        "before": "üğüne verilmesi ile tasfiye sona ermiş kabul edilir ve şirketin unvanı ticaret sicilinden silinerek\n",
+        "after": "Türkiye Ticaret Sicili Gazetesinde ilan edilir. İflasına karar verilen şirket veya kooperatifin ise "
+      },
+      {
+        "law_number": "6502",
+        "before": "aması veya kaydın güncellenmemesi durumunda her bir servis istasyonu için on sekiz\nbin Türk Lirası,\n",
+        "after": "2) Beşinci fıkrasına aykırı olarak her türlü mecra ve faaliyetlerinde kolaylıkla görülebilir ve\nokun"
+      }
+    ]
+  },
+  "sentence_aware": {
+    "total_chunks": 983,
+    "split_counts": {
+      "train": 884,
+      "validation": 40,
+      "test": 59
+    },
+    "boundary_counts": {
+      "article_heading": 799,
+      "possible_sentence_end": 44,
+      "possible_mid_sentence": 26
+    },
+    "mid_sentence_by_law": {
+      "2004": 1,
+      "213": 2,
+      "5271": 2,
+      "5510": 20,
+      "6502": 1
+    },
+    "integrity_errors": [],
+    "examples": [
+      {
+        "law_number": "5271",
+        "before": " Hakkında Kanunda tanımlanan silah kaçakçılığı\n(madde 12) suçları.\nc) (Ek: 25/5/2005 – 5353/17 md.) ",
+        "after": "Bankalar Kanununun 22 nci maddesinin (3) ve (4) numaralı\nfıkralarında tanımlanan zimmet suçu,\nd) Kaç"
+      },
+      {
+        "law_number": "5271",
+        "before": "gulanmasını\nkabul etmemesi hâlinde seri muhakeme usulü uygulanmaz. (Ek cümle: 8/7/2021-7331/22 md.) ",
+        "after": "Seri\nmuhakeme usulü, bu kapsama giren bir suçun, kapsama girmeyen başka bir suçla birlikte işlenmiş "
+      },
+      {
+        "law_number": "6502",
+        "before": " bir işlem için beş yüz\nTürk Lirası idari para cezası uygulanır.\nb) (Değişik:23/5/2024-7511/19 md.) ",
+        "after": "58 inci maddesinin,\n1) İkinci fıkrasına aykırı hareket eden üretici ve ithalatçılar hakkında; satı ş"
+      },
+      {
+        "law_number": "213",
+        "before": "sı ve bunların uygulanmasına ili şkin usul ve esasları\nbelirlemeye,\n7. (Ek: 28/11/2017-7061/19 md.) ",
+        "after": "Elektronik ticarette ve internet dâhil olmak üzere her türlü dijital\nortamın alım, satım, kiralama, "
+      },
+      {
+        "law_number": "213",
+        "before": "ca hazırlanacak ve\nResmi Gazete'de yayınlanacak yönetmelikle belirlenir.\n(Ek: 24/6/1994-4008/7 md.) ",
+        "after": "Maliye Bakanlığı, birinci fıkrada yazılı belge tasdik i şlemini;\nnoterlere, kanunla kurulmuş mesleki"
+      },
+      {
+        "law_number": "2004",
+        "before": "ik yapan hükmü, bu Kanunun yürürlüğe girmesinden sonra\nyapılacak iflâs idaresi toplantılarında,\n34- ",
+        "after": "226 ncı maddesinde değişiklik yapan hükmü, Kanunun yürürlüğe girmesinden sonra yapılacak\nsulh ve tah"
+      }
+    ]
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "total": 131045,
+  "status_counts": {
+    "total": 131045,
+    "numbers_present_in_target_law": 130112,
+    "requires_reference_review": 933
+  },
+  "by_law": {
+    "4721": {
+      "numbers_present_in_target_law": 13404
+    },
+    "6098": {
+      "numbers_present_in_target_law": 9773,
+      "requires_reference_review": 234
+    },
+    "2709": {
+      "numbers_present_in_target_law": 2364,
+      "requires_reference_review": 126
+    },
+    "5271": {
+      "numbers_present_in_target_law": 31996,
+      "requires_reference_review": 69
+    },
+    "5237": {
+      "numbers_present_in_target_law": 56280,
+      "requires_reference_review": 111
+    },
+    "2577": {
+      "numbers_present_in_target_law": 5148,
+      "requires_reference_review": 240
+    },
+    "2004": {
+      "numbers_present_in_target_law": 3579,
+      "requires_reference_review": 77
+    },
+    "4857": {
+      "numbers_present_in_target_law": 3038,
+      "requires_reference_review": 34
+    },
+    "6102": {
+      "numbers_present_in_target_law": 1435
+    },
+    "213": {
+      "numbers_present_in_target_law": 1074
+    },
+    "6502": {
+      "numbers_present_in_target_law": 354,
+      "requires_reference_review": 24
+    },
+    "5510": {
+      "numbers_present_in_target_law": 1667,
+      "requires_reference_review": 18
+    }
+  },
+  "article_index_sizes": {
+    "2709": 177,
+    "4721": 1030,
+    "6098": 649,
+    "5237": 345,
+    "5271": 335,
+    "4857": 122,
+    "6102": 1535,
+    "6502": 88,
+    "2577": 65,
+    "213": 416,
+    "2004": 370,
+    "5510": 112
+  },
+  "examples": {
+    "requires_reference_review": [
+      {
+        "law": "5271",
+        "question": "Yargıtay'ın temyiz incelemesi sonucunda verdiği bozma kararına karşı ilk derece veya bölge adliye mahkemesi direnebilir mi?",
+        "answer": "Evet, direnebilir. Bu durumda, dosya Yargıtay Hukuk Genel Kurulu'na (ceza davalarında Yargıtay Ceza Genel Kurulu'na) gider. Genel Kurul'un verdiği karar, tüm mahkemeler için bağlayıcıdır. (HMK m. 373, CMK m. 307)",
+        "extracted_numbers": [
+          307,
+          373
+        ],
+        "numbers_not_found": [
+          373
+        ]
+      },
+      {
+        "law": "6098",
+        "question": "Yasal önalım hakkı, hangi işlemler karşısında kullanılamaz?",
+        "answer": "Yasal önalım hakkı, paylı mülkiyet payının satışı durumunda kullanılır. Bağışlama, trampa (mal değişimi) veya cebri icra yoluyla satış gibi durumlarda kullanılamaz. (TBK m. 733)",
+        "extracted_numbers": [
+          733
+        ],
+        "numbers_not_found": [
+          733
+        ]
+      },
+      {
+        "law": "6098",
+        "question": "Yasal önalım hakkı sahibi, bu hakkını kullandığında, taşınmazı hangi bedelle satın alır?",
+        "answer": "Taşınmazı, alıcının satıcıya ödediği satış bedeli üzerinden satın alır. Önalım hakkı sahibi, satış bedeli ile alıcıya düşen tapu giderlerini, hâkim tarafından belirlenen süre içinde nakden yatırmakla yükümlüdür. (TBK m. 734)",
+        "extracted_numbers": [
+          734
+        ],
+        "numbers_not_found": [
+          734
+        ]
+      },
+      {
+        "law": "6098",
+        "question": "Bir tacir, diğer bir tacire sattığı malın bedelini alamaması halinde 'hapis hakkı'nı hangi mallar üzerinde kullanabilir?",
+        "answer": "Hapis hakkı (TBK m. 950), alacaklının, borçluya ait olup onun rızasıyla zilyedi bulunduğu taşınırlar veya kıymetli evrak üzerinde kullanılabilir. Alacak ile zilyetlik altındaki eşya arasında ticari ilişkiden doğan bir bağlantı olması yeterl",
+        "extracted_numbers": [
+          950
+        ],
+        "numbers_not_found": [
+          950
+        ]
+      },
+      {
+        "law": "6098",
+        "question": "Hapis hakkı nedir ve hangi koşullarda kullanılabilir?",
+        "answer": "Hapis hakkı, alacaklının, borçluya ait olup onun rızasıyla zilyedi bulunduğu taşınırı veya kıymetli evrakı, borç ödeninceye kadar hapsetme yetkisidir. Bunun için borcun muaccel olması ve alacak ile zilyetlik altındaki eşya arasında bir bağl",
+        "extracted_numbers": [
+          950
+        ],
+        "numbers_not_found": [
+          950
+        ]
+      }
+    ]
+  },
+  "limitations": [
+    "Atiflar sadece cevap metninden sezgisel olarak cikarildi.",
+    "Madde numaralari baska bir kanuna ait olabilir.",
+    "Mükerrer, ek ve geçici madde türleri tam ayrıştırılmadı.",
+    "PDF/OCR hatalari eslesmeleri etkileyebilir.",
+    "Madde varligi hukuki dogruluk kaniti degildir."
+  ]
+}

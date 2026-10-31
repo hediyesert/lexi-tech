@@ -1,0 +1,82 @@
+{
+  "project": "LexiTech TR",
+  "version": "v0.9",
+  "advisor_questions": [
+    5,
+    6
+  ],
+  "scope": "instruction_quality_scan_and_preliminary_hold",
+  "total_scanned_qa": 124510,
+  "structural_errors": 0,
+  "heuristic_candidate_qa": 2678,
+  "heuristic_candidate_percentage": 2.151,
+  "quality_signal_counts": {
+    "short_question_without_question_mark": 268,
+    "url_in_answer": 2298,
+    "url_in_question": 117,
+    "possible_reference_only_answer": 1
+  },
+  "candidate_split_counts": {
+    "train": 2675,
+    "test": 3
+  },
+  "short_prompt_analysis": {
+    "initial_candidates": 268,
+    "first_rule_explicit": 218,
+    "improved_rule_explicit": 253,
+    "additional_assistant_assessed_instructions": 2,
+    "headline_or_statement_review": 13,
+    "headline": 11,
+    "statement": 2,
+    "independent_human_validation": false
+  },
+  "preliminary_hold": {
+    "unique_records": 14,
+    "reason_counts": {
+      "headline_prompt": 11,
+      "citation_only_answer": 1,
+      "statement_prompt": 2,
+      "incomplete_question_fragment": 1
+    },
+    "source_queue_sha256": "b60c21fd96c7db0bac246a5417b311bd5a61f382ab37afe6cedf239547beb74a",
+    "held_split_counts": {
+      "train": 14,
+      "validation": 0,
+      "test": 0
+    },
+    "human_final_decisions": 0
+  },
+  "working_copy": {
+    "location": "data/interim/instruction_quality_held_working_v0.9",
+    "original_counts": {
+      "train": 111782,
+      "validation": 6397,
+      "test": 6331
+    },
+    "excluded_from_copy": {
+      "train": 14,
+      "validation": 0,
+      "test": 0
+    },
+    "remaining_counts": {
+      "train": 111768,
+      "validation": 6397,
+      "test": 6331
+    },
+    "total_remaining": 124496,
+    "original_dataset_unchanged": true,
+    "byte_level_integrity_check": "passed_in_step_351"
+  },
+  "training_approved": false,
+  "rights_status": "pending_review",
+  "limitations": [
+    "2678 aday kesin hatalı kayıt sayısı değildir.",
+    "URL içeren metinler otomatik olarak hatalı değildir.",
+    "14 kayıt geçici asistan önerisiyle çalışma kopyasında bekletildi.",
+    "14 kaydın nihai insan kararı bulunmuyor.",
+    "Bu rapor önceki bütün pipeline temizleme adımlarını kapsamaz.",
+    "Diğer kalite adaylarının incelemesi tamamlanmadı.",
+    "Kaynak hakları ve hukuki doğruluk ayrıca doğrulanmalı.",
+    "Çalışma kopyası eğitim için onaylı değildir."
+  ]
+}

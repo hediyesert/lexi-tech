@@ -1,0 +1,118 @@
+{
+  "source_counts": {
+    "OrionCAF/turkish_law_qa_dataset": 18185,
+    "sinanelms/hukukisorular": 289824
+  },
+  "distinct_source_document_counts": {
+    "sinanelms/hukukisorular": 286
+  },
+  "top_source_documents": {
+    "sinanelms/hukukisorular": [
+      [
+        "0.json",
+        15596
+      ],
+      [
+        "277.json",
+        2264
+      ],
+      [
+        "6.json",
+        1784
+      ],
+      [
+        "285.json",
+        1745
+      ],
+      [
+        "279.json",
+        1717
+      ],
+      [
+        "24.json",
+        1661
+      ],
+      [
+        "254.json",
+        1615
+      ],
+      [
+        "253.json",
+        1609
+      ],
+      [
+        "28.json",
+        1579
+      ],
+      [
+        "284.json",
+        1557
+      ]
+    ]
+  },
+  "metadata_key_counts": {
+    "OrionCAF/turkish_law_qa_dataset": {},
+    "sinanelms/hukukisorular": {
+      "soru_uzunluk": 289824,
+      "cevap_uzunluk": 289824,
+      "top_uzunluk": 289824,
+      "token_sayisi": 289824
+    }
+  },
+  "metadata_samples": {
+    "OrionCAF/turkish_law_qa_dataset": [
+      {
+        "source_document": null,
+        "metadata": {}
+      },
+      {
+        "source_document": null,
+        "metadata": {}
+      },
+      {
+        "source_document": null,
+        "metadata": {}
+      }
+    ],
+    "sinanelms/hukukisorular": [
+      {
+        "source_document": "0.json",
+        "metadata": {
+          "soru_uzunluk": "95",
+          "cevap_uzunluk": "170",
+          "top_uzunluk": "265",
+          "token_sayisi": "74"
+        }
+      },
+      {
+        "source_document": "0.json",
+        "metadata": {
+          "soru_uzunluk": "138",
+          "cevap_uzunluk": "273",
+          "top_uzunluk": "411",
+          "token_sayisi": "125"
+        }
+      },
+      {
+        "source_document": "0.json",
+        "metadata": {
+          "soru_uzunluk": "105",
+          "cevap_uzunluk": "231",
+          "top_uzunluk": "336",
+          "token_sayisi": "97"
+        }
+      }
+    ]
+  },
+  "citation_indicator_counts": {
+    "OrionCAF/turkish_law_qa_dataset": {
+      "answer_mentions_law": 1710,
+      "answer_mentions_article": 285
+    },
+    "sinanelms/hukukisorular": {
+      "answer_mentions_article": 41948,
+      "answer_mentions_law": 75334
+    }
+  },
+  "note": "Atıf göstergeleri doğruluk kanıtı değildir. Kaynak belge adları resmî hukuk kaynağı olarak henüz doğrulanmamıştır."
+}

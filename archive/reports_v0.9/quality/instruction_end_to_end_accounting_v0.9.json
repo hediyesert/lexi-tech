@@ -1,0 +1,121 @@
+{
+  "project": "LexiTech TR",
+  "version": "v0.9",
+  "advisor_questions": [
+    5,
+    6
+  ],
+  "scope": "raw_qa_to_quality_held_instruction_working_copy",
+  "source_counts": {
+    "sinanelms/hukukisorular": {
+      "raw": 360598,
+      "cleaned": 360597,
+      "removed_by_initial_cleaning": 1
+    },
+    "OrionCAF/turkish_law_qa_dataset": {
+      "raw": 18305,
+      "cleaned": 18305,
+      "removed_by_initial_cleaning": 0
+    }
+  },
+  "initial_raw_records": 378903,
+  "stages": [
+    {
+      "name": "İlk metin temizliği",
+      "input": 378903,
+      "set_aside": 1,
+      "remaining": 378902,
+      "classification": "empty_question_or_answer_filter",
+      "evidence": "scripts/03_clean.py"
+    },
+    {
+      "name": "Birebir tekrar ayıklama",
+      "input": 378902,
+      "set_aside": 70893,
+      "remaining": 308009,
+      "classification": "exact_duplicate",
+      "evidence": "scripts/05_exact_deduplicate.py"
+    },
+    {
+      "stage": "Instruction aday secimi",
+      "input": 308009,
+      "set_aside": 176964,
+      "remaining": 131045,
+      "decision_type": "heuristic_scope_selection",
+      "evidence": "pool",
+      "note": "Secim kriterlerini karsilamayanlar hatali veya silinmis olarak yorumlanamaz."
+    },
+    {
+      "stage": "Atif inceleme karantinasi",
+      "input": 131045,
+      "set_aside": 933,
+      "remaining": 130112,
+      "decision_type": "pending_reference_review",
+      "evidence": "plan",
+      "note": "Atif uyumsuzlugu kesin hukuki hata kaniti degildir."
+    },
+    {
+      "stage": "Kaynak belgesi karantinasi",
+      "input": 130112,
+      "set_aside": 960,
+      "remaining": 129152,
+      "decision_type": "pending_source_review",
+      "evidence": "plan",
+      "note": "Karantina, kalici silme karari degildir."
+    },
+    {
+      "stage": "Alternatif cevaplarin ayrilmasi",
+      "input": 129152,
+      "set_aside": 4630,
+      "remaining": 124522,
+      "decision_type": "alternative_answer_separation",
+      "evidence": "dedup",
+      "note": "Alternatif cevap kayitlari ayrildi; bunlarin yanlis oldugu kanitlanmadi."
+    },
+    {
+      "stage": "Ayni cevapli tekrarlar",
+      "input": 124522,
+      "set_aside": 7,
+      "remaining": 124515,
+      "decision_type": "duplicate_skip",
+      "evidence": "dedup",
+      "note": "Ayni cevapli 7 tekrar atlandi."
+    },
+    {
+      "stage": "Splitler arasi leakage duzeltmesi",
+      "input": 124515,
+      "set_aside": 5,
+      "remaining": 124510,
+      "decision_type": "cross_split_quarantine",
+      "evidence": "leakage",
+      "note": "Validation'dan 4 ve testten 1 kayit ayrildi; raporlanan capraz-split soru gruplari sifira indi."
+    },
+    {
+      "stage": "Gecici kalite bekletme",
+      "input": 124510,
+      "set_aside": 14,
+      "remaining": 124496,
+      "decision_type": "assistant_preliminary_hold",
+      "evidence": "audit",
+      "note": "Yalnizca calisma kopyasindan ayrildi. Nihai insan karari yok."
+    }
+  ],
+  "total_not_carried_forward": 254407,
+  "final_working_copy_records": 124496,
+  "all_arithmetic_checks_passed": true,
+  "previous_report": "reports/quality/instruction_full_cleaning_accounting_v0.9.json",
+  "training_approved": false,
+  "rights_status": "pending_review",
+  "limitations": [
+    "Ayrılan kayıtların tamamı hatalı veya silinmiş değildir.",
+    "İlk temizlemede ayrılan tek kaydın bireysel gerekçesi ayrıca doğrulanmalıdır.",
+    "İlk exact dedup kontrolü soru ve cevap içeriğine dayanır.",
+    "Instruction seçim havuzu hukuken doğrulanmış değildir.",
+    "Alternatif cevaplar ve karantina kayıtları kesin hatalı kabul edilmemiştir.",
+    "2678 kalite sinyali adayı kesin hata sayısı değildir.",
+    "14 kayıt yalnızca çalışma kopyasında bekletilmiştir.",
+    "Domain Corpus temizleme geçmişi ayrı raporlanmalıdır.",
+    "Kaynak kullanım hakları ve bağımsız hukuki doğrulama tamamlanmamıştır.",
+    "Bu rapor eğitim için izin vermez."
+  ]
+}

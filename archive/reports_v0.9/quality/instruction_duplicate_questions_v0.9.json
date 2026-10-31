@@ -1,0 +1,343 @@
+{
+  "status": "automatic_audit_only",
+  "counts": {
+    "total": 129152,
+    "duplicate_question_groups": 2115,
+    "additional_duplicate_records": 2529,
+    "groups_with_different_answers": 2108,
+    "groups_with_multiple_law_labels": 4,
+    "groups_with_identical_answers": 7
+  },
+  "top_repeated_questions": [
+    {
+      "question": "El yazılı vasiyetnamenin geçerlilik şartları nelerdir?",
+      "record_count": 12,
+      "distinct_answer_count": 12,
+      "splits": [
+        "train"
+      ],
+      "laws": [
+        "4721"
+      ]
+    },
+    {
+      "question": "Tenkis davası nedir ve kimler tarafından açılabilir?",
+      "record_count": 9,
+      "distinct_answer_count": 9,
+      "splits": [
+        "train"
+      ],
+      "laws": [
+        "4721"
+      ]
+    },
+    {
+      "question": "Fiil ehliyetinin koşulları nelerdir?",
+      "record_count": 8,
+      "distinct_answer_count": 8,
+      "splits": [
+        "train"
+      ],
+      "laws": [
+        "4721"
+      ]
+    },
+    {
+      "question": "Mirasçılıktan çıkarma (ıskat) hangi sebeplerle yapılabilir?",
+      "record_count": 8,
+      "distinct_answer_count": 8,
+      "splits": [
+        "train"
+      ],
+      "laws": [
+        "4721"
+      ]
+    },
+    {
+      "question": "Saklı paylı mirasçılar kimlerdir?",
+      "record_count": 8,
+      "distinct_answer_count": 8,
+      "splits": [
+        "train"
+      ],
+      "laws": [
+        "4721"
+      ]
+    },
+    {
+      "question": "Babalık karinesi nedir?",
+      "record_count": 8,
+      "distinct_answer_count": 8,
+      "splits": [
+        "train"
+      ],
+      "laws": [
+        "4721"
+      ]
+    },
+    {
+      "question": "Nişanlanmanın bozulması halinde hediyelerin iadesi istenebilir mi?",
+      "record_count": 7,
+      "distinct_answer_count": 7,
+      "splits": [
+        "train"
+      ],
+      "laws": [
+        "4721"
+      ]
+    },
+    {
+      "question": "Haksız tahrik altında suç işleyen bir kişinin cezasında nasıl bir indirim yapılır?",
+      "record_count": 7,
+      "distinct_answer_count": 7,
+      "splits": [
+        "train"
+      ],
+      "laws": [
+        "5237"
+      ]
+    },
+    {
+      "question": "Adi kefalet ile müteselsil kefalet arasındaki temel fark nedir?",
+      "record_count": 6,
+      "distinct_answer_count": 6,
+      "splits": [
+        "train"
+      ],
+      "laws": [
+        "6098"
+      ]
+    },
+    {
+      "question": "Boşanan kadın, kocasının soyadını kullanmaya devam edebilir mi?",
+      "record_count": 6,
+      "distinct_answer_count": 6,
+      "splits": [
+        "train"
+      ],
+      "laws": [
+        "4721"
+      ]
+    },
+    {
+      "question": "Zincirleme suç nedir ve cezası nasıl belirlenir?",
+      "record_count": 6,
+      "distinct_answer_count": 6,
+      "splits": [
+        "train"
+      ],
+      "laws": [
+        "5237"
+      ]
+    },
+    {
+      "question": "Soybağının reddi davasını kimler açabilir?",
+      "record_count": 6,
+      "distinct_answer_count": 6,
+      "splits": [
+        "train"
+      ],
+      "laws": [
+        "4721"
+      ]
+    },
+    {
+      "question": "Anlaşmalı boşanma davası açılabilmesi için evliliğin en az ne kadar sürmüş olması gerekir?",
+      "record_count": 6,
+      "distinct_answer_count": 6,
+      "splits": [
+        "train"
+      ],
+      "laws": [
+        "4721"
+      ]
+    },
+    {
+      "question": "Boşanma davasında yetkili mahkeme neresidir?",
+      "record_count": 6,
+      "distinct_answer_count": 6,
+      "splits": [
+        "train"
+      ],
+      "laws": [
+        "4721"
+      ]
+    },
+    {
+      "question": "Taşınmaz satışı vaadi sözleşmesinin geçerlilik şekli nedir?",
+      "record_count": 5,
+      "distinct_answer_count": 5,
+      "splits": [
+        "train"
+      ],
+      "laws": [
+        "6098"
+      ]
+    }
+  ],
+  "different_answer_examples": [
+    {
+      "question": "Yetkisiz bir temsilcinin yaptığı hukuki işlemin geçerliliği neye bağlıdır?",
+      "record_count": 2,
+      "answers": [
+        {
+          "id": "d7a45a2a3f467e0d53ce88684b39870dff0ec9061f87e9c03d48bfb69bdc5280",
+          "law": "6098",
+          "source_document": "0.json",
+          "answer": "Bir kimse yetkisi olmadığı hâlde temsilci olarak bir hukuki işlem yaparsa, bu işlem ancak temsil olunanın onayı (icazeti) ile geçerli hale gelir. Temsil olunan onamazsa, işlem geçersiz olur ve yetkisiz temsilci, karşı tarafın zararını gidermekle yükümlü olabilir. (Türk Borçlar Kanunu, Madde 46, 47)"
+        },
+        {
+          "id": "f5ba9157f0d631494fe5c55f2fb9f6021161d9ecc8b3e51ece789abe419d67d8",
+          "law": "6098",
+          "source_document": "0.json",
+          "answer": "Madde 46'ya göre, bir kimse yetkisi olmadığı hâlde temsilci olarak bir hukuki işlem yaparsa, bu işlem ancak onadığı (icazet verdiği) takdirde temsil olunanı bağlar. Temsil olunan onamazsa, işlem geçersiz olur ve yetkisiz temsilci, Madde 47 uyarınca bu geçersizlikten doğan zarardan sorumlu olabilir. (Türk Borçlar Kanunu, Madde 46 ve 47)"
+        }
+      ]
+    },
+    {
+      "question": "Haksız fiil sorumluluğunun temel koşulu nedir?",
+      "record_count": 2,
+      "answers": [
+        {
+          "id": "bf3b8ca958f677c6bfad3da39153248aee23091adf737b6c94d8321aecd51b30",
+          "law": "6098",
+          "source_document": "0.json",
+          "answer": "Kusurlu ve hukuka aykırı bir fiille başkasına zarar veren, bu zararı gidermekle yükümlüdür. Bu sorumluluğun doğması için kusur, zarar, hukuka aykırılık ve illiyet bağı unsurlarının bir arada bulunması gerekir. (Türk Borçlar Kanunu, Madde 49)"
+        },
+        {
+          "id": "c05cda0606de3b9a2f45f4ca0cc1920e95e65ff3a283276d0e872a94d92ea32a",
+          "law": "6098",
+          "source_document": "0.json",
+          "answer": "Kusurlu ve hukuka aykırı bir fiille başkasına zarar veren, bu zararı gidermekle yükümlüdür. (Türk Borçlar Kanunu, Madde 49)"
+        }
+      ]
+    },
+    {
+      "question": "Yapı malikinin sorumluluğu nasıl düzenlenmiştir?",
+      "record_count": 4,
+      "answers": [
+        {
+          "id": "3abf32435f3bc41e461f066731f1c1b4719abcff97982e2f263615bdeaff4fba",
+          "law": "6098",
+          "source_document": "0.json",
+          "answer": "Bir binanın veya diğer yapı eserlerinin maliki, bunların yapımındaki bozukluklardan veya bakımındaki eksikliklerden doğan zararı gidermekle yükümlüdür. Bu bir kusursuz sorumluluk halidir. (Türk Borçlar Kanunu, Madde 69)"
+        },
+        {
+          "id": "65d0da25f1d6c7278ebeffad9301319ea50066308a7f3ba564c883e152097b1d",
+          "law": "6098",
+          "source_document": "0.json",
+          "answer": "Bir binanın veya diğer yapı eserlerinin maliki, bunların yapımındaki bozukluklardan veya bakımındaki eksikliklerden doğan zararı gidermekle yükümlüdür. Bu da bir kusursuz sorumluluk halidir ve malikin kurtuluş kanıtı getirme imkânı yoktur (6098 sayılı Kanun, Madde 69)."
+        },
+        {
+          "id": "26135b3634b25a0ecd8311cf2c8ae4131e237a0326c931705a939482d3a0c7ec",
+          "law": "6098",
+          "source_document": "0.json",
+          "answer": "Bir binanın veya diğer yapı eserlerinin maliki, bunların yapımındaki bozukluklardan veya bakımındaki eksikliklerden doğan zararı gidermekle yükümlüdür. Bu bir kusursuz sorumluluk halidir. İntifa ve oturma hakkı sahipleri de malikle birlikte müteselsilen sorumludur. (6098 sayılı Kanun, Madde 69)."
+        }
+      ]
+    },
+    {
+      "question": "Sebepsiz zenginleşmenin genel koşulu nedir?",
+      "record_count": 2,
+      "answers": [
+        {
+          "id": "ffd848efca9bc1de5342f0c54fe5eb987497ddd57c01909465d45a58aa45e850",
+          "law": "6098",
+          "source_document": "0.json",
+          "answer": "Haklı bir sebep olmaksızın, bir başkasının malvarlığından veya emeğinden zenginleşen, bu zenginleşmeyi geri vermekle yükümlüdür. (Türk Borçlar Kanunu, Madde 77)"
+        },
+        {
+          "id": "1aba29244bea6d0bd3c646cd9af3af277d0caaacdd561171e950daad16671de6",
+          "law": "6098",
+          "source_document": "0.json",
+          "answer": "Haklı bir sebep olmaksızın, bir başkasının malvarlığından veya emeğinden zenginleşen, bu zenginleşmeyi geri vermekle yükümlüdür. (TBK Madde 77)"
+        }
+      ]
+    },
+    {
+      "question": "Borcun ifa yeri, taraflarca belirlenmemişse nasıl tespit edilir?",
+      "record_count": 2,
+      "answers": [
+        {
+          "id": "9d1d0a461c91c8dd1b5e2ac61878ba91f82cdd1da1b9286df4c90d57c48e313f",
+          "law": "6098",
+          "source_document": "0.json",
+          "answer": "Aksine bir anlaşma yoksa, para borçları alacaklının ödeme zamanındaki yerleşim yerinde; parça borçları sözleşmenin kurulduğu sırada borç konusunun bulunduğu yerde; bunların dışındaki bütün borçlar ise doğumları sırasında borçlunun yerleşim yerinde ifa edilir. (Türk Borçlar Kanunu, Madde 89)"
+        },
+        {
+          "id": "1816c862ac23027b85f63226f0b0a2795a480359120997a8565e3cbb10b50bea",
+          "law": "6098",
+          "source_document": "0.json",
+          "answer": "Aksine bir anlaşma yoksa şu hükümler uygulanır: 1. Para borçları, alacaklının ödeme zamanındaki yerleşim yerinde, 2. Parça borçları, sözleşmenin kurulduğu sırada borç konusunun bulunduğu yerde, 3. Bunların dışındaki bütün borçlar, doğumları sırasında borçlunun yerleşim yerinde ifa edilir. (6098 sayılı Kanun, Madde 89)."
+        }
+      ]
+    },
+    {
+      "question": "Sorumsuzluk anlaşması hangi durumda kesin olarak hükümsüzdür?",
+      "record_count": 3,
+      "answers": [
+        {
+          "id": "dfbc3e605f2ee183e03581c3768c56ea5a9f7320373c76d2f34f796255b2fdc2",
+          "law": "6098",
+          "source_document": "0.json",
+          "answer": "Borçlunun ağır kusurundan sorumlu olmayacağına ilişkin önceden yapılan anlaşma kesin olarak hükümsüzdür. (Türk Borçlar Kanunu, Madde 115)"
+        },
+        {
+          "id": "d4ecfcef10cb0f39686514b97e055dbdf018939894bfd7d3d6fecb301355b35f",
+          "law": "6098",
+          "source_document": "0.json",
+          "answer": "Borçlunun ağır kusurundan sorumlu olmayacağına ilişkin önceden yapılan anlaşma kesin olarak hükümsüzdür. (TBK Madde 115)"
+        },
+        {
+          "id": "1f05a2fafd6208ba7abfa1f5353f19e6834a9e14f01aa51928ea9b7b8b49da14",
+          "law": "6098",
+          "source_document": "0.json",
+          "answer": "TBK Madde 115'e göre, borçlunun ağır kusurundan sorumlu olmayacağına ilişkin önceden yapılan anlaşma kesin olarak hükümsüzdür. Hafif kusur için yapılan sorumsuzluk anlaşmaları ise geçerli olabilir. (TBK, Madde 115)."
+        }
+      ]
+    },
+    {
+      "question": "Zamanaşımını durduran sebeplerden üç tanesini sayınız.",
+      "record_count": 2,
+      "answers": [
+        {
+          "id": "ea2fbdbc744fb1f1d357be3e45888c735d6d7c772ee1f4bdeabec846f5e2b220",
+          "law": "6098",
+          "source_document": "0.json",
+          "answer": "1. Velayet süresince, çocukların ana ve babalarından olan alacakları için. 2. Evlilik devam ettiği sürece, eşlerin diğerinden olan alacakları için. 3. Borçlu, alacak üzerinde intifa hakkına sahip olduğu sürece. (Türk Borçlar Kanunu, Madde 153)"
+        },
+        {
+          "id": "e2309bf481968bfb359cc4925bd8b4df58402e54a05eb0b17c828c62c9afc189",
+          "law": "6098",
+          "source_document": "0.json",
+          "answer": "TBK Madde 153'e göre zamanaşımını durduran sebeplerden bazıları şunlardır: 1) Velayet süresince, çocukların ana ve babalarından olan alacakları için, 2) Vesayet süresince, vesayet altında bulunanların vasiden olan alacakları için, 3) Evlilik devam ettiği sürece, eşlerin diğerinden olan alacakları için, 4) Borçlu, alacak üzerinde intifa hakkına sahip olduğu sürece, 5) Alacağı, Türk mahkemelerinde ileri sürme imkânının bulunmadığı sürece. (6098 sayılı Kanun, Madde 153)"
+        }
+      ]
+    },
+    {
+      "question": "Taşınmaz satışı vaadi sözleşmesinin geçerlilik şekli nedir?",
+      "record_count": 5,
+      "answers": [
+        {
+          "id": "e83eb68b472f28936a2704ec96676b3fca6214f96c71f1fea4726d4c5dad32bc",
+          "law": "6098",
+          "source_document": "0.json",
+          "answer": "Taşınmaz satışı vaadi, geri alım ve alım sözleşmeleri, resmî şekilde düzenlenmedikçe geçerli olmaz. (Türk Borçlar Kanunu, Madde 237)"
+        },
+        {
+          "id": "b9f21e9d11d815ce958336e34f504803de451ec2cdb06d74fbc82e335fe8037b",
+          "law": "6098",
+          "source_document": "0.json",
+          "answer": "Taşınmaz satışı vaadi, resmî şekilde düzenlenmedikçe geçerli olmaz. (TBK Madde 237)"
+        },
+        {
+          "id": "2cb268a0a929585c40174762dffdda498e72d15eb049bd8d5b84c36b50b2a5b2",
+          "law": "6098",
+          "source_document": "0.json",
+          "answer": "Taşınmaz satışı vaadi sözleşmesi, resmî şekilde (noterde) düzenlenmedikçe geçerli olmaz. (Türk Borçlar Kanunu Madde 237)"
+        }
+      ]
+    }
+  ],
+  "note": "Farklı cevaplar mutlaka çelişkili değildir. Hukuki anlam ve doğruluk ayrıca incelenmelidir."
+}

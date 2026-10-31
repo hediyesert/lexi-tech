@@ -1,138 +1,101 @@
-# LexiTech TR — DATASET_CARD
+# LexiTech TR Domain Corpus v1.0-rc1
 
-**Sürüm:** Domain Corpus v0.9 (ön taslak)
-**Belge tarihi:** 2026-10-27
-**Dil:** Türkçe
-**Alan:** Türkiye hukuku
-**Durum:** Hukuki içerik ve kullanım hakları için nihai onay bekleniyor.
+**Durum:** Teknik olarak eğitime hazır aday. İnsan kalite kontrolü ve kullanım hakkı onayı bekliyor,
+`training_approved=false`.
 
-## 1. Amaç
+## Amaç
 
-Türkçe hukuk alanına uyarlanacak dil modelleri için
-alan korpusu oluşturmak. Bu korpus ileriki aşamada
-CPT/DAPT çalışmaları için aday veri sağlayabilir.
+Türk hukuku alanında soru cevaplayabilen bir dil modelinin continued pretraining (CPT) aşamasında kullanılmak
+üzere hazırlandı. Genel amaçlı bir Türkçe corpus değildir. Vize aşamasında model eğitimi yapılmadı.
 
-**Vize aşamasında model eğitimi gerçekleştirilmemiştir.**
+## Kapsam
 
-## 2. Veri kapsamı
+Kapsam içi: 12 temel kanunun yürürlükteki birleştirilmiş metni.
+Kapsam dışı: yargı kararları, yönetmelik ve tebliğler, doktrin, 12 kanun dışındaki mevzuat. Ayrıntı:
+[reports/problem_definition.md](reports/problem_definition.md).
 
-- Belge sayısı: **12**
-- Toplam karakter: **4,471,279**
-- Toplam tokenizer tokenı: **1,655,887**
-- Kaynak türü: Resmî mevzuat PDF belgelerinden çıkarılan metinler.
-- Tokenizer: `Qwen/Qwen2.5-3B-Instruct`.
-- Birim: Kanun belgesi; ayrıca parçalama (chunking)
-  sürümleri hazırlanmıştır.
+## Veri kaynakları
 
-### Kapsanan kanunlar
+| Kaynak | Tür | Dil | Doküman | Lisans / kullanım |
+|---|---|---|---:|---|
+| Mevzuat Bilgi Sistemi | PDF | tr | 12 | Resmî metin, kullanım koşulu incelenecek |
 
-- **2004:** İcra ve İflas Kanunu
-- **213:** Vergi Usul Kanunu
-- **2577:** İdari Yargılama Usulü Kanunu
-- **2709:** Türkiye Cumhuriyeti Anayasası
-- **4721:** Türk Medeni Kanunu
-- **4857:** İş Kanunu
-- **5237:** Türk Ceza Kanunu
-- **5271:** Ceza Muhakemesi Kanunu
-- **5510:** Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu
-- **6098:** Türk Borçlar Kanunu
-- **6102:** Türk Ticaret Kanunu
-- **6502:** Tüketicinin Korunması Hakkında Kanun
+Hukuk metninde en güvenilir kaynak resmî yayın olduğu için tek kaynak bilinçli seçildi. Kaynak bağımlılığı
+yazım biçimi açısından yüksektir; bu bir sınırlılıktır. Tam liste:
+[reports/sources/data_sources.csv](reports/sources/data_sources.csv).
 
-## 3. Veri kaynakları ve izlenebilirlik
+## Veri toplama
 
-Kaynak listesi:
+Kanunlar 19-20 Ekim 2026'da mevzuat.gov.tr sayfalarından tarayıcıyla PDF olarak kaydedildi, bu yüzden indirme
+adımı script değildir. Dosyalar `data/raw/legislation/` altında değiştirilmeden saklanır, her çalışmada
+SHA-256 ile doğrulanır. Belgeye özel URL'ler PDF altbilgisinden okundu, adreslerin canlı erişimi bu ortamda
+denenemedi.
 
-`reports/sources/legislation_documents.csv`
+## İşleme adımları
 
-Bu listede mevcut kaynak bilgileri, erişim tarihleri ve
-SHA-256 değerleri saklanmaktadır.
+- **Extraction:** pypdf. 1.540 sayfa, 12 dokümanın 12'si başarılı. Taranmış sayfa yok, OCR gerekmedi.
+- **Cleaning:** Sayfa başlığı silme, NFC, kırık kelime ve harf aralığı onarımı (2.335 kelime), boşluk ve satır
+  normalizasyonu. Boşluk dışı karakterin değişmediği hash ile doğrulanır. Kurallar:
+  [reports/cleaning_rules.md](reports/cleaning_rules.md).
+- **Filtering:** Hiçbir kanun elenmedi. 86 değişiklik tablosu chunk'ı kanun hükmü olmadığı için eğitimden çıkarıldı.
+- **Deduplication:** Dokümanlar farklı kanunlar olduğu için doküman düzeyinde tekrar yok; chunk düzeyinde
+  birebir tekrar testi temiz.
 
-Resmî mevzuat PDF'lerinin kullanılmış olması, her türlü
-yeniden dağıtım veya model eğitimi için kullanım haklarının
-otomatik olarak onaylandığı anlamına gelmez.
+## Format
 
-**Kullanım hakları durumu: İnceleme bekliyor.**
+JSONL. `domain_corpus_v1.0.jsonl` doküman düzeyindedir: `document_id`, `title`, `source`, `url`, `language`,
+`document_type`, `publication_year`, `subtopic`, `char_count`, `token_count`, `text` ve ek olarak `law_number`,
+`version_date`, `raw_sha256`, `text_sha256`, `sections`.
 
-## 4. Veri hazırlama işlemleri
+`train.jsonl`, `validation.jsonl`, `test.jsonl` chunk düzeyindedir ve CPT için kullanılır.
 
-1. PDF belgelerinin temin edilmesi.
-2. Metin çıkarımı ve otomatik metin temizliği.
-3. Belge kimliği, kaynak ve SHA-256 metadata'sının kaydı.
-4. Tokenizer ile token sayılarının hesaplanması.
-5. Belge bazlı train/validation/test ayrımı.
-6. Ana kanun, işlenmemiş hükümler ve değişiklik
-   tablolarına yönelik bölümleme.
-7. Token sınırını gözeten hukuki duyarlı parçalama.
-8. Parça bütünlüğü ve yakın tekrar denetimleri.
+## İstatistikler
 
-## 5. Bölme yaklaşımı
+| Ölçüt | Değer |
+|---|---:|
+| Doküman | 12 |
+| Toplam kelime | 582.750 |
+| Toplam token | 1.595.752 |
+| Eğitime giren token | 1.439.916 |
+| Eğitim chunk'ı | 820 |
+| Medyan chunk | 1.902 token |
+| Türkçe chunk | %99,9 (820 chunk'ın 1'i otomatik tespitte farklı dil) |
 
-Kanun belgeleri belge düzeyinde ayrılmıştır.
+Dağılım ve alt konular: [reports/statistics/statistics_report_v1.0.md](reports/statistics/statistics_report_v1.0.md).
 
-- Train belge sayısı: 10
-- Validation belge sayısı: 1
-- Test belge sayısı: 1
+## Veri ayrımı
 
-Bu ayrımda farklı splitlerde aynı kanun belgesi bulunmaz.
+Doküman düzeyinde: 10 kanun train, Anayasa validation, Türk Ceza Kanunu test. Chunk'lar split'ten sonra üretildi,
+bu yüzden aynı kanunun parçaları iki kümeye düşmez. Küme başına chunk: 738 / 33 / 49. Token oranı yaklaşık
+%90 / %4 / %6.
 
-**Sınırlama:** Validation ve test kümeleri yalnızca
-birer kanundan oluşmaktadır. Dolayısıyla tüm hukuk
-alanlarını temsil eden dengeli bir değerlendirme
-sağladıkları iddia edilemez.
+Parçalama madde sınırlarını ve üst sınır olarak 2.048 token gözetir. Madde başlığı kendi maddesiyle kalır.
 
-## 6. Veri biçimi
+## Lisans ve kullanım
 
-- Belge düzeyi:
-  `data/final/domain_corpus_v0.9_tokenized.jsonl`
-- Belge splitleri:
-  `data/final/domain_v0.9/`
-- Hukuki duyarlı chunk splitleri:
-  `data/final/domain_v0.9/chunks_legal_aware/`
+Kullanım hakları incelemesi tamamlanmadı, `rights_status=pending_review`. Kanun metinlerinin kullanım serbestisi
+danışmanla netleştirilmeli. Kişisel veri beklenmez, mevzuat metnidir.
 
-Örnek metadata alanları:
+## Bilinen problemler
 
-`document_id`, `law_number`, `title`, `source_url`,
-`raw_sha256`, `text_sha256`, `token_count`,
-`rights_status`, `quality_status`.
+- 1,44 milyon eğitim tokenı CPT için küçüktür. Model alan dilini sınırlı ölçüde öğrenir.
+- Metne yapışık dipnot rakamları var (`Belirlenmesi2`), karakter değiştirmemek için silinmedi.
+- Tablolarda sütun yapısı kaybolmuştur.
+- Az sayıda kırık kelime kalmıştır (`Pa şa`, `yava şlatan`, `kalkmamı şsa`).
+- Test yalnızca ceza hukuku, validation yalnızca anayasa hukukudur. Küme sonuçları genellenemez.
+- Bazı bölüm başlıkları önceki chunk'ın sonunda kalır.
+- Metinler Ekim 2026 tarihlidir, güncellik zamanla bozulur.
 
-## 7. Kalite ve bilinen riskler
+## Sınırlılıklar
 
-- PDF çıkarımından kaynaklanabilen OCR, harf,
-  kelime aralığı ve madde numarası hataları.
-- Belge sürümlerinin güncelliğinin ayrıca
-  doğrulanması gerekliliği.
-- Değişiklik tablolarının model eğitimine doğrudan
-  alınmaması gerekliliği.
-- Hukuki duyarlı chunking işleminde bazı uzun
-  maddelerin bölünmüş olması.
-- Otomatik temizliğin hukuk uzmanı onayı yerine
-  geçmemesi.
-- Kaynak belgelerin güncel ve yürürlükteki metinlerle
-  karşılaştırılmasının tamamlanmamış olması.
+Bu veri seti hukuki danışmanlık aracı değildir. Yalnızca kanun metni içerir, yargı kararı içermez. Yürürlük
+tarihine bağlı geçiş hükümleri ayrıca yorum gerektirir.
 
-Chunk metadata'sındaki `requires_manual_review`
-ve `training_candidate` alanları dikkate alınmalıdır.
+## Sürüm geçmişi
 
-## 8. Kalite kanıtları
+- v0.9 (27.10.2026): Extraction, temizleme, token sayımı, üç chunk denemesi.
+- v1.0-rc1 (31.10.2026): Tek pipeline, tüm kanunlarda kırık kelime onarımı, tam metadata, tek chunk sürümü.
 
-- `reports/statistics/domain_token_summary_v0.9.json`
-- `reports/quality/domain_chunk_final_comparison_v0.9.json`
-- `reports/statistics/domain_chunk_stats_legal_aware_v0.9.json`
-- `reports/quality/domain_section_plan_v0.9.csv`
-- `reports/quality/domain_corpus_near_duplicate_pairs_v0.9.csv`
+## Hazırlayanlar
 
-## 9. İnsan değerlendirmesi
-
-Alan korpusu için hedeflenen kapsamlı manuel
-örnek incelemesi ve nihai hukuki uzman onayı
-henüz tamamlanmamıştır.
-
-## 10. Kullanım sınırları
-
-Bu veri seti **v0.9 teknik ön taslaktır**.
-
-Kaynakların izin durumu, metin güncelliği, hukuki
-doğruluk ve insan kalite değerlendirmesi tamamlanmadan
-`v1.0` veya eğitim için onaylanmış veri olarak
-sunulmamalıdır.
+[ad soyad], [ad soyad], [ad soyad]. Danışman: [ad soyad].

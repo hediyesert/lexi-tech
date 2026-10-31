@@ -1,0 +1,204 @@
+{
+  "project": "LexiTech TR",
+  "version": "v0.9",
+  "scan_type": "heuristic_quality_signals",
+  "total_qa": 124510,
+  "total_candidates": 2678,
+  "candidate_percentage": 2.151,
+  "signal_counts": {
+    "short_question_without_question_mark": 268,
+    "url_in_answer": 2298,
+    "url_in_question": 117,
+    "possible_reference_only_answer": 1
+  },
+  "split_counts": {
+    "train": 111782,
+    "validation": 6397,
+    "test": 6331
+  },
+  "candidate_splits": {
+    "train": 2675,
+    "test": 3
+  },
+  "schema_errors": 0,
+  "known_issues_crosscheck": {
+    "1a566c9ff57a595336c1a220034522abcc1a46c02e765cbd1bf970f0b73d16d2": {
+      "original_quality_flag": "citation_only_answer",
+      "detected_signals": [
+        "url_in_answer",
+        "possible_reference_only_answer"
+      ],
+      "split": "train"
+    },
+    "ec5c4ff997f67055def8083072be0210315f44f33746ead4c2616274b31317ae": {
+      "original_quality_flag": "incomplete_question_fragment",
+      "detected_signals": [
+        "short_question_without_question_mark"
+      ],
+      "split": "train"
+    }
+  },
+  "examples_per_signal": {
+    "short_question_without_question_mark": [
+      {
+        "record_id": "cbb863041087d18d1f5b14d179dfad3ff99b49df3ac4c42c4147f0c19211b2f8",
+        "split": "train",
+        "question_preview": "Zamanaşımını kesen sebeplerden ikisini belirtiniz.",
+        "answer_preview": "1. Borçlunun borcu ikrar etmesi (örneğin faiz ödemesi). 2. Alacaklının dava veya icra takibi yoluyla"
+      },
+      {
+        "record_id": "d6e9a696a633016bf96f6e33faac73dbb8397d95e96cd3ad76dce60ae42f7440",
+        "split": "train",
+        "question_preview": "Kullanım ödüncü sözleşmesini tanımlayınız.",
+        "answer_preview": "Kullanım ödüncü sözleşmesi, ödünç verenin bir şeyin karşılıksız olarak kullanılmasını ödünç alana bı"
+      },
+      {
+        "record_id": "8176e80a0c1dc4796a3cdf1aa7712a9b8c3bca1ac775996326e1c48fd11ec094",
+        "split": "train",
+        "question_preview": "Genel hizmet sözleşmesini tanımlayınız.",
+        "answer_preview": "Hizmet sözleşmesi, işçinin işverene bağımlı olarak belirli veya belirli olmayan süreyle işgörmeyi ve"
+      },
+      {
+        "record_id": "9e5c42f053c4712bfee46eaeb650d84b71da5c72e33fa8a28ea7cd67e944e698",
+        "split": "train",
+        "question_preview": "Pazarlamacılık sözleşmesini tanımlayınız.",
+        "answer_preview": "Pazarlamacılık sözleşmesi, pazarlamacının sürekli olarak, bir ticari işletme sahibi işveren hesabına"
+      },
+      {
+        "record_id": "df8dda49499e832697794c4a52c7f1ec3bd6ea09d9214ff326ab760919d01a7d",
+        "split": "train",
+        "question_preview": "Dava zamanaşımı süresini kesen hallerden üç tanesini sayınız.",
+        "answer_preview": "a) Şüpheli veya sanıklardan birinin savcı huzurunda ifadesinin alınması veya sorguya çekilmesi, b) Ş"
+      },
+      {
+        "record_id": "3b910e8e0092354988ddec50ef271041fac16f73d4e5cb7a2095423377083bb5",
+        "split": "train",
+        "question_preview": "Kasten öldürme suçunun nitelikli hallerinden üçünü belirtiniz.",
+        "answer_preview": "a) Tasarlayarak, b) Canavarca hisle veya eziyet çektirerek, c) Üstsoy veya altsoydan birine ya da eş"
+      },
+      {
+        "record_id": "d89740fe3b1d2f17587a3f5d3b228fb0c8276743e91c42c8fbc6c255c47376fe",
+        "split": "train",
+        "question_preview": "Adlî kontrol tedbirlerinden üç tanesini sayınız.",
+        "answer_preview": "a) Yurt dışına çıkamamak, b) Hâkim tarafından belirlenen yerlere, belirtilen süreler içinde düzenli "
+      },
+      {
+        "record_id": "df9101a846bbe8695c80561f746ef2b60eec1dce24f48baae75819d8239c9170",
+        "split": "train",
+        "question_preview": "Uzlaştırma kapsamındaki suçlardan bazılarını belirtiniz.",
+        "answer_preview": "Soruşturulması ve kovuşturulması şikâyete bağlı suçlar (cinsel dokunulmazlığa karşı suçlar hariç), ş"
+      }
+    ],
+    "url_in_answer": [
+      {
+        "record_id": "1d5d9020c09a99eac64091dda25f90d2f1b630f78b78117a571d7c54dc32175c",
+        "split": "train",
+        "question_preview": "İsim ve soyisim değişikliği davası ile nüfus kaydının düzeltilmesi davası arasındaki temel farkları,",
+        "answer_preview": "İsim ve soyisim değişikliği davası ile nüfus kaydının düzeltilmesi davası sıkça karıştırılsa da aral"
+      },
+      {
+        "record_id": "556cbdb0ff9cde3971c817fd75ebbf16268a14396d99300f40989cb48fce9fa9",
+        "split": "train",
+        "question_preview": "Evlilik birliği içinde doğan ve boşanma sonrası velayeti anneye verilen bir çocuğun soyadının, annen",
+        "answer_preview": "YHGK'nın anılan kararına göre, evlilik birliği içinde doğan bir çocuğun soyadının, velayeti anneye v"
+      },
+      {
+        "record_id": "8293a7de45eb7d3ad869ab50a0340debf81db5d2b6d6858737f52029322ceba8",
+        "split": "train",
+        "question_preview": "TMK m. 27'ye göre isim değişikliği davasında 'haklı sebep' kavramının kapsamını Yargıtay uygulamalar",
+        "answer_preview": "'Haklı sebep' TMK m. 27'de tanımlanmamış, takdiri hakime bırakılmış geniş kapsamlı bir kavramdır. Ya"
+      },
+      {
+        "record_id": "738d0cf6c4c951fbba836865610f1b50219132db1dd49a803557cb917273b00a",
+        "split": "train",
+        "question_preview": "TMK m. 27'de 14/11/2024 tarihli ve 7532 sayılı yasa ile yapılan değişikliğin getirdiği en önemli yen",
+        "answer_preview": "TMK m. 27'de yapılan en önemli yenilik, adın değiştirilmesi kararının ilanı uygulamasıdır. Değişikli"
+      },
+      {
+        "record_id": "8c0d1d70591bd8a9cf05945432ca6f4ec13cca3afc1e78dcd09acb68c8c380cc",
+        "split": "train",
+        "question_preview": "TMK m. 161'e göre zinanın boşanma sebebi olarak kabul edilebilmesi için cinsel ilişkinin tam olarak ",
+        "answer_preview": "TMK m. 161'e göre zinanın boşanma sebebi sayılabilmesi için, Yargıtay'ın yerleşik içtihatları ve dok"
+      },
+      {
+        "record_id": "a0a57d52020fba3267c1a63b22a3f2b204183e79fe1c7d05e256d7a164f852ee",
+        "split": "train",
+        "question_preview": "Zina nedeniyle boşanma davasında hak düşürücü süreler nelerdir ve bu sürelerin başlangıcı nasıl tesp",
+        "answer_preview": "TMK m. 161/2'ye göre zina nedeniyle boşanma davası açma hakkı, iki ayrı hak düşürücü süreye tabidir."
+      },
+      {
+        "record_id": "793c5fd9ab980b964a4dcf052fe1ca3a9cfacaa761a0a9e6db966d0e90008e7a",
+        "split": "train",
+        "question_preview": "TMK m. 161/3 uyarınca 'affeden tarafın dava hakkı yoktur'. Af açık veya örtülü olabilir mi? Örnekler",
+        "answer_preview": "Evet, af açık veya örtülü olabilir. Açık af, aldatılan eşin zina eylemini öğrendikten sonra, sözlü v"
+      },
+      {
+        "record_id": "9db238abf39ad04edc6663ea957df414ab7924c25bed7511487bbe2738d56cfe",
+        "split": "train",
+        "question_preview": "TMK m. 162'de düzenlenen 'hayata kast', 'pek kötü davranış' ve 'ağır derecede onur kırıcı davranış' ",
+        "answer_preview": "TMK m. 162'de düzenlenen bu üç kavram, özel boşanma sebepleri olup, kusura dayalı ve mutlak boşanma "
+      }
+    ],
+    "url_in_question": [
+      {
+        "record_id": "93f2d343566eac0c95159d8fed976c07b2a347df8b6591ee0b4a5d67047eaa1f",
+        "split": "train",
+        "question_preview": "Vasiyetname nedir ve Türk Medeni Kanunu'na (TMK) göre hangi şekillerde yapılabilir? (TMK md. 531) (U",
+        "answer_preview": "Vasiyetname, miras bırakanın tek taraflı iradesine dayanan, kimseye yöneltilmesine gerekmeyen ölüme "
+      },
+      {
+        "record_id": "57af51d646463e1aad061fa1ff7058306496960b87faa6be577f315814b9410d",
+        "split": "train",
+        "question_preview": "Vasiyetname yapma ehliyeti için aranan şartlar nelerdir ve ehliyetsiz kişilerin yaptığı vasiyetnamel",
+        "answer_preview": "TMK md. 502'ye göre vasiyet yapabilmek için ayırt etme gücüne sahip ve on beş yaşını bitirmiş olmak "
+      },
+      {
+        "record_id": "66bbf4691ff6ae591c6610a33fdfe4092f95297eb6ee72c854ef3ed0b60faef0",
+        "split": "train",
+        "question_preview": "Resmi vasiyetname nasıl düzenlenir ve tanıkların rolü nedir? (TMK md. 532, 533, 535, 536) (URL: http",
+        "answer_preview": "Resmi vasiyetname, iki tanığın katılması ile resmi memur (sulh hâkimi, noter veya kanunla yetkili di"
+      },
+      {
+        "record_id": "e2e18c1f52d59a02a79f09686a64f321bca9a12840fa75966ac2312cf9c7ef34",
+        "split": "train",
+        "question_preview": "El yazılı vasiyetnamenin geçerlilik şartları nelerdir ve saklanması nasıl olur? (TMK md. 538) (URL: ",
+        "answer_preview": "El yazılı vasiyetnamenin yapıldığı yıl, ay ve gün gösterilerek başından sonuna kadar vasiyetçinin el"
+      },
+      {
+        "record_id": "21bfeed79bc6cb0ef4b520dc264bbe30a19dbea28add3cc401ac0737858c0ba4",
+        "split": "train",
+        "question_preview": "Sözlü vasiyet hangi durumlarda yapılabilir ve geçerliliğini ne zaman yitirir? (TMK md. 539, 540, 541",
+        "answer_preview": "Sözlü vasiyet, vasiyetçinin olağanüstü durumlar (TMK md. 539) yüzünden diğer şekillerde vasiyetname "
+      },
+      {
+        "record_id": "e8d3c40b9ffe2ef181da93e66a702bae4515aee1782917b71f24d52b7383e456",
+        "split": "train",
+        "question_preview": "Vasiyetnamenin teslimi ve açılması süreci nasıl işler? (TMK md. 595, 596) (URL: https://or.av.tr/vas",
+        "answer_preview": "Miras bırakanın ölümünden sonra ele geçen vasiyetnamesinin, geçerli olup olmadığına bakılmaksızın he"
+      },
+      {
+        "record_id": "2fa0e9870fa1bf0f800cff280b5796c11d50deba6d657ca6d29388fb1916a881",
+        "split": "train",
+        "question_preview": "CMK Madde 69'a göre bilirkişinin reddini gerektiren sebepler nelerdir ve kimler ret hakkını kullanab",
+        "answer_preview": "CMK Madde 69(1)'e göre, hâkimin reddini gerektiren sebepler bilirkişi hakkında da geçerlidir. Cumhur"
+      },
+      {
+        "record_id": "7f591aecf6d8a0c4681244e160fb9a24eaa052f252e9bc4f7c41396b8c27b3e3",
+        "split": "train",
+        "question_preview": "Bilirkişinin reddi istemini inceleyecek merciler soruşturma ve kovuşturma evrelerinde nasıl farklıla",
+        "answer_preview": "CMK Madde 69(3)'e göre, ret istemini davayı görmekte olan hâkim veya mahkeme inceler. Soruşturma evr"
+      }
+    ],
+    "possible_reference_only_answer": [
+      {
+        "record_id": "1a566c9ff57a595336c1a220034522abcc1a46c02e765cbd1bf970f0b73d16d2",
+        "split": "train",
+        "question_preview": "Bir hukuki ilişkiye dayanan alacağın ispatı veya gerçek bir durumun belgelenmesi amacıyla resmi belg",
+        "answer_preview": "TCK md. 211 (https://barandogan.av.tr/blog/ceza-hukuku/resmi-evrakta-belgede-sahtecilik-cezasi.html)"
+      }
+    ]
+  },
+  "important_note": "Bu kurallar yalnızca şüpheli kayıtları belirler. İşaretlenen kayıtlar otomatik olarak hatalı veya eğitim için uygunsuz kabul edilemez.",
+  "records_removed": 0,
+  "human_approved": 0
+}

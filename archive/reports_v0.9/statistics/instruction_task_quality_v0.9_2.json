@@ -1,0 +1,213 @@
+{
+  "project": "LexiTech TR",
+  "version": "v0.9.2",
+  "question": 15,
+  "classification_status": "experimental",
+  "dataset_records": 124510,
+  "task_distribution": {
+    "other": {
+      "count": 61125,
+      "percent": 49.09
+    },
+    "procedure_deadline": {
+      "count": 14646,
+      "percent": 11.76
+    },
+    "definition": {
+      "count": 13918,
+      "percent": 11.18
+    },
+    "legal_conditions": {
+      "count": 11646,
+      "percent": 9.35
+    },
+    "case_law_analysis": {
+      "count": 9470,
+      "percent": 7.61
+    },
+    "comparison": {
+      "count": 6956,
+      "percent": 5.59
+    },
+    "case_application": {
+      "count": 2742,
+      "percent": 2.2
+    },
+    "legal_effect": {
+      "count": 2399,
+      "percent": 1.93
+    },
+    "penalty_sanction": {
+      "count": 1597,
+      "percent": 1.28
+    },
+    "article_explanation": {
+      "count": 11,
+      "percent": 0.01
+    }
+  },
+  "development_sample": {
+    "size": 70,
+    "agreement": 30,
+    "disagreement": 40,
+    "used_for_rule_development": true
+  },
+  "held_out_from_development_sample": {
+    "size": 50,
+    "agreement": 37,
+    "disagreement": 13,
+    "unweighted_agreement_percent": 74.0,
+    "annotation_source": "assistant_proposed",
+    "independent_human_verified": false,
+    "balanced_by_predicted_category": true
+  },
+  "by_predicted_category": [
+    {
+      "predicted_label": "article_explanation",
+      "sample_count": 5,
+      "agreement_count": 4,
+      "disagreement_count": 1,
+      "sample_agreement_percent": 80.0
+    },
+    {
+      "predicted_label": "case_application",
+      "sample_count": 5,
+      "agreement_count": 4,
+      "disagreement_count": 1,
+      "sample_agreement_percent": 80.0
+    },
+    {
+      "predicted_label": "case_law_analysis",
+      "sample_count": 5,
+      "agreement_count": 5,
+      "disagreement_count": 0,
+      "sample_agreement_percent": 100.0
+    },
+    {
+      "predicted_label": "comparison",
+      "sample_count": 5,
+      "agreement_count": 4,
+      "disagreement_count": 1,
+      "sample_agreement_percent": 80.0
+    },
+    {
+      "predicted_label": "definition",
+      "sample_count": 5,
+      "agreement_count": 1,
+      "disagreement_count": 4,
+      "sample_agreement_percent": 20.0
+    },
+    {
+      "predicted_label": "legal_conditions",
+      "sample_count": 5,
+      "agreement_count": 5,
+      "disagreement_count": 0,
+      "sample_agreement_percent": 100.0
+    },
+    {
+      "predicted_label": "legal_effect",
+      "sample_count": 5,
+      "agreement_count": 4,
+      "disagreement_count": 1,
+      "sample_agreement_percent": 80.0
+    },
+    {
+      "predicted_label": "other",
+      "sample_count": 5,
+      "agreement_count": 0,
+      "disagreement_count": 5,
+      "sample_agreement_percent": 0.0
+    },
+    {
+      "predicted_label": "penalty_sanction",
+      "sample_count": 5,
+      "agreement_count": 5,
+      "disagreement_count": 0,
+      "sample_agreement_percent": 100.0
+    },
+    {
+      "predicted_label": "procedure_deadline",
+      "sample_count": 5,
+      "agreement_count": 5,
+      "disagreement_count": 0,
+      "sample_agreement_percent": 100.0
+    }
+  ],
+  "disagreements": [
+    {
+      "review_number": 2,
+      "predicted_label": "comparison",
+      "assistant_proposed_label": "case_application"
+    },
+    {
+      "review_number": 12,
+      "predicted_label": "case_application",
+      "assistant_proposed_label": "case_law_analysis"
+    },
+    {
+      "review_number": 16,
+      "predicted_label": "legal_effect",
+      "assistant_proposed_label": "comparison"
+    },
+    {
+      "review_number": 36,
+      "predicted_label": "definition",
+      "assistant_proposed_label": "penalty_sanction"
+    },
+    {
+      "review_number": 37,
+      "predicted_label": "definition",
+      "assistant_proposed_label": "comparison"
+    },
+    {
+      "review_number": 38,
+      "predicted_label": "definition",
+      "assistant_proposed_label": "procedure_deadline"
+    },
+    {
+      "review_number": 39,
+      "predicted_label": "definition",
+      "assistant_proposed_label": "procedure_deadline"
+    },
+    {
+      "review_number": 43,
+      "predicted_label": "article_explanation",
+      "assistant_proposed_label": "case_application"
+    },
+    {
+      "review_number": 46,
+      "predicted_label": "other",
+      "assistant_proposed_label": "article_explanation"
+    },
+    {
+      "review_number": 47,
+      "predicted_label": "other",
+      "assistant_proposed_label": "legal_conditions"
+    },
+    {
+      "review_number": 48,
+      "predicted_label": "other",
+      "assistant_proposed_label": "case_application"
+    },
+    {
+      "review_number": 49,
+      "predicted_label": "other",
+      "assistant_proposed_label": "case_application"
+    },
+    {
+      "review_number": 50,
+      "predicted_label": "other",
+      "assistant_proposed_label": "comparison"
+    }
+  ],
+  "limitations": [
+    "Test soruları geliştirmedeki 70 sorudan ayrıdır.",
+    "Test etiketleri asistan tarafından önerilmiştir.",
+    "Bağımsız insan veya hukukçu doğrulaması yoktur.",
+    "Her tahmin kategorisinden 5 soru seçilmiştir.",
+    "Yuzde 74 tum veri setinin dogruluk orani degildir.",
+    "Other kategorisindeki kayıt sayısı yüksektir.",
+    "Birincil görev etiketi çok görevli soruları basitleştirir.",
+    "Hukuki cevap doğruluğu bu çalışmada ölçülmemiştir."
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "version": "v0.9",
+  "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+  "max_chunk_tokens": 2048,
+  "document_count": 12,
+  "total_chunks": 983,
+  "chunks_per_split": {
+    "train": 884,
+    "validation": 40,
+    "test": 59
+  },
+  "chunks_per_section": {
+    "main_law": 881,
+    "unincorporated": 16,
+    "amendment_table": 86
+  },
+  "oversized_units_split": 53,
+  "max_actual_chunk_tokens": 2048,
+  "all_documents_sha256_verified": true,
+  "documents": [
+    {
+      "document_id": "civil_law_4721",
+      "law_number": "4721",
+      "split": "train",
+      "chunk_count": 74,
+      "original_tokens": 142295,
+      "chunk_token_sum": 142295,
+      "sha256_verified": true
+    },
+    {
+      "document_id": "obligations_law_6098",
+      "law_number": "6098",
+      "split": "train",
+      "chunk_count": 56,
+      "original_tokens": 104380,
+      "chunk_token_sum": 104380,
+      "sha256_verified": true
+    },
+    {
+      "document_id": "criminal_procedure_5271",
+      "law_number": "5271",
+      "split": "train",
+      "chunk_count": 78,
+      "original_tokens": 131007,
+      "chunk_token_sum": 131011,
+      "sha256_verified": true
+    },
+    {
+      "document_id": "labor_law_4857",
+      "law_number": "4857",
+      "split": "train",
+      "chunk_count": 31,
+      "original_tokens": 51379,
+      "chunk_token_sum": 51380,
+      "sha256_verified": true
+    },
+    {
+      "document_id": "commercial_law_6102",
+      "law_number": "6102",
+      "split": "train",
+      "chunk_count": 189,
+      "original_tokens": 348094,
+      "chunk_token_sum": 348095,
+      "sha256_verified": true
+    },
+    {
+      "document_id": "consumer_law_6502",
+      "law_number": "6502",
+      "split": "train",
+      "chunk_count": 32,
+      "original_tokens": 49815,
+      "chunk_token_sum": 49818,
+      "sha256_verified": true
+    },
+    {
+      "document_id": "administrative_procedure_law_2577",
+      "law_number": "2577",
+      "split": "train",
+      "chunk_count": 25,
+      "original_tokens": 38333,
+      "chunk_token_sum": 38335,
+      "sha256_verified": true
+    },
+    {
+      "document_id": "tax_procedure_law_213",
+      "law_number": "213",
+      "split": "train",
+      "chunk_count": 115,
+      "original_tokens": 189139,
+      "chunk_token_sum": 189156,
+      "sha256_verified": true
+    },
+    {
+      "document_id": "enforcement_bankruptcy_law_2004",
+      "law_number": "2004",
+      "split": "train",
+      "chunk_count": 98,
+      "original_tokens": 161075,
+      "chunk_token_sum": 161088,
+      "sha256_verified": true
+    },
+    {
+      "document_id": "social_security_law_5510",
+      "law_number": "5510",
+      "split": "train",
+      "chunk_count": 186,
+      "original_tokens": 265376,
+      "chunk_token_sum": 265406,
+      "sha256_verified": true
+    },
+    {
+      "document_id": "constitution_2709",
+      "law_number": "2709",
+      "split": "validation",
+      "chunk_count": 40,
+      "original_tokens": 71041,
+      "chunk_token_sum": 71042,
+      "sha256_verified": true
+    },
+    {
+      "document_id": "criminal_law_5237",
+      "law_number": "5237",
+      "split": "test",
+      "chunk_count": 59,
+      "original_tokens": 103953,
+      "chunk_token_sum": 103953,
+      "sha256_verified": true
+    }
+  ]
+}

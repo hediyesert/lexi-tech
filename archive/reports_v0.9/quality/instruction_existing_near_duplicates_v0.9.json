@@ -1,0 +1,87 @@
+{
+  "dataset": "instruction_leakage_clean_v0.9",
+  "method": "reuse_previous_verified_minhash_pairs",
+  "previous_method": {
+    "threshold": 0.85,
+    "num_perm": 128,
+    "shingle_size": 3,
+    "compared_fields": "question_and_answer"
+  },
+  "counts": {
+    "records_train": 111782,
+    "records_validation": 6397,
+    "records_test": 6331,
+    "old_near_duplicate_pairs": 2688,
+    "pairs_not_fully_retained": 2161,
+    "pairs_both_retained": 527,
+    "within_split_pairs": 527,
+    "within_train": 486,
+    "within_test": 21,
+    "within_validation": 20
+  },
+  "cross_split_examples": [],
+  "within_split_examples": [
+    {
+      "left_id": "55f4b0157bc100caaec849415db81ae6aae028f0b729a8b47cc2eb7e35986e2e",
+      "right_id": "0259a2f04acddfe6f7768ce5dd07b2ee319a1fa1705cd5cd135754b903b0983c",
+      "left_split": "train",
+      "right_split": "train",
+      "left_law": "4721",
+      "right_law": "4721",
+      "left_question": "TMK'ya göre, yasal mirasçılardan birinin mirası reddetmesi durumunda, onun alacaklıları bu redde karşı ne yapabilir?",
+      "right_question": "TMK'ya göre yasal mirasçılardan birinin mirası reddetmesi durumunda, onun alacaklıları bu redde karşı ne yapabilir?",
+      "jaccard": 1.0
+    },
+    {
+      "left_id": "2356e54c0012242ab961a4b457f41287ad6b50a2ce38f9f782a6810b4904828f",
+      "right_id": "4caace5e51c1046d2aa063e0daf09274c87763f4387491c41dcaf45c5e94ba27",
+      "left_split": "train",
+      "right_split": "train",
+      "left_law": "4721",
+      "right_law": "4721",
+      "left_question": "TMK'ya göre, evlatlık ilişkisi nasıl kaldırılabilir?",
+      "right_question": "TMK'ya göre evlatlık ilişkisi nasıl kaldırılabilir?",
+      "jaccard": 1.0
+    },
+    {
+      "left_id": "a6c91da143f883d498909417b19437d8274e8f26f6d46af9ecd2a65ec60d9508",
+      "right_id": "b57ad812689cc85460cd3a2937896560332ce19effd35f7389f8f82c3673c53f",
+      "left_split": "train",
+      "right_split": "train",
+      "left_law": "6098",
+      "right_law": "6098",
+      "left_question": "Sebepsiz zenginleşmeden doğan istem hakkı için zamanaşımı süreleri nasıldır?",
+      "right_question": "Sebepsiz zenginleşmeden doğan istem hakkı için zamanaşımı süreleri nedir?",
+      "jaccard": 0.85
+    },
+    {
+      "left_id": "9908a90ae04c40cbcab54dcbaecafe9419612b791d503926b88e0b24342502b6",
+      "right_id": "a84376f30ab28c2b87d29036455b106ca1725630324cc6eb5ff3852224624f38",
+      "left_split": "train",
+      "right_split": "train",
+      "left_law": "5237",
+      "right_law": "5237",
+      "left_question": "TCK'ya göre bir kimsenin 'halkı kin ve düşmanlığa tahrik veya aşağılama' suçundan cezalandırılabilmesi için aranan ek şart nedir?",
+      "right_question": "TCK'ya göre 'halkı kin ve düşmanlığa tahrik veya aşağılama' suçundan cezalandırılabilmesi için aranan ek şart nedir?",
+      "jaccard": 0.886792
+    },
+    {
+      "left_id": "0a87412fd471e7f76764b7cec726023a4855762b45c7266d1c905dd09d8d80ce",
+      "right_id": "759ec4678af95564db77518861da96e6ccaf0f9b9db2062b04446af5fc347388",
+      "left_split": "train",
+      "right_split": "train",
+      "left_law": "5271",
+      "right_law": "5271",
+      "left_question": "CMK'ya göre 'itiraz' kanun yolunun özellikleri nelerdir?",
+      "right_question": "CMK'da düzenlenen 'itiraz' kanun yolunun özellikleri nelerdir?",
+      "jaccard": 0.87234
+    }
+  ],
+  "limitations": [
+    "Yalnızca eski MinHash analizinde bulunan çiftler tarandı.",
+    "Yeni veri setinde sıfırdan MinHash taraması yapılmadı.",
+    "Soru metnine özgü yakın tekrar kontrolü yapılmadı.",
+    "LSH bütün benzer çiftleri bulmayı garanti etmez.",
+    "Hukuki doğruluk ve lisans durumu onaylanmadı."
+  ]
+}

@@ -1,6 +1,6 @@
 project:
   name: "LexiTech TR"
-  version: "0.1.0"
+  version: "1.0-rc1"
   random_seed: 42
 
 paths:
@@ -18,23 +18,41 @@ datasets:
     - name: "OrionCAF/turkish_law_qa_dataset"
       enabled: true
 
+tokenizer: "Qwen/Qwen2.5-3B-Instruct"
+
+extraction:
+  min_chars_per_page: 200
+
 cleaning:
   normalize_unicode: true
   remove_html: true
   normalize_whitespace: true
   remove_empty_records: true
 
-deduplication:
-  sha256:
-    enabled: true
+domain:
+  max_chunk_tokens: 2048
 
+deduplication:
   minhash:
-    enabled: true
     threshold: 0.85
     num_perm: 128
+    shingle_words: 3
+
+instruction:
+  target_examples: 4000
+  max_task_share: 0.20
+  max_law_share: 0.20
+  min_question_chars: 15
+  min_answer_chars: 80
+  max_answer_chars: 3000
+  min_evidence_score: 0.55
+
+quality_review:
+  domain_sample: 150
+  instruction_sample: 200
 
 split:
-  train: 0.80
-  validation: 0.10
-  test: 0.10
+  train: 0.90
+  validation: 0.05
+  test: 0.05
   document_level: true

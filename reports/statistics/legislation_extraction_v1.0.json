@@ -1,0 +1,118 @@
+{
+  "tool": "pypdf",
+  "documents_total": 12,
+  "documents_failed": 0,
+  "failure_rate": 0.0,
+  "pages_total": 1540,
+  "min_chars_per_page": 200,
+  "documents": [
+    {
+      "law_number": "2709",
+      "file": "anayasa.pdf",
+      "pages": 67,
+      "characters": 203016,
+      "median_chars_per_page": 2995,
+      "low_text_pages": [],
+      "needs_ocr": false
+    },
+    {
+      "law_number": "4721",
+      "file": "medeni_kanun.pdf",
+      "pages": 164,
+      "characters": 410643,
+      "median_chars_per_page": 2472.5,
+      "low_text_pages": [],
+      "needs_ocr": false
+    },
+    {
+      "law_number": "6098",
+      "file": "borclar_kanunu.pdf",
+      "pages": 113,
+      "characters": 305948,
+      "median_chars_per_page": 2705,
+      "low_text_pages": [],
+      "needs_ocr": false
+    },
+    {
+      "law_number": "5237",
+      "file": "ceza_kanunu.pdf",
+      "pages": 99,
+      "characters": 295182,
+      "median_chars_per_page": 3040,
+      "low_text_pages": [],
+      "needs_ocr": false
+    },
+    {
+      "law_number": "5271",
+      "file": "ceza_muhakemesi_kanunu.pdf",
+      "pages": 118,
+      "characters": 357029,
+      "median_chars_per_page": 3077.5,
+      "low_text_pages": [],
+      "needs_ocr": false
+    },
+    {
+      "law_number": "4857",
+      "file": "is_kanunu.pdf",
+      "pages": 45,
+      "characters": 147622,
+      "median_chars_per_page": 3337,
+      "low_text_pages": [],
+      "needs_ocr": false
+    },
+    {
+      "law_number": "6102",
+      "file": "ticaret_kanunu.pdf",
+      "pages": 339,
+      "characters": 1010946,
+      "median_chars_per_page": 2966,
+      "low_text_pages": [],
+      "needs_ocr": false
+    },
+    {
+      "law_number": "6502",
+      "file": "tuketici_kanunu.pdf",
+      "pages": 45,
+      "characters": 144039,
+      "median_chars_per_page": 3364,
+      "low_text_pages": [],
+      "needs_ocr": false
+    },
+    {
+      "law_number": "2577",
+      "file": "idari_yargilama_kanunu.pdf",
+      "pages": 33,
+      "characters": 103567,
+      "median_chars_per_page": 3260,
+      "low_text_pages": [],
+      "needs_ocr": false
+    },
+    {
+      "law_number": "213",
+      "file": "vergi_usul_kanunu.pdf",
+      "pages": 170,
+      "characters": 515131,
+      "median_chars_per_page": 3083.0,
+      "low_text_pages": [],
+      "needs_ocr": false
+    },
+    {
+      "law_number": "2004",
+      "file": "icra_iflas_kanunu.pdf",
+      "pages": 141,
+      "characters": 436916,
+      "median_chars_per_page": 3061,
+      "low_text_pages": [],
+      "needs_ocr": false
+    },
+    {
+      "law_number": "5510",
+      "file": "sosyal_sigortalar_kanunu.pdf",
+      "pages": 206,
+      "characters": 750744,
+      "median_chars_per_page": 3772.0,
+      "low_text_pages": [],
+      "needs_ocr": false
+    }
+  ]
+}

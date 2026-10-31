@@ -1,0 +1,5 @@
+# Kalite incelemesinde reddedilen kaynak kayıt kimlikleri. Biçim: kimlik  # gerekçe
+61b14b9e8b11260a52a37e3d1bb95b86ecbad06ce5b48a68d34db3f440bf20ab  # Soruda doğrulanamayan karar numarası (YCGK 2017/420)
+e84cff358cd85d1bf15ab7b93d91f40ed112ed1fe1fb5c7896a8a978af0d7ef5  # Cevaba site adresi sızmış
+4062ea91b159beb077956ed1635c51fd040eef88e39836d2c5515d996731e2d8  # TTK m. 621 kapsamı kesin okunamadı; hukukçu bakmalı
+7d4c7f5ba2e63a1f321d95b2456881484ceb2cc81c087642b7013d4358757765  # Cevapta LLM notu: metindeki fıkra sehven

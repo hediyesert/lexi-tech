@@ -1,0 +1,136 @@
+{
+  "documents": [
+    {
+      "document_id": "constitution_2709",
+      "law_number": "2709",
+      "page_headers_removed": 67,
+      "spaced_s_words_joined": 124,
+      "chars_before": 193913,
+      "chars_after": 192793,
+      "lines_before": 2933,
+      "lines_after": 1467,
+      "text_sha256": "ce01e75f284797b901efac1df4e1d3183dbe411722505a9cdbc9373627f44574"
+    },
+    {
+      "document_id": "civil_law_4721",
+      "law_number": "4721",
+      "page_headers_removed": 164,
+      "spaced_s_words_joined": 182,
+      "chars_before": 388119,
+      "chars_after": 383987,
+      "lines_before": 7495,
+      "lines_after": 4063,
+      "text_sha256": "03fee00bb1ea0b4308aa198da4d4ae8a03320956155f6359bc1a36d69d7c463f"
+    },
+    {
+      "document_id": "obligations_law_6098",
+      "law_number": "6098",
+      "page_headers_removed": 113,
+      "spaced_s_words_joined": 173,
+      "chars_before": 290462,
+      "chars_after": 288272,
+      "lines_before": 5106,
+      "lines_after": 2459,
+      "text_sha256": "59d5c040dd42d013458a2b3777550fae86c6c153b48069d21f6be78be5e32ca7"
+    },
+    {
+      "document_id": "criminal_law_5237",
+      "law_number": "5237",
+      "page_headers_removed": 99,
+      "spaced_s_words_joined": 162,
+      "chars_before": 281727,
+      "chars_after": 280043,
+      "lines_before": 4435,
+      "lines_after": 1922,
+      "text_sha256": "e960ff0075275c24262107554c2c94bafa01e926614b87605de2536d72aac2ad"
+    },
+    {
+      "document_id": "criminal_procedure_5271",
+      "law_number": "5271",
+      "page_headers_removed": 118,
+      "spaced_s_words_joined": 183,
+      "chars_before": 340853,
+      "chars_after": 338772,
+      "lines_before": 5252,
+      "lines_after": 2503,
+      "text_sha256": "7aff7559d9d4dfc7f8000e7faaafe313dee318a3e8b7ab90571ef87617fc6993"
+    },
+    {
+      "document_id": "labor_law_4857",
+      "law_number": "4857",
+      "page_headers_removed": 45,
+      "spaced_s_words_joined": 90,
+      "chars_before": 141511,
+      "chars_after": 140561,
+      "lines_before": 2008,
+      "lines_after": 826,
+      "text_sha256": "4eb89e8f2eb5260c4745227903f36c954296cd369ee55b78d829c6bfd9d59c16"
+    },
+    {
+      "document_id": "commercial_law_6102",
+      "law_number": "6102",
+      "page_headers_removed": 339,
+      "spaced_s_words_joined": 442,
+      "chars_before": 964272,
+      "chars_after": 958943,
+      "lines_before": 15376,
+      "lines_after": 6743,
+      "text_sha256": "8e7100025fbca333085b6986f169e2340350bf51c5545931b015e98d5f47e165"
+    },
+    {
+      "document_id": "consumer_law_6502",
+      "law_number": "6502",
+      "page_headers_removed": 45,
+      "spaced_s_words_joined": 86,
+      "chars_before": 137928,
+      "chars_after": 137379,
+      "lines_before": 2006,
+      "lines_after": 830,
+      "text_sha256": "81991b714c5db7a18b89e466ba0729cccf13c3bfe2f85ca207b8089a951c2d24"
+    },
+    {
+      "document_id": "administrative_procedure_law_2577",
+      "law_number": "2577",
+      "page_headers_removed": 33,
+      "spaced_s_words_joined": 42,
+      "chars_before": 99088,
+      "chars_after": 97736,
+      "lines_before": 1467,
+      "lines_after": 683,
+      "text_sha256": "a1a2b75edddc7a2c27e5955045196a01b58b6359a55bff44f5623ad6187bd86e"
+    },
+    {
+      "document_id": "tax_procedure_law_213",
+      "law_number": "213",
+      "page_headers_removed": 170,
+      "spaced_s_words_joined": 269,
+      "chars_before": 491269,
+      "chars_after": 489492,
+      "lines_before": 7680,
+      "lines_after": 3692,
+      "text_sha256": "640eee14b24a022767f252e385ffe86a49f76619485a49fcc14628e0b55ccf80"
+    },
+    {
+      "document_id": "enforcement_bankruptcy_law_2004",
+      "law_number": "2004",
+      "page_headers_removed": 141,
+      "spaced_s_words_joined": 175,
+      "chars_before": 417566,
+      "chars_after": 416186,
+      "lines_before": 6343,
+      "lines_after": 2981,
+      "text_sha256": "352a735b6915b9bf80f1a5e778b07ce682599cfb62fe46a9ff6765cf36e33347"
+    },
+    {
+      "document_id": "social_security_law_5510",
+      "law_number": "5510",
+      "page_headers_removed": 206,
+      "spaced_s_words_joined": 407,
+      "chars_before": 722424,
+      "chars_after": 718427,
+      "lines_before": 9298,
+      "lines_after": 3336,
+      "text_sha256": "8e77831cbfdddc8db4f1c8012aa166bc7003f6e81cc25f714902587db65bb910"
+    }
+  ]
+}
