@@ -97,6 +97,21 @@ def test_example_schema(examples):
         assert bad_char_ratio(example["response"]) == 0
 
 
+def test_example_lengths_are_reasonable(examples):
+    for example in examples:
+        assert 8 <= len(example["instruction"]) <= 1500, example["id"]
+        assert 30 <= len(example["response"]) <= 3000, example["id"]
+
+
+def test_sourced_examples_keep_their_source(examples):
+    for example in examples:
+        assert example["origin"].get("dataset"), example["id"]
+        if example["origin"]["dataset"] not in ("lexitech", "mevzuat"):
+            assert example["source_document"], example["id"]
+            assert example["source_articles"], example["id"]
+            assert example["origin"].get("record_id"), example["id"]
+
+
 def test_flags_never_claim_human_approval(examples, chunks):
     assert all(e["verified"] is False and e["verified_by"] is None for e in examples)
     assert all(e["training_approved"] is False for e in examples)

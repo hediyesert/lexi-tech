@@ -3,7 +3,7 @@
 Türk hukuku için yapay zekâ destekli hukuk asistanı projesi. Hedef kullanıcılar stajyer avukatlar, hukuk
 öğrencileri, avukatlar ve hukuki bilgiye erişmek isteyen vatandaşlardır.
 
-**Durum: v1.0-rc1.** Veri setleri teknik olarak hazır. İnsan kalite kontrolü ve kullanım hakkı onayı tamamlanmadı.
+**Durum: v1.0-rc1.** Veri setleri teknik olarak hazır. İnsan kalite kontrolü yapılmadı, kullanım hakkı onayı tamamlanmadı.
 Vize aşamasında model eğitimi yapılmadı. Bu proje hukuki danışmanlık sunmaz.
 
 ## Hedef ve mevcut durum

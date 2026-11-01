@@ -5,7 +5,8 @@
 ## Sonuç
 
 Teslim edilecek 9 kalemin 6'sı hazır. Sunum taslak olarak hazır, ad ve danışman bilgisi eksik. Kalite kontrol
-raporu hazır ancak insan incelemesi yapılmadı. Git deposunda uzak depo tanımlı değil. Bu işler ile kullanım hakkı
+raporu hazır ancak grup kararıyla insan incelemesi yapılmadan teslim ediliyor; rehberin manuel kontrol şartı tam
+karşılanmıyor. Git deposunda uzak depo tanımlı değil. Bu işler ile kullanım hakkı
 kararı grup üyelerini bekliyor.
 
 ## Teslim kalemleri
@@ -68,7 +69,7 @@ korundu: dosyalar v1.0 adını taşır, durum `1.0-rc1` kalır, `training_approv
 | 9 | Kaç token, hangi alt konular? | 1.595.233 token, 12 hukuk alanı |
 | 10 | Dil dağılımı? | Domain %99,9 Türkçe; instruction cevaplarının tamamı Türkçe (otomatik tespit) |
 | 11 | Split ve leakage? | Domain doküman düzeyinde; instruction kaynak dosya ve madde düzeyinde ayrık, testle doğrulanıyor |
-| 12 | Manuel kalite kontrol? | **Eksik.** Asistan turu yapıldı, insan incelemesi bekliyor |
+| 12 | Manuel kalite kontrolünü nasıl yaptık? | **Yapılmadı.** Asistan incelemesi yapıldı, grup bu vizede insan incelemesi yapmadı |
 | 13 | Corpus ve instruction farkı? | Corpus alanı öğretir (CPT), instruction görevi öğretir (SFT) |
 | 14 | Örnekler nasıl oluştu, doğrulandı mı? | LLM ile üretilmiş kaynak havuzu, kanun metnine karşı otomatik filtre |
 | 15 | Görev türleri? | 12 tür, en büyüğü %20; `INSTRUCTION_CARD.md` |
@@ -79,10 +80,8 @@ korundu: dosyalar v1.0 adını taşır, durum `1.0-rc1` kalır, `training_approv
 
 ## Grubun yapması gerekenler
 
-1. **İnsan kalite kontrolü.** `reports/quality/kalite_inceleme_v1.0.xlsx` dosyasında 200 instruction ve 150 domain
-   örneği, kaynak metniyle yan yana duruyor. Sarı sütunları doldurun, sonra
-   `python scripts/qc_review_sheet.py import` ve `python scripts/11_quality_report.py` çalıştırın.
-   Asistan görüşleri ayrı sütunlarda, şüpheli satırlar üstte. İnsan onayı yerine geçmez.
+1. **İnsan kalite kontrolü.** Grup bu vizede yapmamaya karar verdi, danışmana önceden söyleyin. Dosya
+   `reports/quality/kalite_inceleme_v1.0.xlsx` hazır duruyor, final döneminde tamamlanabilir.
 2. **Kullanım hakkı.** `reports/advisor_questions.md` taslağını kendi adınızla danışmana gönderin.
 3. **Hukukçu görüşü.** En azından test kümesi örneklenmeli.
 4. **Literatür.** `reports/literature_review.md` taslak. Birincil kaynakları okuyup sayıları doğrulayın.

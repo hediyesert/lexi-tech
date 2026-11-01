@@ -1,4 +1,5 @@
 """Vize istatistik raporunu ve temizleme öncesi-sonrası örneklerini üretir."""
+import csv
 import json
 import re
 from collections import Counter
@@ -27,6 +28,18 @@ def table(headers, rows):
 
 def load_report(config, name):
     return json.loads(path_of(config["paths"]["reports"], name).read_text(encoding="utf-8"))
+
+
+def read_rows(config, name):
+    path = path_of(config["paths"]["reports"], "quality", name)
+    if not path.exists():
+        return []
+    with path.open(encoding="utf-8", newline="") as f:
+        return list(csv.DictReader(f))
+
+
+def review_count(config, name, column):
+    return sum(bool(r[column]) for r in read_rows(config, name))
 
 
 def cleaning_examples(config):
@@ -166,6 +179,11 @@ def main():
     example_count = cleaning_examples(config)
 
     d, i = summary["domain"], summary["instruction"]
+    human_domain = review_count(config, "qc_domain_sample_v1.0.csv", "human_reviewer")
+    human_instruction = review_count(config, "qc_instruction_sample_v1.0.csv", "human_reviewer")
+    round_two = read_rows(config, "qc_assistant_round2_v1.0.csv")
+    assistant_total = len(round_two)
+    assistant_read = sum(r["assistant_verdict"] != "rule_checked" for r in round_two)
     task_labels = {
         "usul_sure": ("Usul ve süre", "Başvuru yolu, süre ve görevli mahkemeyi söyler"),
         "kosul_unsur": ("Koşul ve unsur", "Bir kurumun şartlarını veya suçun unsurlarını sıralar"),
@@ -200,8 +218,12 @@ def main():
             ["Türkçe chunk oranı", percent(chunk_languages["tr"], len(chunks))],
             ["Ham soru-cevap kaydı", tr_number(raw_total)],
             ["Birebir tekrar", tr_number(i["exact_duplicates"])],
+            ["Yakın tekrar", tr_number(reasons.get("near_duplicate", 0))],
             ["Kanun metniyle desteklenen aday", tr_number(i["after_kb_filter"])],
             ["Final instruction örneği", tr_number(i["final_examples"])],
+            ["Domain insan kontrol örneği", human_domain],
+            ["Instruction insan kontrol örneği", human_instruction],
+            ["Instruction asistan ön incelemesi", f"{assistant_read} / {assistant_total}"],
         ]),
         "",
         "## Verinin aşamalar boyunca erimesi",

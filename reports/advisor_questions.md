@@ -10,7 +10,7 @@ Sayın [danışman adı],
 
 LexiTech TR vize çalışmasında iki veri seti hazırladık: 12 kanundan oluşan Domain Corpus ve 4.000 örneklik Instruction
 Dataset. Teknik hazırlık tamamlandı, ancak kullanım hakları doğrulanmadığı için veri setlerini eğitime onaylı olarak
-işaretlemedik. Şu üç konuda görüşünüzü rica ediyoruz.
+işaretlemedik. Şu dört konuda görüşünüzü rica ediyoruz.
 
 **1. Kanun metinleri.** 12 kanunu mevzuat.gov.tr'den aldık. İkincil kaynaklara göre FSEK m. 31, resmen yayımlanan
 mevzuat ve yargı içtihatlarının kullanımını serbest bırakıyor. Bu hükme dayanarak metinleri model eğitiminde kullanabilir
@@ -26,8 +26,12 @@ tabanlı, elle yazılmış ve Apache-2.0 beyanlı) bu karardan etkilenmez. Ancak
 hazırlamak demektir ve vize takvimini etkiler.
 
 **3. Hukuki doğrulama.** Cevaplar kanun metniyle otomatik karşılaştırıldı, ama bu hukuki doğruluğu kanıtlamıyor. Test
-kümesinden bir örneklemi inceleyebilecek bir hukukçu önerebilir misiniz? Vize için grup üyelerinin 200 örneklik
-incelemesi yeterli olur mu?
+kümesinden bir örneklemi inceleyebilecek bir hukukçu önerebilir misiniz? 
+
+**4. İnsan kalite kontrolü.** Rehberdeki manuel kontrolü vize teslimine kadar yapamadık. Örnekler yalnızca yapay zekâ
+asistanıyla ön incelemeden geçti: 200 instruction örneğinin 170'i okundu, 150 domain parçası otomatik tarandı. Bu insan
+onayı değildir ve raporda böyle belirtilmiştir. İnceleme dosyası hazır. Bu eksiği final döneminin başında tamamlamamız
+uygun olur mu?
 
 **Ek bir soru: sürüm adı.** Rehber Dataset v1.0 teslimi istiyor. Hak ve insan incelemesi tamamlanmadan veri setlerini
 `v1.0-rc1` olarak sunmak uygun mu, yoksa teslim için v1.0 adı mı beklenir?

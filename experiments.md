@@ -436,3 +436,8 @@ Karar: İlk asistan turu `qc_domain_assistant_round1_v1.0.csv` olarak ayrıldı,
 - Domain chunk'larının yaklaşık onda birinde kısmi harf aralığı kalmıştı.
 
 Karar: Hepsi kurala çevrildi, 7 kayıt elle reddedildi, 10 kayıt hukukçu görüşüne bırakıldı. Son yapımda filtreden 28.866 aday kaldı.
+
+## 22. İnsan İncelemesi Kararı (31.10.2026)
+
+Karar: Vize teslimi insan incelemesi olmadan yapılacak. Rehberin manuel kontrol şartı tam karşılanmıyor; bu durum raporlarda
+ve sunumda açıkça yazılı, danışmana bildirilecek. `kalite_inceleme_v1.0.xlsx` final döneminde tamamlanmak üzere hazır tutuluyor.

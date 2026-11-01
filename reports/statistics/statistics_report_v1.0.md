@@ -17,8 +17,12 @@ Bu dosya `scripts/09_statistics.py` ile üretilir, elle düzenlenmez.
 | Türkçe chunk oranı | %99,9 |
 | Ham soru-cevap kaydı | 378.903 |
 | Birebir tekrar | 70.893 |
+| Yakın tekrar | 112 |
 | Kanun metniyle desteklenen aday | 28.866 |
 | Final instruction örneği | 4.000 |
+| Domain insan kontrol örneği | 0 |
+| Instruction insan kontrol örneği | 0 |
+| Instruction asistan ön incelemesi | 170 / 200 |
 
 ## Verinin aşamalar boyunca erimesi
 

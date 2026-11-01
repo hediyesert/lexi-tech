@@ -1,6 +1,6 @@
 # LexiTech TR Instruction Dataset v1.0-rc1
 
-**Durum:** Teknik olarak eğitime hazır aday. İnsan kalite kontrolü ve kullanım hakkı onayı bekliyor.
+**Durum:** Teknik olarak eğitime hazır aday. İnsan kalite kontrolü yapılmadı, kullanım hakkı onayı bekliyor.
 Tüm kayıtlarda `verified=false`, `training_approved=false`.
 
 ## Amaç

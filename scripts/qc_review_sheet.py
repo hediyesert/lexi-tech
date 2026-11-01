@@ -12,7 +12,6 @@ from pathlib import Path
 
 from openpyxl import Workbook, load_workbook
 from openpyxl.styles import Alignment, Font, PatternFill
-from openpyxl.worksheet.datavalidation import DataValidation
 
 from common import build_article_index, load_config, path_of, read_jsonl
 
@@ -67,15 +66,11 @@ def build_sheet(book, title, columns, rows, checks):
 
     first_input = len(columns) + 1
     last_input = len(headers)
-    validation = DataValidation(type="list", formula1='"yes,no"', allow_blank=True)
-    sheet.add_data_validation(validation)
     for column in range(first_input, last_input + 1):
         letter = sheet.cell(1, column).column_letter
         sheet.column_dimensions[letter].width = 16
         for line in range(2, len(rows) + 2):
             sheet.cell(line, column).fill = YELLOW
-        if column < first_input + len(check_labels):
-            validation.add(f"{letter}2:{letter}{len(rows) + 1}")
 
     for cell in sheet[1]:
         cell.font = Font(bold=True)
@@ -139,7 +134,8 @@ def export_sheet(config, output):
         "Instruction: cevabı yandaki kaynak maddeyle karşılaştırın. Emin değilseniz no deyip Not'a yazın.",
         "Asistan sütunları yalnızca öneridir. Şüpheli satırlar üsttedir. Kararı siz verirsiniz.",
         "Domain: metin okunabilir mi, kalıntı var mı diye bakın.",
-        "Bitince dosyayı kaydedin, ardından: python scripts/qc_review_sheet.py import",
+        "Numbers kullanıyorsanız bitince Dosya > Dışa Aktar > Excel ile aynı ada ve aynı klasöre kaydedin.",
+        "Sonra çalıştırın: python scripts/qc_review_sheet.py import",
     ]:
         guide.append([line])
     guide.column_dimensions["A"].width = 110
