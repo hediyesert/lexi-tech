@@ -98,4 +98,4 @@ tarihine bağlı geçiş hükümleri ayrıca yorum gerektirir.
 
 ## Hazırlayanlar
 
-[ad soyad], [ad soyad], [ad soyad]. Danışman: [ad soyad].
+Hediye Sert . Danışman: Asım Sinan Yüksel.
